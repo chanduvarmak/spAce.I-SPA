@@ -1,0 +1,61 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "uname": "jhehdec",
+      "email": "chandu@gmail.com",
+      "password": "chandu",
+      "cpassword": "chandu",
+      "id": 2
+    },
+    {
+      "uname": "jhehdec",
+      "email": "chandu@gmail.com",
+      "password": "chandu",
+      "cpassword": "chandu",
+      "id": 3
+    },
+    {
+      "uname": "cddsa",
+      "email": "chandu@gmail.com",
+      "password": "chandu",
+      "cpassword": "chandu",
+      "id": 4
+    },
+    {
+      "uname": "cddsa",
+      "email": "chandu@gmail.com",
+      "password": "chandu",
+      "cpassword": "chandu",
+      "id": 5
+    },
+    {
+      "uname": "qwefef",
+      "email": "chandu@gmai.com",
+      "password": "chandu",
+      "cpassword": "chandu",
+      "id": 6
+    },
+    {
+      "uname": "qwefef",
+      "email": "chandu@gmai.com",
+      "password": "chandu",
+      "cpassword": "chandu",
+      "id": 7
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

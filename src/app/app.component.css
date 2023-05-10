@@ -1,0 +1,27 @@
+/* * {
+  padding: 3em;
+}
+nav button { 
+display: block;
+padding: 8px;
+background-color: #dddddd;
+cursor: pointer;
+} 
+nav button:hover {
+  background-color: gray;
+}
+
+.dropdown {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 18px;
+}
+
+dropdown:hover {
+  background-color: gray;
+} */
+
+body{
+  background: linear-gradient(#d1d7e0, #243b55);
+}

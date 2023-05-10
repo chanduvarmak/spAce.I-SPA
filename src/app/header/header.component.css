@@ -1,0 +1,163 @@
+/* /* body{
+  background-color: aquamarine;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav {
+  margin-left: 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin-right: 20px;
+  position: relative;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: gray;
+}
+
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+}
+
+nav ul ul li {
+  display: block;
+}
+
+nav li:hover > ul {
+  display: block;
+}
+
+.sub-menu:hover > ul {
+  display: block;
+}
+
+.sub-menu > ul {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: #333;
+}
+
+.sub-menu > ul li {
+  display: block;
+} */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  background-color: gray;
+  border-bottom: 1px solid whitesmoke;
+  padding: 0 20px;
+
+  /* height: 80px;
+  background-color: blue;
+  border-bottom: 1px solid black;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; */
+}
+.logo a {
+  display: flex;
+  color: unset;
+  text-decoration-color: whitesmoke;
+  font-size: xx-large;
+  text-decoration-style: wavy;
+}
+.menu {
+  /* display: inline-block;
+  height: 100%; */
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%px;
+  background-color: gray;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-right: 20px;
+  margin-top: 15px;
+}
+/* .menu:hover {
+  background-color: whitesmoke;
+} */
+.button {
+  padding: 0 20px;
+  color: aquamarine;
+  font-size: 18px;
+  transition: transform 0.3s ease-in-out;
+  /* padding: 0 20px;
+  color: aqua;
+  font-size: 18px;
+  transition: transform 0.3s ease-in-out; */
+}
+/* button:hover {
+  background-color: whitesmoke;
+} */
+.button1 {
+  padding: 0 20px;
+  color: aquamarine;
+  font-size: 18px;
+  transition: transform 0.3s ease-in-out;
+}
+/* .button1:hover {
+  background-color: whitesmoke;
+} */
+.collabration {
+  padding: 0 20px;
+  color: aquamarine;
+  font-size: 18px;
+  transition: transform 0.3s ease-in-out;
+}
+/* .collabration:hover {
+  background-color: whitesmoke;
+} */
+.research {
+  padding: 0 20px;
+  color: aquamarine;
+  font-size: 18px;
+  transition: transform 0.3s ease-in-out;
+}
+/* .research:hover {
+  background-color: whitesmoke;
+} */
+
+/* .btn {
+  border-radius: 100px;
+} */

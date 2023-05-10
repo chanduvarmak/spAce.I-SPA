@@ -1,0 +1,196 @@
+.welcome {
+  width: 400px;
+  margin: 100px auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  text-align: center;
+  animation: shadow 2s ease-in-out infinite;
+  font-size: 45px;
+}
+h1 {
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 32px;
+  font-family: unset;
+  letter-spacing: normal;
+  margin: 0 0 16px;
+  cursor: pointer;
+}
+h6 {
+  font: 400 calc(14px * 0.67) / 20px Roboto, sans-serif;
+  margin: 0 0 12px;
+  font-size: small;
+  font-family: initial;
+  color: gray;
+  cursor: pointer;
+}
+
+button {
+  width: 310px;
+  margin: 100px auto;
+  background-color: #fff;
+  border-radius: 50px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  animation: shadow 2s ease-in-out infinite;
+  font-size: 20px;
+}
+.front {
+  width: 500px;
+  margin: 100px auto;
+  background-color: rgba(0, 0, 0, 0.38);
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  text-align: center;
+  animation: shadow 2s ease-in-out infinite;
+}
+.container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+  background: darkgray;
+  border-radius: 15px;
+  animation: shadow 2s ease-in-out infinite;
+  cursor: pointer;
+}
+.row {
+  /* font-size: 2.5rem; */
+  line-height: 3rem;
+  font-family: PayPalSansBig-Light, Helvetica Neue, Arial, sans-serif;
+  font-weight: 400;
+  display: flex;
+  padding: 30px;
+  margin: 45px;
+  font-size: 34px;
+  font-family: sans-serif;
+}
+/* .thework {
+  box-sizing: border-box;
+  display: block;
+  color: black;
+  margin: 0;
+  padding: 35px;
+  background: darkgray;
+  border-radius: 50px;
+  font-family: sans-serif;
+  font-style: oblique;
+  font-size: larger;
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.about-us {
+  height: 100vh;
+  width: 100%;
+  padding: 90px 0;
+  background: #dddddde7;
+}
+.pic {
+  height: auto;
+  width: 302px;
+  border-radius: 50%;
+}
+.about {
+  width: 1130px;
+  max-width: 85%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.text {
+  width: 540px;
+}
+.text h2 {
+  font-size: 90px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.text h5 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+span {
+  color: gray;
+}
+.text p {
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 1px;
+}
+.data {
+  margin-top: 30px;
+}
+.hire {
+  font-size: 18px;
+  background: gray;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  padding: 8px 25px;
+  border-radius: 6px;
+  transition: 0.5s;
+}
+.hire:hover {
+  background: #000;
+  border: 1px solid whitesmoke;
+}
+.design {
+  background-color: white;
+  margin-top: -23px;
+}
+.bg-primary {
+  background-color: black;
+}
+
+/* //permutations combinations design// */
+
+/* .container {
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 50px;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.form-group {
+  text-align: left;
+}
+
+.btn-primary {
+  background-color: #4CAF50;
+  border-color: #4CAF50;
+}
+
+.btn-primary:hover {
+  background-color: #3e8e41;
+  border-color: #3e8e41;
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #e6e6e6;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+}
+
+.result p {
+  margin: 0;
+} */

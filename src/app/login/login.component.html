@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>log-in</title>
+    <link rel="stylesheet" type="text/css" href="./login.component.css" />
+  </head>
+  <body>
+    <div class="register-form">
+      <a routerLink="./home" style="color: cornflowerblue">spAce.I</a>
+      <h2>Log-in</h2>
+      <form [formGroup]="regForm" (ngSubmit)="show()">
+        <input
+          type="text"
+          placeholder="Username*"
+          formControlName="uname"
+          [(ngModel)]="loginObj.userName"
+          required
+        />
+        <div
+          *ngIf="regForm
+          .controls['uname'].touched &&regForm.controls['uname']?.['errors']"
+          class="invalid"
+        >
+          <div *ngIf="regForm.controls['uname']?.['errors']?.['required']">
+            username is required
+          </div>
+          <div *ngIf="regForm.controls['uname']?.['errors']?.['minlength']">
+            minimum length should be 4
+          </div>
+        </div>
+        <input
+          type="password"
+          placeholder="Password*"
+          formControlName="password"
+          [(ngModel)]="loginObj.password"
+          [value]=""
+          required
+        />
+        <div
+          *ngIf="regForm
+          .controls['password'].touched &&regForm.controls['password']?.['errors']"
+          class="invalid"
+        >
+          <div *ngIf="regForm.controls['password']?.['errors']?.['required']">
+            password is mandatory
+          </div>
+          <div *ngIf="regForm.controls['password']?.['errors']?.['minlength']">
+            minimum length should be 4
+          </div>
+        </div>
+        <!-- ngModel is used to bind the functions which we have written in ts file with object variable we can bind to ngmodel-->
+        <input
+          type="email"
+          placeholder="Email"
+          formControlName="email"
+          [(ngModel)]="loginObj.email"
+          required
+        />
+        <div
+          *ngIf="regForm
+          .controls['email'].touched &&regForm.controls['email']?.['errors']"
+          class="invalid"
+        >
+          <div *ngIf="regForm.controls['email']?.['errors']?.['required']">
+            email is not mandatory
+          </div>
+          <div *ngIf="regForm.controls['email']?.['errors']?.['minlength']">
+            minimum length should be 4
+          </div>
+        </div>
+        <button
+          type="submit"
+          value="Login"
+          [disabled]="regForm.invalid"
+          (click)="onLogin()"
+        >
+          Login
+        </button>
+      </form>
+      <h6>new user</h6>
+      <span><a href="" target="" routerLink="/signup">create new one</a></span>
+    </div>
+  </body>
+</html>

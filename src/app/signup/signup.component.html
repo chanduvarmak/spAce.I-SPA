@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./signup.component.css" />
+    <title>signup</title>
+  </head>
+  <!--ANGULAR REACTIVE FORMS -->
+  <body>
+    <div class="cont">
+      <div class="signUpForm">
+        <h2>Sign-up Form</h2>
+        <form [formGroup]="regForm" (ngSubmit)="show()">
+          <label for="email">Email</label>
+          <input
+            type="text"
+            placeholder="Email*"
+            formControlName="email"
+            required
+            />
+            <!-- [(ngModel)]="signupObj.email" -->
+          <div
+            *ngIf="regForm
+          .controls['email'].touched &&regForm.controls['email']?.['errors']"
+            class="invalid"
+          >
+            <div *ngIf="regForm.controls['email']?.['errors']?.['required']">
+              email is mandatory
+            </div>
+            <div *ngIf="regForm.controls['email']?.['errors']?.['minlength']">
+              minimum length should be 4
+            </div>
+          </div>
+
+          <label for="username">Username</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Username*"
+            formControlName="uname"
+            required
+            />
+            <!-- [(ngModel)]="signupObj.userName" -->
+          <div
+            *ngIf="regForm
+          .controls['uname'].touched &&regForm.controls['uname']?.['errors']"
+            class="invalid"
+          >
+            <div *ngIf="regForm.controls['uname']?.['errors']?.['required']">
+              username is required
+            </div>
+            <div *ngIf="regForm.controls['uname']?.['errors']?.['minlength']">
+              minimum length should be 4
+            </div>
+          </div>
+
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Password*"
+            formControlName="password"
+            required
+            />
+            <!-- [(ngModel)]="signupObj.password" -->
+          <div
+            *ngIf="regForm
+          .controls['password'].touched &&regForm.controls['password']?.['errors']"
+            class="invalid"
+          >
+            <div *ngIf="regForm.controls['password']?.['errors']?.['required']">
+              password is required
+            </div>
+            <div
+              *ngIf="regForm.controls['password']?.['errors']?.['minlength']"
+            >
+              password include capital letters,symbols..
+            </div>
+          </div>
+
+          <label for="confirmpwd">Confrim Password</label>
+          <input
+            type="text"
+            formControlName="cpassword"
+            placeholder="Confirm Password*"
+            />
+            <!-- [(ngModel)]="signupObj.cpassword" -->
+          <div
+            *ngIf="regForm.controls['cpassword']?.['touched'] &&regForm.controls['cpassword']?.['errors']"
+            class="invalid"
+          >
+            <div
+              *ngIf="regForm.controls['cpassword']?.['errors']?.['required']"
+            >
+              confirm your password
+            </div>
+            <div *ngIf="regForm['errors']?.['passwordsMatch']">
+              passwords not matched
+            </div>
+          </div>
+          <button type="submit" [disabled]="regForm.invalid" (click)="show()">
+            Sign-up
+          </button>
+        </form>
+        <br />
+        <h6>Already admin?</h6>
+        <span>
+          <a routerLink="/login">Login here Admin</a>
+        </span>
+      </div>
+    </div>
+    <!-- <div class="logInForm">
+        <h2>Admin Login Form</h2>
+        <form>
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required />
+
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required />
+
+          <button type="submit">Login</button>
+        </form>
+        <br />
+        <h6>forgot Password</h6>
+        <span><a href="" target="_blank">click here</a></span>
+      </div>
+    </div> -->
+
+    <!-- <div>
+      <button mat-raised-button [mat-menu-trigger-for]="domains">
+        full-stack Languages
+      </button>
+      <mat-menu mat-raised-button #domains="matMenu">
+        <button mat-menu-item [mat-menu-trigger-for]="ref">frontend</button>
+        <button mat-menu-item [mat-menu-trigger-for]="ref1">backend</button>
+      </mat-menu>
+      <mat-menu #ref="matMenu">
+        <button mat-menu-item>html</button>
+        <button mat-menu-item>css</button>
+        <button mat-menu-item>JS</button>
+      </mat-menu>
+      <mat-menu #ref1="matMenu">
+        <button mat-menu-item>html</button>
+        <button mat-menu-item>css</button>
+        <button mat-menu-item>JS</button>
+      </mat-menu>
+    </div> -->
+  </body>
+</html>
+<!-- <router-outlet></router-outlet> -->
