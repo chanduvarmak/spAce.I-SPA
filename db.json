@@ -46,6 +46,20 @@
       "password": "chandu",
       "cpassword": "chandu",
       "id": 7
+    },
+    {
+      "uname": "effe",
+      "email": "chandu@gmai.com",
+      "password": "ef2wfw",
+      "cpassword": "ef2wfw",
+      "id": 8
+    },
+    {
+      "uname": "effe",
+      "email": "chandu@gmai.com",
+      "password": "ef2wfw",
+      "cpassword": "ef2wfw",
+      "id": 9
     }
   ],
   "comments": [
