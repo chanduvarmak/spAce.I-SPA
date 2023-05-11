@@ -1,92 +1,92 @@
 body {
-	margin: 0;
-	padding: 0;
-	font-family: Arial, sans-serif;
-	background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
 }
 
 .container {
-	max-width: 1200px;
-	margin: 50px auto;
-	display: flex;
-	justify-content: space-between;
+  max-width: 1200px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-between;
 }
 
 .profile {
-	background-color: #fff;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-	border-radius: 5px;
-	overflow: hidden;
-	width: 30%;
-	position: relative;
-	transition: transform 0.3s ease-in-out;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+  width: 30%;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
 }
 
 .profile:hover {
-	transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .profile img {
-	width: 100%;
-	height: 200px;
-	object-fit: cover;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
 .profile h2 {
-	margin: 20px 0 10px 20px;
-	font-size: 24px;
+  margin: 20px 0 10px 20px;
+  font-size: 24px;
 }
 
 .profile p {
-	margin: 0 0 20px 20px;
-	font-size: 18px;
-	color: #999;
+  margin: 0 0 20px 20px;
+  font-size: 18px;
+  color: #999;
 }
 
 .profile a {
-	display: block;
-	padding: 10px 20px;
-	background-color: #333;
-	color: #fff;
-	text-align: center;
-	text-decoration: none;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	transition: background-color 0.3s ease-in-out;
+  display: block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .profile a:hover {
-	background-color: #222;
+  background-color: #222;
 }
 
 .profile:nth-child(odd) {
-	animation: slideInRight 1s ease-in-out;
+  animation: slideInRight 1s ease-in-out;
 }
 
 .profile:nth-child(even) {
-	animation: slideInLeft 1s ease-in-out;
+  animation: slideInLeft 1s ease-in-out;
 }
 
 @keyframes slideInRight {
-	from {
-		opacity: 0;
-		transform: translateX(100%);
-	}
-	to {
-		opacity: 1;
-		transform: translateX(0%);
-	}
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
 }
 
 @keyframes slideInLeft {
-	from {
-		opacity: 0;
-		transform: translateX(-100%);
-	}
-	to {
-		opacity: 1;
-		transform: translateX(0%);
-	}
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
 }
