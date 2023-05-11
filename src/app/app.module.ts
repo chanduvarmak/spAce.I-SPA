@@ -16,6 +16,7 @@ import { HomeComponent } from './home/home.component';
 import { TheWorkComponent } from './the-work/the-work.component';
 import { MatSelectModule } from '@angular/material/select';
 import { HttpClientModule } from '@angular/common/http';
+import { ThecollabComponent } from './thecollab/thecollab.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
     SignupComponent,
     HomeComponent,
     TheWorkComponent,
+    ThecollabComponent,
   ],
   imports: [
     BrowserModule,
