@@ -6,6 +6,7 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { SignupComponent } from './signup/signup.component';
 import { HomeComponent } from './home/home.component';
 import { TheWorkComponent } from './the-work/the-work.component';
+import { ThecollabComponent } from './thecollab/thecollab.component';
 const routes: Routes = [
   // { path: 'header', component: HeaderComponent },
   // { path: 'home', component: HomeComponent },
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'contactus', component: ContactusComponent },
   { path: 'home', component: HomeComponent },
   { path: 'the-work', component: TheWorkComponent },
+  { path: 'thecollab', component: ThecollabComponent },
 ];
 
 @NgModule({
