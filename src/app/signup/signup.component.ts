@@ -4,7 +4,6 @@ import {
   FormControl,
   FormGroup,
   Validators,
-  
 } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 // import { FormBuilder } from '@angular/forms';
@@ -36,7 +35,7 @@ export class SignupComponent {
 
   //THIS PIECE OF CODE IS USED FOR VALIDATIONS AND CONFIRM PASSWORD MATCH//
   regForm: FormGroup;
-  constructor(public http:HttpClient) {
+  constructor(public http: HttpClient) {
     this.regForm = new FormGroup(
       {
         uname: new FormControl(null, [
@@ -62,15 +61,14 @@ export class SignupComponent {
       };
     }
   }
-
+  //THIS PIECE OF CODE USED TO STORE SIGNUP DATA INTO JSON SERVER//
   show() {
     this.http
       .post('http://localhost:3000/Posts', this.regForm.value)
-      .subscribe(
-        (res) => {
-          alert('Register Successfull');
-          // this.registerForm.reset();
-      })
+      .subscribe((res) => {
+        alert('Register Successfull');
+        // this.registerForm.reset();
+      });
   }
   //USING STATIC DATA MAKING SIGNUP FUNCTIONAL//
 
