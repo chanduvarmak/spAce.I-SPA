@@ -70,19 +70,4 @@ export class SignupComponent {
         // this.registerForm.reset();
       });
   }
-  //USING STATIC DATA MAKING SIGNUP FUNCTIONAL//
-
-  // email: string = 'example@example.com';
-  // username: string = 'example';
-  // password: string = 'password';
-  // confirmPassword: string = 'password';
-
-  // signup(): void {
-  //   if (this.password === this.confirmPassword) {
-  //     // Save user data to database or perform other signup tasks
-  //     alert('Signup successful!');
-  //   } else {
-  //     alert('Passwords do not match.');
-  //   }
-  // }
 }
