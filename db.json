@@ -90,11 +90,109 @@
       "id": 13
     }
   ],
-  "comments": [
+  "signupusers": [
     {
       "id": 1,
       "body": "some comment",
       "postId": 1
+    },
+    {
+      "uname": "cwrge",
+      "email": "example@example.com",
+      "password": "chandu",
+      "cpassword": "chandu",
+      "id": 2
+    },
+    {
+      "uname": "cwrge",
+      "email": "example@example.com",
+      "password": "chandu",
+      "cpassword": "chandu",
+      "id": 3
+    },
+    {
+      "uname": "varma",
+      "email": "chandu@gmai.com",
+      "password": "varma",
+      "cpassword": "varma",
+      "id": 4
+    },
+    {
+      "uname": "varma",
+      "email": "chandu@gmai.com",
+      "password": "varma",
+      "cpassword": "varma",
+      "id": 5
+    },
+    {
+      "uname": "chandu",
+      "email": "cvf@y9",
+      "password": "varma",
+      "cpassword": "varma",
+      "id": 6
+    },
+    {
+      "uname": "chandu",
+      "email": "cvf@y9",
+      "password": "varma",
+      "cpassword": "varma",
+      "id": 7
+    },
+    {
+      "uname": "chandu",
+      "email": "chanduvarma@gmail.com",
+      "password": "varma",
+      "cpassword": "varma",
+      "id": 8
+    },
+    {
+      "uname": "chandu",
+      "email": "chanduvarma@gmail.com",
+      "password": "varma",
+      "cpassword": "varma",
+      "id": 9
+    },
+    {
+      "uname": "cwrge",
+      "email": "chanduvarma@gmail.com",
+      "password": "varma",
+      "cpassword": "varma",
+      "id": 10
+    },
+    {
+      "uname": "cwrge",
+      "email": "chanduvarma@gmail.com",
+      "password": "varma",
+      "cpassword": "varma",
+      "id": 11
+    },
+    {
+      "uname": "cddsa",
+      "email": "chanduvarma@gmail.com",
+      "password": "varma",
+      "cpassword": "varma",
+      "id": 12
+    },
+    {
+      "uname": "cddsa",
+      "email": "chanduvarma@gmail.com",
+      "password": "varma",
+      "cpassword": "varma",
+      "id": 13
+    },
+    {
+      "uname": "cddsa",
+      "email": "chandu@gmai.com",
+      "password": "varmaa",
+      "cpassword": "varmaa",
+      "id": 14
+    },
+    {
+      "uname": "cddsa",
+      "email": "chandu@gmai.com",
+      "password": "varmaa",
+      "cpassword": "varmaa",
+      "id": 15
     }
   ],
   "profile": {
