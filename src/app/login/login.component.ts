@@ -11,12 +11,12 @@ import { Router } from '@angular/router';
 export class LoginComponent {
   //this below steps are used to validate form fields,we use this variables in html to get error properties//
   regForm: FormGroup;
-  constructor(public http:HttpClient,public route:Router) {
+  constructor(private http: HttpClient, private route: Router) {
     this.regForm = new FormGroup({
-      uname: new FormControl(null, [
-        Validators.required,
-        Validators.minLength(4),
-      ]),
+      // uname: new FormControl(null, [
+      //   Validators.required,
+      //   Validators.minLength(4),
+      // ]),
       password: new FormControl(null, [
         Validators.required,
         Validators.minLength(4),
@@ -37,7 +37,7 @@ export class LoginComponent {
         if (user) {
           alert('login success');
           this.regForm.reset();
-          this.route.navigate(['dashboard']);
+          this.route.navigate(['commercial']);
         } else {
           alert('user not found');
         }
@@ -49,25 +49,25 @@ export class LoginComponent {
   }
 
   //THIS PIECE OF CODE IS USED TO STORE THE FEILDS DATA INSIDE LOCAL STORAGE//
-  loginUsers: any[] = [];
-  loginObj: any = {
-    userName: '',
-    password: '',
-    email: '',
-  };
+  // loginUsers: any[] = [];
+  // loginObj: any = {
+  //   userName: '',
+  //   password: '',
+  //   email: '',
+  // };
   // loginObj: any={
   //   userName: '',
   //   password: '',
   //   email: '',
   // }
-  ngOnInit(): void {}
-  onLogin() {
-    this.loginUsers.push(this.loginObj);
-    localStorage.setItem('signupUsers', JSON.stringify(this.loginUsers));
-    this.loginObj = {
-      userName: '',
-      password: '',
-      email: '',
-    };
-  }
+  // ngOnInit(): void {}
+  // onLogin() {
+  //   this.loginUsers.push(this.loginObj);
+  //   localStorage.setItem('signupUsers', JSON.stringify(this.loginUsers));
+  //   this.loginObj = {
+  //     userName: '',
+  //     password: '',
+  //     email: '',
+  //   };
+  // }
 }

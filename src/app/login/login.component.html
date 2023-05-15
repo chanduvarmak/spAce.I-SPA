@@ -9,7 +9,7 @@
       <a routerLink="./home" style="color: cornflowerblue">spAce.I</a>
       <h2>Log-in</h2>
       <form [formGroup]="regForm" (ngSubmit)="login()">
-        <input
+        <!-- <input
           type="text"
           placeholder="Username*"
           formControlName="uname"
@@ -27,18 +27,37 @@
           <div *ngIf="regForm.controls['uname']?.['errors']?.['minlength']">
             minimum length should be 4
           </div>
-        </div>
+        </div> -->
         <input
-          type="password"
-          placeholder="Password*"
-          formControlName="password"
-          [(ngModel)]="loginObj.password"
-          [value]=""
+          type="email"
+          placeholder="Email"
+          formControlName="email"
           required
         />
         <div
           *ngIf="regForm
-          .controls['password'].touched &&regForm.controls['password']?.['errors']"
+        .controls['email'].touched &&regForm.controls['email']?.['errors']"
+          class="invalid"
+        >
+          <div *ngIf="regForm.controls['email']?.['errors']?.['required']">
+            email is not mandatory
+          </div>
+          <div *ngIf="regForm.controls['email']?.['errors']?.['minlength']">
+            minimum length should be 4
+          </div>
+        </div>
+
+        <input
+          type="password"
+          placeholder="Password*"
+          formControlName="password"
+          [value]=""
+          required
+        />
+        <!-- [(ngModel)]="loginObj.password" -->
+        <div
+          *ngIf="regForm
+        .controls['password'].touched &&regForm.controls['password']?.['errors']"
           class="invalid"
         >
           <div *ngIf="regForm.controls['password']?.['errors']?.['required']">
@@ -49,31 +68,7 @@
           </div>
         </div>
         <!-- ngModel is used to bind the functions which we have written in ts file with object variable we can bind to ngmodel-->
-        <input
-          type="email"
-          placeholder="Email"
-          formControlName="email"
-          [(ngModel)]="loginObj.email"
-          required
-        />
-        <div
-          *ngIf="regForm
-          .controls['email'].touched &&regForm.controls['email']?.['errors']"
-          class="invalid"
-        >
-          <div *ngIf="regForm.controls['email']?.['errors']?.['required']">
-            email is not mandatory
-          </div>
-          <div *ngIf="regForm.controls['email']?.['errors']?.['minlength']">
-            minimum length should be 4
-          </div>
-        </div>
-        <button
-          type="submit"
-          value="Login"
-          [disabled]="regForm.invalid"
-          (click)="onLogin()"
-        >
+        <button type="submit" value="Login" [disabled]="regForm.invalid">
           Login
         </button>
       </form>

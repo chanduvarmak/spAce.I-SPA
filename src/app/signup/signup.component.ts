@@ -36,7 +36,7 @@ export class SignupComponent {
 
   //THIS PIECE OF CODE IS USED FOR VALIDATIONS AND CONFIRM PASSWORD MATCH//
   regForm: FormGroup;
-  constructor(public http: HttpClient, public route: Router) {
+  constructor(private http: HttpClient, private route: Router) {
     this.regForm = new FormGroup(
       {
         uname: new FormControl(null, [
@@ -65,7 +65,7 @@ export class SignupComponent {
 
   signup() {
     this.http
-      .post<any>('http://localhost:3000/siugnupusers', this.regForm.value)
+      .post<any>('http://localhost:3000/signupusers', this.regForm.value)
       .subscribe(
         (res) => {
           alert('signup successfull');
