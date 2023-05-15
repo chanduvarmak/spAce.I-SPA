@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +11,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class LoginComponent {
   //this below steps are used to validate form fields,we use this variables in html to get error properties//
   regForm: FormGroup;
-  constructor() {
+  constructor(public http:HttpClient,public route:Router) {
     this.regForm = new FormGroup({
       uname: new FormControl(null, [
         Validators.required,
@@ -23,8 +25,27 @@ export class LoginComponent {
     });
   }
 
-  show() {
-    console.log(this.regForm.value);
+  login() {
+    this.http.get<any>('http://localhost:3000/signupusers').subscribe(
+      (res) => {
+        const user = res.find((a: any) => {
+          return (
+            a.email === this.regForm.value.email &&
+            a.password === this.regForm.value.password
+          );
+        });
+        if (user) {
+          alert('login success');
+          this.regForm.reset();
+          this.route.navigate(['dashboard']);
+        } else {
+          alert('user not found');
+        }
+      },
+      (err) => {
+        alert('something went wrong');
+      }
+    );
   }
 
   //THIS PIECE OF CODE IS USED TO STORE THE FEILDS DATA INSIDE LOCAL STORAGE//
