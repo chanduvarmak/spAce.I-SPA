@@ -30,7 +30,7 @@
         </div> -->
         <input
           type="email"
-          placeholder="Email"
+          placeholder="Email*"
           formControlName="email"
           required
         />
@@ -40,7 +40,7 @@
           class="invalid"
         >
           <div *ngIf="regForm.controls['email']?.['errors']?.['required']">
-            email is not mandatory
+            email is mandatory
           </div>
           <div *ngIf="regForm.controls['email']?.['errors']?.['minlength']">
             minimum length should be 4
