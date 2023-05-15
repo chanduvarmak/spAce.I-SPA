@@ -12,7 +12,7 @@
     <div class="cont">
       <div class="signUpForm">
         <h2>Sign-up Form</h2>
-        <form [formGroup]="regForm" (ngSubmit)="show()">
+        <form [formGroup]="regForm" (ngSubmit)="signup()">
           <label for="email">Email</label>
           <input
             type="text"
@@ -102,7 +102,7 @@
               passwords not matched
             </div>
           </div>
-          <button type="submit" [disabled]="regForm.invalid" (click)="show()">
+          <button type="submit" [disabled]="regForm.invalid" (click)="signup()">
             Sign-up
           </button>
         </form>
