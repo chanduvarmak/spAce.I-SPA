@@ -4,9 +4,9 @@ import {
   FormControl,
   FormGroup,
   Validators,
-  
 } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 // import { FormBuilder } from '@angular/forms';
 @Component({
   selector: 'app-signup',
@@ -36,7 +36,7 @@ export class SignupComponent {
 
   //THIS PIECE OF CODE IS USED FOR VALIDATIONS AND CONFIRM PASSWORD MATCH//
   regForm: FormGroup;
-  constructor(public http:HttpClient) {
+  constructor(public http: HttpClient, public route: Router) {
     this.regForm = new FormGroup(
       {
         uname: new FormControl(null, [
@@ -63,14 +63,19 @@ export class SignupComponent {
     }
   }
 
-  show() {
+  signup() {
     this.http
-      .post('http://localhost:3000/Posts', this.regForm.value)
+      .post<any>('http://localhost:3000/siugnupusers', this.regForm.value)
       .subscribe(
         (res) => {
-          alert('Register Successfull');
-          // this.registerForm.reset();
-      })
+          alert('signup successfull');
+          this.regForm.reset();
+          this.route.navigate(['login']);
+        },
+        (err) => {
+          alert('something went wrong');
+        }
+      );
   }
   //USING STATIC DATA MAKING SIGNUP FUNCTIONAL//
 

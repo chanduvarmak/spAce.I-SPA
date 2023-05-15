@@ -12,15 +12,15 @@
     <div class="cont">
       <div class="signUpForm">
         <h2>Sign-up Form</h2>
-        <form [formGroup]="regForm" (ngSubmit)="show()">
+        <form [formGroup]="regForm" (ngSubmit)="signup()">
           <label for="email">Email</label>
           <input
             type="text"
             placeholder="Email*"
             formControlName="email"
             required
-            />
-            <!-- [(ngModel)]="signupObj.email" -->
+          />
+          <!-- [(ngModel)]="signupObj.email" -->
           <div
             *ngIf="regForm
           .controls['email'].touched &&regForm.controls['email']?.['errors']"
@@ -42,8 +42,8 @@
             placeholder="Username*"
             formControlName="uname"
             required
-            />
-            <!-- [(ngModel)]="signupObj.userName" -->
+          />
+          <!-- [(ngModel)]="signupObj.userName" -->
           <div
             *ngIf="regForm
           .controls['uname'].touched &&regForm.controls['uname']?.['errors']"
@@ -65,8 +65,8 @@
             placeholder="Password*"
             formControlName="password"
             required
-            />
-            <!-- [(ngModel)]="signupObj.password" -->
+          />
+          <!-- [(ngModel)]="signupObj.password" -->
           <div
             *ngIf="regForm
           .controls['password'].touched &&regForm.controls['password']?.['errors']"
@@ -87,8 +87,8 @@
             type="text"
             formControlName="cpassword"
             placeholder="Confirm Password*"
-            />
-            <!-- [(ngModel)]="signupObj.cpassword" -->
+          />
+          <!-- [(ngModel)]="signupObj.cpassword" -->
           <div
             *ngIf="regForm.controls['cpassword']?.['touched'] &&regForm.controls['cpassword']?.['errors']"
             class="invalid"
@@ -102,7 +102,7 @@
               passwords not matched
             </div>
           </div>
-          <button type="submit" [disabled]="regForm.invalid" (click)="show()">
+          <button type="submit" [disabled]="regForm.invalid" (click)="signup()">
             Sign-up
           </button>
         </form>

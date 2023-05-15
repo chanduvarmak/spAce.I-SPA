@@ -76,11 +76,25 @@
       "id": 11
     }
   ],
-  "comments": [
+  "siugnupusers": [
     {
       "id": 1,
       "body": "some comment",
       "postId": 1
+    },
+    {
+      "uname": "cwrge",
+      "email": "chandu@gmai.com",
+      "password": "varma",
+      "cpassword": "varma",
+      "id": 2
+    },
+    {
+      "uname": "cwrge",
+      "email": "chandu@gmai.com",
+      "password": "varma",
+      "cpassword": "varma",
+      "id": 3
     }
   ],
   "profile": {
