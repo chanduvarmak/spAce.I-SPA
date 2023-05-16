@@ -35,6 +35,7 @@ export class SignupComponent {
   // }
 
   //THIS PIECE OF CODE IS USED FOR VALIDATIONS AND CONFIRM PASSWORD MATCH//
+
   regForm: FormGroup;
   constructor(private http: HttpClient, private route: Router) {
     this.regForm = new FormGroup(
