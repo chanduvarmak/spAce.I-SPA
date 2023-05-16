@@ -34,8 +34,7 @@ export class SignupComponent {
   //   };
   // }
 
-  //THIS PIECE OF CODE IS USED FOR VALIDATIONS AND CONFIRM PASSWORD MATCH//
-
+//THIS PIECE OF CODE IS USED FOR VALIDATIONS AND CONFIRM PASSWORD MATCH//
   regForm: FormGroup;
   constructor(private http: HttpClient, private route: Router) {
     this.regForm = new FormGroup(
@@ -51,6 +50,7 @@ export class SignupComponent {
       this.passwordMatch
     );
   }
+  //THIS BELOW CODE IS USED TO MATCH PASSWORDS//
   passwordMatch(rf: any) {
     let password = rf.controls['password'].value;
     let cpassword = rf.controls['cpassword'].value;
@@ -64,6 +64,7 @@ export class SignupComponent {
     }
   }
 
+  //THIS BELOW CODE IS USED TO POST DATA TO OUR JSON SERVER//
   signup() {
     this.http
       .post<any>('http://localhost:3000/signupusers', this.regForm.value)

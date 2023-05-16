@@ -25,6 +25,7 @@ export class LoginComponent {
     });
   }
 
+  //THIS BELLOW CODE IS USED TO GET THE POSTED DATA FROM OUR JSON DATA//
   login() {
     this.http.get<any>('http://localhost:3000/signupusers').subscribe(
       (res) => {
