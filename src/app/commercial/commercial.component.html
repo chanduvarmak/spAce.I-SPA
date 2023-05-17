@@ -1,1 +1,27 @@
-<p>commercial works!</p>
+<!-- <div class="container">
+  <h2>Admin Dashboard</h2>
+  <button (click)="showData()">Show Data</button>
+  <pre>{{ jsonData | json }}</pre>
+</div> -->
+
+<div class="container">
+  <h2>Admin Dashboard</h2>
+  <button (click)="showData()">Show Data</button>
+  <table *ngIf="jsonData && jsonData.length > 0">
+    <thead>
+      <tr>
+        <th>uname</th>
+        <th>Email</th>
+        <th>Password</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of jsonData">
+        <td>{{ item.uname }}</td>
+        <td>{{ item.email }}</td>
+        <td>{{ item.password }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <p *ngIf="jsonData && jsonData.length === 0">No data available.</p>
+</div>
