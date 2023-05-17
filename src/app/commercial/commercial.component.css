@@ -11,12 +11,12 @@ h2 {
 button {
   padding: 10px 20px;
   font-size: 16px;
+  margin-bottom: 10px;
 }
 
 table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
+ 
+  border: 1px solid;
 }
 
 th,
@@ -30,9 +30,9 @@ th {
   background-color: #f5f5f5;
 }
 
-tbody tr:nth-child(even) {
+/* tbody tr:nth-child(even) {
   background-color: #f9f9f9;
-}
+} */
 
 p {
   text-align: center;
