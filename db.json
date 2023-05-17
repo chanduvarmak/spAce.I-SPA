@@ -268,6 +268,20 @@
       "password": "varma",
       "cpassword": "varma",
       "id": 25
+    },
+    {
+      "uname": "cwrge",
+      "email": "example@example.com",
+      "password": "varma",
+      "cpassword": "varma",
+      "id": 26
+    },
+    {
+      "uname": "cwrge",
+      "email": "example@example.com",
+      "password": "varma",
+      "cpassword": "varma",
+      "id": 27
     }
   ],
   "profile": {
