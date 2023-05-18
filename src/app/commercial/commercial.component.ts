@@ -9,7 +9,7 @@ import { SpaceiService } from '../spacei.service';
 })
 export class CommercialComponent {
   jsonData: any;
-
+  specificData: any;
   constructor(private http: HttpClient, private SpaceiServ: SpaceiService) {}
 
   showData() {
@@ -21,5 +21,8 @@ export class CommercialComponent {
     this.SpaceiServ.getData().subscribe((data) => {
       console.log(data);
     });
+    // this.SpaceiServ.getData().subscribe((data) => {
+    //   this.specificData = data['X-RapidAPI-Key']; // Replace 'specificKey' with the desired key
+    // });
   }
 }

@@ -29,4 +29,7 @@
 </div>
 <div>
   <button (click)="getDataFromApi()">Project Details</button>
+  <div *ngIf="specificData">
+    Specific Value: {{ specificData }}
+  </div>
 </div>
