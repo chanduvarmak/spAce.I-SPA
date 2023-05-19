@@ -39,7 +39,7 @@ export class LoginComponent {
           alert('login success');
           this.regForm.reset();
           this.route.navigate(['commercial']);
-        } else {
+        } else {  
           alert('user not found');
         }
       },

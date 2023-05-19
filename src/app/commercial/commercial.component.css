@@ -12,10 +12,11 @@ button {
   padding: 10px 20px;
   font-size: 16px;
   margin-bottom: 10px;
+  text-align: center;
+  margin-left: 143px;
 }
 
 table {
- 
   border: 1px solid;
 }
 

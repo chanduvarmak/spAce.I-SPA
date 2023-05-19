@@ -34,8 +34,11 @@ export class SignupComponent {
   //   };
   // }
 
-//THIS PIECE OF CODE IS USED FOR VALIDATIONS AND CONFIRM PASSWORD MATCH//
+  //THIS PIECE OF CODE IS USED FOR VALIDATIONS AND CONFIRM PASSWORD MATCH//
+
   regForm: FormGroup;
+  users: any = [];
+  dataToStore: boolean = false;
   constructor(private http: HttpClient, private route: Router) {
     this.regForm = new FormGroup(
       {
@@ -48,6 +51,21 @@ export class SignupComponent {
         cpassword: new FormControl(null, [Validators.required]),
       },
       this.passwordMatch
+    );
+  }
+  ngOnInit() {
+    this.userData();
+  }
+
+  userData() {
+    this.http.get<any>('http://localhost:3000/signupusers').subscribe(
+      (res) => {
+        this.users = res;
+        console.log(this.users);
+      },
+      (err) => {
+        alert('something went wrong');
+      }
     );
   }
   //THIS BELOW CODE IS USED TO MATCH PASSWORDS//
@@ -66,17 +84,63 @@ export class SignupComponent {
 
   //THIS BELOW CODE IS USED TO POST DATA TO OUR JSON SERVER//
   signup() {
-    this.http
-      .post<any>('http://localhost:3000/signupusers', this.regForm.value)
-      .subscribe(
-        (res) => {
-          alert('signup successfull');
-          this.regForm.reset();
-          this.route.navigate(['login']);
-        },
-        (err) => {
-          alert('something went wrong');
-        }
-      );
+    // this.http
+    //   .post<any>('http://localhost:3000/signupusers', this.regForm.value)
+    //   .subscribe(
+    //     (res) => {
+    //       this.users;
+    //       const user = res.find((a: any) => {
+    //         return (
+    //           a.email === this.regForm.value.email
+    //           // a.password === this.regForm.value.password
+    //         );
+    //       });
+
+    //       // this.users.forEach((obj: any) => {
+    //       //   if (obj.email == this.regForm.value.email) {
+    //       //     alert('already exist');
+    //       //   }
+    //       // });
+    //       this.regForm.reset();
+    //       this.route.navigate(['login']);
+    //     },
+    //     (err) => {
+    //       alert('something went wrong');
+    //     }
+    //   );
+    // this.http.get<any>('http://localhost:3000/signupusers').subscribe(
+    //   (res) => {
+    //     if (this.regForm.value.email == res.email) {
+    //       alert('success');
+    //     }
+    //   },
+    //   (err) => {
+    //     alert('something went wrong');
+    //   }
+    // );
+    this.users.forEach((obj: any) => {
+      if (obj.email == this.regForm.value.email) {
+        alert('already exist');
+      } else {
+        // let o:{
+        //   "uname": this.regForm.value.email
+        // }
+        this.dataToStore = true;
+      }
+    });
+    if (this.dataToStore) {
+      this.http
+        .post<any>('http://localhost:3000/signupusers', this.regForm.value)
+        .subscribe(
+          (res) => {
+            alert('signup successfull');
+            this.regForm.reset();
+            this.route.navigate(['login']);
+          },
+          (err) => {
+            alert('something went wrong');
+          }
+        );
+    }
   }
 }
