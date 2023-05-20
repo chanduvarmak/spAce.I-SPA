@@ -5,6 +5,15 @@
   font-size: xx-large;
   text-decoration-style: wavy;
 }
+.sidemenus{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  background-color: gray;
+  border-bottom: 1px solid whitesmoke;
+  padding: 0 20px;
+}
 .menu {
   display: flex;
   justify-content: space-between;
@@ -14,50 +23,33 @@
   border-bottom: 1px solid whitesmoke;
   padding: 0 20px;
 }
-/* .menu:hover {
-  background-color: whitesmoke;
-} */
+
 .button {
   padding: 0 20px;
   color: aquamarine;
   font-size: 18px;
   transition: transform 0.3s ease-in-out;
-  /* padding: 0 20px;
-  color: aqua;
-  font-size: 18px;
-  transition: transform 0.3s ease-in-out; */
+  
 }
-/* button:hover {
-  background-color: whitesmoke;
-} */
+
 .button1 {
   padding: 0 20px;
   color: aquamarine;
   font-size: 18px;
   transition: transform 0.3s ease-in-out;
 }
-/* .button1:hover {
-  background-color: whitesmoke;
-} */
+
 .collabration {
   padding: 0 20px;
   color: aquamarine;
   font-size: 18px;
   transition: transform 0.3s ease-in-out;
 }
-/* .collabration:hover {
-  background-color: whitesmoke;
-} */
+
 .research {
   padding: 0 20px;
   color: aquamarine;
   font-size: 18px;
   transition: transform 0.3s ease-in-out;
 }
-/* .research:hover {
-  background-color: whitesmoke;
-} */
 
-/* .btn {
-  border-radius: 100px;
-} */

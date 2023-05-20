@@ -3,9 +3,9 @@
   <div class="logo">
     <a href="">spAce.I</a>
   </div>
-
   <link rel="stylesheet" href="./header.component.css" />
-  <div class="button">
+  <div class="sidemenus">
+   <div class="button">
     <button
       routerLink="/"
       routerLinkActive="activebutton"
@@ -13,10 +13,8 @@
     >
       <mat-icon>home</mat-icon>
     </button>
-  </div>
-
-  
-  <div class="research">
+   </div>
+   <div class="research">
     <button mat-raised-button [mat-menu-trigger-for]="domains">The Work</button>
     <mat-menu mat-raised-button #domains="matMenu">
       <button mat-menu-item [mat-menu-trigger-for]="ref">Research</button>
@@ -34,9 +32,9 @@
       <button mat-menu-item routerLink="./thecollab">E-Commerce</button>
       <button mat-menu-item routerLink="./thecollab">Banking Sites</button>
     </mat-menu>
-  </div>
+   </div>
   
-  <div class="collabration">
+   <div class="collabration">
     <button mat-raised-button [mat-menu-trigger-for]="collabrations">
       The Collaboration
     </button>
@@ -62,16 +60,18 @@
       <button mat-menu-item>work</button>
       <button mat-menu-item>technologies</button>
     </mat-menu>
-  </div>
+    
+   </div>
   
-  <div class="button1">
+   <div class="button1">
     <button
     routerLink="/login"
     routerLinkActive="activebutton"
     ariaCurrentWhenActive="page"
     >
     Login
-  </button>
+   </button>
+  </div>
 </div>
 
 
