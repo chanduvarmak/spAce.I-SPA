@@ -22,6 +22,7 @@ import { CrudComponent } from './crud/crud.component';
 import { ProjectdetailsComponent } from './projectdetails/projectdetails.component';
 import { ThanksComponent } from './thanks/thanks.component';
 import { ClipboardModule } from '@angular/cdk/clipboard';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { ClipboardModule } from '@angular/cdk/clipboard';
     MatSelectModule,
     HttpClientModule,
     ClipboardModule,
+    DragDropModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
