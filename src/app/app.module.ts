@@ -20,6 +20,7 @@ import { ThecollabComponent } from './thecollab/thecollab.component';
 import { CommercialComponent } from './commercial/commercial.component';
 import { CrudComponent } from './crud/crud.component';
 import { ProjectdetailsComponent } from './projectdetails/projectdetails.component';
+import { ThanksComponent } from './thanks/thanks.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { ProjectdetailsComponent } from './projectdetails/projectdetails.compone
     CommercialComponent,
     CrudComponent,
     ProjectdetailsComponent,
+    ThanksComponent,
   ],
   imports: [
     BrowserModule,
