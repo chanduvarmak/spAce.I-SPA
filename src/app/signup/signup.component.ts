@@ -48,7 +48,6 @@ export class SignupComponent {
     }
   }
 
-   
   ngOnInit() {
     this.userData();
   }
@@ -69,6 +68,7 @@ export class SignupComponent {
     this.users.forEach((obj: any) => {
       if (obj.email == this.regForm.value.email) {
         alert('already exist');
+        return;
       } else {
         this.dataToStore = true;
       }
