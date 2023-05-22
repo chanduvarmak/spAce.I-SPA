@@ -10,6 +10,7 @@ import { ThecollabComponent } from './thecollab/thecollab.component';
 import { CommercialComponent } from './commercial/commercial.component';
 import { CrudComponent } from './crud/crud.component';
 import { ProjectdetailsComponent } from './projectdetails/projectdetails.component';
+import { ThanksComponent } from './thanks/thanks.component';
 const routes: Routes = [
   // { path: 'header', component: HeaderComponent },
   // { path: 'home', component: HomeComponent },
@@ -29,6 +30,7 @@ const routes: Routes = [
   { path: 'commercial', component: CommercialComponent },
   { path: 'crud', component: CrudComponent },
   { path: 'projectdetails', component: ProjectdetailsComponent },
+  { path: 'thanks', component: ThanksComponent },
 ];
 
 @NgModule({

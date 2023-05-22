@@ -37,7 +37,7 @@
       </div>
     </div>
     <div>
-      <label for="technology1">Technology 1:</label>
+      <label for="technology1">FrontEnd Technologies:</label>
       <select id="technology1" formControlName="technology1" required>
         <option value="">-- Select Technology 1 --</option>
         <option
@@ -59,7 +59,7 @@
     </div>
 
     <div>
-      <label for="technology2">Technology 2:</label>
+      <label for="technology2">Backend Technologies:</label>
       <select id="technology2" formControlName="technology2" required>
         <option value="">-- Select Technology 2 --</option>
         <option
@@ -79,9 +79,12 @@
         Technology 2 is required.
       </div>
     </div>
-    <button type="submit" [disabled]="researchForm.invalid">Submit</button>
+    <button
+      type="submit"
+      [disabled]="researchForm.invalid"
+      routerLink="/thanks"
+    >
+      Submit
+    </button>
   </form>
-  
-
-  
 </div>
