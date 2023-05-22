@@ -163,8 +163,9 @@ span {
   justify-content: center;
   align-items: center;
   text-align: center;
+  text-shadow: #000;
   background: #fff;
-  border-radius: 4px;
+  border-radius: 50%;
   position: relative;
   z-index: 1;
   transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1);
