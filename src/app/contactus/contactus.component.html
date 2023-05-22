@@ -21,8 +21,11 @@
 
     <div>
       <label for="researchDescription">Research Description:</label>
-      <textarea id="clipboard-example-textarea" cols="30" rows="10" formControlName="researchDescription" [(ngModel)]="value"></textarea>
-<button [cdkCopyToClipboard]="value">Copy to clipboard</button>
+      <textarea
+        id="researchDescription"
+        formControlName="researchDescription"
+        required
+      ></textarea>
       <div
         *ngIf="
           researchForm.get('researchDescription')?.invalid &&
