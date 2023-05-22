@@ -1,0 +1,10 @@
+<form (ngSubmit)="onSubmit()">
+    <div>
+      <label for="technology">Select Technology:</label>
+      <select id="technology" [(ngModel)]="selectedTechnology" name="technology">
+        <option *ngFor="let tech of technologies" [value]="tech.id">{{ tech.name }}</option>
+      </select>
+    </div>
+    <button type="submit">Send</button>
+  </form>
+  
