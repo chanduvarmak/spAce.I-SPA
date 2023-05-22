@@ -154,8 +154,8 @@ span {
   background-color: black;
 }
 .example-box {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border: solid 1px #ccc;
   color: rgba(0, 0, 0, 0.87);
   cursor: move;
@@ -163,8 +163,9 @@ span {
   justify-content: center;
   align-items: center;
   text-align: center;
-  text-shadow: #000;
-  background: #fff;
+  font-size: large;
+  font-style: italic;
+  background: gray;
   border-radius: 50%;
   position: relative;
   z-index: 1;
