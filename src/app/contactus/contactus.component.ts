@@ -8,6 +8,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./contactus.component.css'],
 })
 export class ContactusComponent implements OnInit {
+  value = '';
   researchForm!: FormGroup;
   // Replace with your desired technologies
   frontEndTechnologies: string[] = [

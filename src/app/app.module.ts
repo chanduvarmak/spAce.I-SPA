@@ -21,6 +21,7 @@ import { CommercialComponent } from './commercial/commercial.component';
 import { CrudComponent } from './crud/crud.component';
 import { ProjectdetailsComponent } from './projectdetails/projectdetails.component';
 import { ThanksComponent } from './thanks/thanks.component';
+import { ClipboardModule } from '@angular/cdk/clipboard';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { ThanksComponent } from './thanks/thanks.component';
     FormsModule,
     MatSelectModule,
     HttpClientModule,
+    ClipboardModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
