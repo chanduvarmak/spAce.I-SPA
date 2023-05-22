@@ -38,6 +38,8 @@ export class LoginComponent {
         if (user) {
           alert('login success');
           this.regForm.reset();
+          this.regForm.markAsPristine();
+          this.regForm.markAsUntouched();
           this.route.navigate(['commercial']);
         } else {  
           alert('user not found');

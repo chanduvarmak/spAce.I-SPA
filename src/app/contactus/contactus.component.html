@@ -1,32 +1,87 @@
-<link rel="stylesheet" href="./contactus.component.css" />
-<div class="container">
-  <form action="#">
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name.." />
+<div class="form-container">
+  <form [formGroup]="researchForm" (ngSubmit)="submitForm()">
+    <div>
+      <label for="researchName">Research Name:</label>
+      <input
+        type="text"
+        id="researchName"
+        formControlName="researchName"
+        required
+      />
+      <div
+        *ngIf="
+          researchForm.get('researchName')?.invalid &&
+          researchForm.get('researchName')?.touched
+        "
+        class="error"
+      >
+        Research Name is required.
+      </div>
+    </div>
 
-    <label for="lname">Last Name</label>
-    <input
-      type="text"
-      id="lname"
-      name="lastname"
-      placeholder="Your last name.."
-    />
+    <div>
+      <label for="researchDescription">Research Description:</label>
+      <textarea
+        id="researchDescription"
+        formControlName="researchDescription"
+        required
+      ></textarea>
+      <div
+        *ngIf="
+          researchForm.get('researchDescription')?.invalid &&
+          researchForm.get('researchDescription')?.touched
+        "
+        class="error"
+      >
+        Research Description is required.
+      </div>
+    </div>
+    <div>
+      <label for="technology1">Technology 1:</label>
+      <select id="technology1" formControlName="technology1" required>
+        <option value="">-- Select Technology 1 --</option>
+        <option
+          *ngFor="let technology of frontEndTechnologies"
+          [value]="technology"
+        >
+          {{ technology }}
+        </option>
+      </select>
+      <div
+        *ngIf="
+          researchForm.get('technology1')?.invalid &&
+          researchForm.get('technology1')?.touched
+        "
+        class="error"
+      >
+        Technology 1 is required.
+      </div>
+    </div>
 
-    <label for="country">Country</label>
-    <select id="country" name="country">
-      <option value="india">india</option>
-      <option value="USA">USA</option>
-      <option value="canada">canada</option>
-    </select>
-
-    <label for="subject">Subject</label>
-    <textarea
-      id="subject"
-      name="subject"
-      placeholder="Write something.."
-      style="height: 200px"
-    ></textarea>
-
-    <input type="submit" value="Submit" />
+    <div>
+      <label for="technology2">Technology 2:</label>
+      <select id="technology2" formControlName="technology2" required>
+        <option value="">-- Select Technology 2 --</option>
+        <option
+          *ngFor="let technology of backEndTechnologies"
+          [value]="technology"
+        >
+          {{ technology }}
+        </option>
+      </select>
+      <div
+        *ngIf="
+          researchForm.get('technology2')?.invalid &&
+          researchForm.get('technology2')?.touched
+        "
+        class="error"
+      >
+        Technology 2 is required.
+      </div>
+    </div>
+    <button type="submit" [disabled]="researchForm.invalid">Submit</button>
   </form>
+  
+
+  
 </div>

@@ -44,7 +44,7 @@
     </mat-menu>
     <mat-menu #tc1="matMenu">
       <button mat-menu-item [mat-menu-trigger-for]="frontend">Frontend</button>
-      <button mat-menu-item>Backend</button>
+      <button mat-menu-item [mat-menu-trigger-for]="backend">Backend</button>
       <button mat-menu-item routerLink="./contactus">contact</button>
     </mat-menu>
     <mat-menu #frontend="matMenu">
@@ -54,6 +54,13 @@
       <button mat-menu-item>mern</button>
       <button mat-menu-item>mean</button>
       <button mat-menu-item>figma</button>
+    </mat-menu>
+    <mat-menu #backend="matMenu">
+      <button mat-menu-item>JAVA</button>
+      <button mat-menu-item>Pyton</button>
+      <button mat-menu-item>My SQL</button>
+      <button mat-menu-item>PHP</button>
+      <button mat-menu-item>.net</button>
     </mat-menu>
     <mat-menu #tc2="matMenu">
       <button mat-menu-item routerLink="./contactus">contact</button>
