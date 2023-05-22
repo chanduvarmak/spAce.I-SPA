@@ -1,19 +1,37 @@
 import { Component } from '@angular/core';
 
+interface Project {
+  id: number;
+  name: string;
+  description: string;
+  duration: string;
+}
 @Component({
   selector: 'app-projectdetails',
   templateUrl: './projectdetails.component.html',
-  styleUrls: ['./projectdetails.component.css']
+  styleUrls: ['./projectdetails.component.css'],
 })
 export class ProjectdetailsComponent {
-  showDetails = false;
-  projectName = 'My Project';
-  projectDescription = 'This is a sample project';
-  startDate = '2023-01-01';
-  endDate = '2023-12-31';
+  projects: Project[] = [
+    {
+      id: 1,
+      name: 'Project 1',
+      description: 'Lorem ipsum dolor sit amet.',
+      duration: '3 months',
+    },
+    {
+      id: 2,
+      name: 'Project 2',
+      description: 'Consectetur adipiscing elit.',
+      duration: '6 months',
+    },
+    // Add more project objects as needed
+  ];
 
-  toggleDetails() {
-    this.showDetails = !this.showDetails;
+  selectedProject: Project | null = null;
+
+  showProjectDetails(project: Project) {
+    this.selectedProject = project;
+    console.log(project);
   }
 }
-
