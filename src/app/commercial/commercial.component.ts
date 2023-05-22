@@ -25,4 +25,14 @@ export class CommercialComponent {
     //   this.specificData = data['X-RapidAPI-Key']; // Replace 'specificKey' with the desired key
     // });
   }
+
+  backgroundColor = 'red';
+
+  onMouseOver() {
+    this.backgroundColor = 'blue';
+  }
+
+  onMouseOut() {
+    this.backgroundColor = 'red';
+  }
 }

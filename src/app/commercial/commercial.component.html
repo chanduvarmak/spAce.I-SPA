@@ -32,4 +32,7 @@
   <div *ngIf="specificData">
     Specific Value: {{ specificData }}
   </div>
+  <div (mouseover)="onMouseOver()" (mouseout)="onMouseOut()" [style.background-color]="backgroundColor">
+    Hover over me!
+  </div>
 </div>

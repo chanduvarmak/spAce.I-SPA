@@ -56,7 +56,6 @@ export class SignupComponent {
   ngOnInit() {
     this.userData();
   }
-
   userData() {
     this.http.get<any>('http://localhost:3000/signupusers').subscribe(
       (res) => {
@@ -68,6 +67,7 @@ export class SignupComponent {
       }
     );
   }
+
   //THIS BELOW CODE IS USED TO MATCH PASSWORDS//
   passwordMatch(rf: any) {
     let password = rf.controls['password'].value;

@@ -1284,9 +1284,38 @@
       "password": "chandu",
       "cpassword": "chandu",
       "id": 107
+    },
+    {
+      "uname": "check123",
+      "email": "check123@gmail.com",
+      "password": "chandu",
+      "cpassword": "chandu",
+      "id": 108
+    },
+    {
+      "uname": "check123",
+      "email": "check123@gmail.com",
+      "password": "chandu",
+      "cpassword": "chandu",
+      "id": 109
+    },
+    {
+      "uname": "check123",
+      "email": "check123@gmail.com",
+      "password": "chandu",
+      "cpassword": "chandu",
+      "id": 110
+    },
+    {
+      "uname": "check123",
+      "email": "check123@gmail.com",
+      "password": "chandu",
+      "cpassword": "chandu",
+      "id": 111
     }
   ],
   "profile": {
-    "name": "typicode"
+    "email": "chandu@gmail.com",
+    "password": "chandu"
   }
 }
