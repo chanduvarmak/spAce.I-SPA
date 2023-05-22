@@ -28,11 +28,11 @@
   <p *ngIf="jsonData && jsonData.length === 0">No data available.</p>
 </div>
 <div>
-  <button (click)="getDataFromApi()">Project Details</button>
-  <div *ngIf="specificData">
-    Specific Value: {{ specificData }}
-  </div>
-  <div (mouseover)="onMouseOver()" (mouseout)="onMouseOut()" [style.background-color]="backgroundColor">
+  <button (click)="getDataFromApi()" routerLink="/projectdetails">
+    Project Details
+  </button>
+  <div *ngIf="specificData">Specific Value: {{ specificData }}</div>
+  <!-- <div (mouseover)="onMouseOver()" (mouseout)="onMouseOut()" [style.background-color]="backgroundColor">
     Hover over me!
-  </div>
+  </div> -->
 </div>

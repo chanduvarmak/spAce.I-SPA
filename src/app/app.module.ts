@@ -19,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ThecollabComponent } from './thecollab/thecollab.component';
 import { CommercialComponent } from './commercial/commercial.component';
 import { CrudComponent } from './crud/crud.component';
+import { ProjectdetailsComponent } from './projectdetails/projectdetails.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { CrudComponent } from './crud/crud.component';
     ThecollabComponent,
     CommercialComponent,
     CrudComponent,
+    ProjectdetailsComponent,
   ],
   imports: [
     BrowserModule,

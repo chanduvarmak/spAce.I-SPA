@@ -14,26 +14,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./signup.component.css'],
 })
 export class SignupComponent {
-  //THIS PIECE OF CODE IS USED TO STORE THE FEILDS DATA INSIDE LOCAL STORAGE//
-  // signupUsers: any[] = [];
-  // signupObj: any = {
-  //   email: '',
-  //   userName: '',
-  //   password: '',
-  //   cpassword: '',
-  // };
-  // ngOnInit(): void {}
-  // onSignup() {
-  //   this.signupUsers.push(this.signupObj);
-  //   localStorage.setItem('signupUsers', JSON.stringify(this.signupUsers));
-  //   this.signupObj = {
-  //     email: '',
-  //     userName: '',
-  //     password: '',
-  //     cpassword: '',
-  //   };
-  // }
-
   //THIS PIECE OF CODE IS USED FOR VALIDATIONS AND CONFIRM PASSWORD MATCH//
 
   regForm: FormGroup;
@@ -53,20 +33,6 @@ export class SignupComponent {
       this.passwordMatch
     );
   }
-  ngOnInit() {
-    this.userData();
-  }
-  userData() {
-    this.http.get<any>('http://localhost:3000/signupusers').subscribe(
-      (res) => {
-        this.users = res;
-        console.log(this.users);
-      },
-      (err) => {
-        alert('something went wrong');
-      }
-    );
-  }
 
   //THIS BELOW CODE IS USED TO MATCH PASSWORDS//
   passwordMatch(rf: any) {
@@ -82,42 +48,24 @@ export class SignupComponent {
     }
   }
 
+   
+  ngOnInit() {
+    this.userData();
+  }
+  userData() {
+    this.http.get<any>('http://localhost:3000/signupusers').subscribe(
+      (res) => {
+        this.users = res;
+        console.log(this.users);
+      },
+      (err) => {
+        alert('something went wrong');
+      }
+    );
+  }
+
   //THIS BELOW CODE IS USED TO POST DATA TO OUR JSON SERVER//
   signup() {
-    // this.http
-    //   .post<any>('http://localhost:3000/signupusers', this.regForm.value)
-    //   .subscribe(
-    //     (res) => {
-    //       this.users;
-    //       const user = res.find((a: any) => {
-    //         return (
-    //           a.email === this.regForm.value.email
-    //           // a.password === this.regForm.value.password
-    //         );
-    //       });
-
-    //       // this.users.forEach((obj: any) => {
-    //       //   if (obj.email == this.regForm.value.email) {
-    //       //     alert('already exist');
-    //       //   }
-    //       // });
-    //       this.regForm.reset();
-    //       this.route.navigate(['login']);
-    //     },
-    //     (err) => {
-    //       alert('something went wrong');
-    //     }
-    //   );
-    // this.http.get<any>('http://localhost:3000/signupusers').subscribe(
-    //   (res) => {
-    //     if (this.regForm.value.email == res.email) {
-    //       alert('success');
-    //     }
-    //   },
-    //   (err) => {
-    //     alert('something went wrong');
-    //   }
-    // );
     this.users.forEach((obj: any) => {
       if (obj.email == this.regForm.value.email) {
         alert('already exist');
@@ -141,8 +89,6 @@ export class SignupComponent {
     }
   }
 }
-
-
 
 //new model to try//
 

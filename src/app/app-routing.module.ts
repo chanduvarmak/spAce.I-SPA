@@ -9,6 +9,7 @@ import { TheWorkComponent } from './the-work/the-work.component';
 import { ThecollabComponent } from './thecollab/thecollab.component';
 import { CommercialComponent } from './commercial/commercial.component';
 import { CrudComponent } from './crud/crud.component';
+import { ProjectdetailsComponent } from './projectdetails/projectdetails.component';
 const routes: Routes = [
   // { path: 'header', component: HeaderComponent },
   // { path: 'home', component: HomeComponent },
@@ -26,7 +27,8 @@ const routes: Routes = [
   { path: 'the-work', component: TheWorkComponent },
   { path: 'thecollab', component: ThecollabComponent },
   { path: 'commercial', component: CommercialComponent },
-  {path:'crud',component:CrudComponent},
+  { path: 'crud', component: CrudComponent },
+  { path: 'projectdetails', component: ProjectdetailsComponent },
 ];
 
 @NgModule({

@@ -26,13 +26,13 @@ export class CommercialComponent {
     // });
   }
 
-  backgroundColor = 'red';
+  // backgroundColor = 'red';
 
-  onMouseOver() {
-    this.backgroundColor = 'blue';
-  }
+  // onMouseOver() {
+  //   this.backgroundColor = 'blue';
+  // }
 
-  onMouseOut() {
-    this.backgroundColor = 'red';
-  }
+  // onMouseOut() {
+  //   this.backgroundColor = 'red';
+  // }
 }

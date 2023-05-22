@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="./projectdetails.component.css" />
+<div *ngIf="showDetails">
+  <!-- Add your project details here -->
+  <h2>Project Details</h2>
+  <p>Project Name: {{ projectName }}</p>
+  <p>Project Description: {{ projectDescription }}</p>
+  <p>Project Start Date: {{ startDate }}</p>
+  <p>Project End Date: {{ endDate }}</p>
+</div>
+
+<button (click)="toggleDetails()">
+  {{ showDetails ? "Hide Details" : "Show Details" }}
+</button>
