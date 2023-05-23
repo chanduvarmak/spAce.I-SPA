@@ -41,7 +41,7 @@ export class LoginComponent {
           this.regForm.markAsPristine();
           this.regForm.markAsUntouched();
           this.route.navigate(['commercial']);
-        } else {  
+        } else {
           alert('user not found');
         }
       },
@@ -50,27 +50,4 @@ export class LoginComponent {
       }
     );
   }
-
-  //THIS PIECE OF CODE IS USED TO STORE THE FEILDS DATA INSIDE LOCAL STORAGE//
-  // loginUsers: any[] = [];
-  // loginObj: any = {
-  //   userName: '',
-  //   password: '',
-  //   email: '',
-  // };
-  // loginObj: any={
-  //   userName: '',
-  //   password: '',
-  //   email: '',
-  // }
-  // ngOnInit(): void {}
-  // onLogin() {
-  //   this.loginUsers.push(this.loginObj);
-  //   localStorage.setItem('signupUsers', JSON.stringify(this.loginUsers));
-  //   this.loginObj = {
-  //     userName: '',
-  //     password: '',
-  //     email: '',
-  //   };
-  // }
 }

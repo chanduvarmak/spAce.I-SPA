@@ -2,7 +2,7 @@
 <h1>Project Details</h1>
 <div *ngFor="let project of projects">
   <button (click)="showProjectDetails(project)">
-   project {{ project.id }}
+    project {{ project.id }}
   </button>
   <div *ngIf="selectedProject === project">
     <h3>{{ project.name }}</h3>
@@ -10,4 +10,15 @@
     <p>Duration: {{ project.duration }}</p>
     <hr />
   </div>
+  
+  <!-- <h2>Research Dashboard</h2> -->
+
+  <!-- <div *ngFor="let research of researches">
+    <h3>{{ research.name }}</h3>
+    <p>{{ research.email }}</p>
+    <p>{{ research.description }}</p>
+    <p>Frontend Technologies: {{ research.frontendTechnologies.join(", ") }}</p>
+    <p>Backend Technologies: {{ research.backendTechnologies.join(", ") }}</p>
+    <hr />
+  </div> -->
 </div>

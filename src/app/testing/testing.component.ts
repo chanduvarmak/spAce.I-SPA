@@ -1,5 +1,14 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormArray, Validators } from '@angular/forms';
+
+interface Research {
+  name: string;
+  email: string;
+  description: string;
+  frontendTechnologies: string[];
+  backendTechnologies: string[];
+}
 
 @Component({
   selector: 'app-testing',
@@ -32,7 +41,7 @@ export class TestingComponent implements OnInit {
     // Add more backend technologies here
   ];
 
-  constructor() {
+  constructor(private http: HttpClient) {
     this.researchForm = new FormGroup({
       name: new FormControl('', Validators.required),
       email: new FormControl('', [Validators.required, Validators.email]),
@@ -76,9 +85,23 @@ export class TestingComponent implements OnInit {
 
   onSubmit() {
     // Access form data here and perform further actions
-    console.log(this.researchForm.value);
-    this.researchForm.reset();
-    this.researchForm.markAsPristine();
-    this.researchForm.markAsUntouched();
+    if (this.researchForm.valid) {
+      const researchData: Research = this.researchForm.value;
+
+      this.http.post<Research>('', researchData).subscribe(
+        (response) => {
+          console.log('Data saved successfully!', response);
+          // Perform any other desired actions upon success
+        },
+        (error) => {
+          console.error('Error saving data:', error);
+          // Handle error accordingly
+        }
+      );
+      console.log(this.researchForm.value);
+      this.researchForm.reset();
+      this.researchForm.markAsPristine();
+      this.researchForm.markAsUntouched();
+    }
   }
 }
