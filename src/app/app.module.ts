@@ -24,6 +24,7 @@ import { ThanksComponent } from './thanks/thanks.component';
 import { ClipboardModule } from '@angular/cdk/clipboard';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { TestingComponent } from './testing/testing.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { TestingComponent } from './testing/testing.component';
     ProjectdetailsComponent,
     ThanksComponent,
     TestingComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
