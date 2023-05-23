@@ -11,6 +11,7 @@ import { CommercialComponent } from './commercial/commercial.component';
 import { CrudComponent } from './crud/crud.component';
 import { ProjectdetailsComponent } from './projectdetails/projectdetails.component';
 import { ThanksComponent } from './thanks/thanks.component';
+import { TestingComponent } from './testing/testing.component';
 const routes: Routes = [
   // { path: 'header', component: HeaderComponent },
   // { path: 'home', component: HomeComponent },
@@ -31,6 +32,7 @@ const routes: Routes = [
   { path: 'crud', component: CrudComponent },
   { path: 'projectdetails', component: ProjectdetailsComponent },
   { path: 'thanks', component: ThanksComponent },
+  { path: 'test', component: TestingComponent },
 ];
 
 @NgModule({

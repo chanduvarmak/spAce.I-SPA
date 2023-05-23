@@ -1,12 +1,20 @@
 h1 {
   color: #333;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
+
+p {
+  font-size: large;
+  font-family: sans-serif;
 }
 
 button {
   display: block;
   margin-bottom: 10px;
   padding: 10px;
-  background-color: #4caf50;
+  background-color: gray;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -17,7 +25,7 @@ button {
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: black;
 }
 
 button:focus {

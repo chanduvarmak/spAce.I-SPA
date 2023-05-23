@@ -23,6 +23,7 @@ import { ProjectdetailsComponent } from './projectdetails/projectdetails.compone
 import { ThanksComponent } from './thanks/thanks.component';
 import { ClipboardModule } from '@angular/cdk/clipboard';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { TestingComponent } from './testing/testing.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     CrudComponent,
     ProjectdetailsComponent,
     ThanksComponent,
+    TestingComponent,
   ],
   imports: [
     BrowserModule,
