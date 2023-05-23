@@ -1,5 +1,6 @@
 <div class="container">
   <link rel="stylesheet" href="./contactus.component.css" />
+  <h1>Research Contact Form</h1>
   <form [formGroup]="researchForm" (ngSubmit)="onSubmit()">
     <label for="researchName">Research Name:</label>
     <input type="text" id="researchName" formControlName="name" />
@@ -100,6 +101,12 @@
       Please enter a valid email address.
     </div>
     <br />
-    <button type="submit" [disabled]="researchForm.invalid">Submit</button>
+    <button
+      type="submit"
+      [disabled]="researchForm.invalid"
+      routerLink="/thanks"
+    >
+      Submit
+    </button>
   </form>
 </div>

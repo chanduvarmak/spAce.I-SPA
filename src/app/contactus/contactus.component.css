@@ -1,5 +1,5 @@
-.form-container {
-  width: 400px;
+.container {
+  /* width: 400px;
   margin: 0 auto;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -7,32 +7,50 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   animation: slideIn 0.5s ease-in-out;
   margin-top: 20px;
+} */
+
+  width: 400px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.5s ease-in-out;
 }
 form {
   max-width: 400px;
   margin: 0 auto;
 }
 
-div {
-  margin-bottom: 10px;
-}
-
 label {
   display: block;
+  margin-top: 10px;
   font-weight: bold;
 }
 
 input[type="text"],
-textarea,
-select {
+textarea {
   width: 100%;
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  box-sizing: border-box;
 }
 
-button[type="submit"] {
-  padding: 10px 20px;
+select {
+  width: 100%;
+  height: 120px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  resize: none;
+}
+
+button {
+  margin-top: 10px;
+  padding: 5px 10px;
   background-color: gray;
   color: white;
   border: none;
@@ -40,13 +58,12 @@ button[type="submit"] {
   cursor: pointer;
 }
 
-button[type="submit"]:hover {
+button:hover {
   background-color: black;
 }
 
 .error-message {
   color: red;
-  font-size: 14px;
   margin-top: 5px;
 }
 @keyframes slideIn {
@@ -58,9 +75,4 @@ button[type="submit"]:hover {
     opacity: 1;
     transform: translateY(0);
   }
-}
-.error {
-  color: red;
-  font-style: italic;
-  font-size: small;
 }
