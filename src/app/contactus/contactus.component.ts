@@ -95,7 +95,7 @@ export class ContactusComponent implements OnInit {
       const researchData: Research = this.researchForm.value;
 
       this.http
-        .post<Research>('http://localhost:3000/projectdetails', researchData)
+        .post<Research>(' http://localhost:3000/contactus', researchData)
         .subscribe(
           (response) => {
             console.log('Data saved successfully!', response);

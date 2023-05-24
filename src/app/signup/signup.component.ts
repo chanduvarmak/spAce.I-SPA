@@ -75,7 +75,7 @@ export class SignupComponent {
     });
     if (this.dataToStore) {
       this.http
-        .post<any>('http://localhost:3000/signupusers', this.regForm.value)
+        .post<any>(' http://localhost:3000/signup', this.regForm.value)
         .subscribe(
           (res) => {
             alert('signup successfull');
