@@ -1,1 +1,58 @@
-<p>contact works!</p>
+<link rel="stylesheet" href="./contact.component.css" />
+<div class="contact-form">
+  <h2>Contact Us</h2>
+  <form (ngSubmit)="submitForm()">
+    <div class="form-group">
+      <label for="companyName">Company Name</label>
+      <input
+        type="text"
+        id="companyName"
+        name="companyName"
+        [(ngModel)]="formData.companyName"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="companyEmail">Company Email</label>
+      <input
+        type="email"
+        id="companyEmail"
+        name="companyEmail"
+        [(ngModel)]="formData.companyEmail"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="city">Select City</label>
+      <select id="city" name="city" [(ngModel)]="formData.city" required>
+        <option *ngFor="let city of cities" [value]="city">{{ city }}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Purpose</label>
+      <div>
+        <label for="research">
+          <input
+            type="checkbox"
+            id="research"
+            name="interests"
+            [(ngModel)]="formData.interests.research"
+          />
+          Research
+        </label>
+      </div>
+      <div>
+        <label for="commercial">
+          <input
+            type="checkbox"
+            id="commercial"
+            name="interests"
+            [(ngModel)]="formData.interests.commercial"
+          />
+          Commercial
+        </label>
+      </div>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+</div>

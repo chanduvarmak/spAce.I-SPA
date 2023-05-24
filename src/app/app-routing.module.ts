@@ -12,6 +12,7 @@ import { CrudComponent } from './crud/crud.component';
 import { ProjectdetailsComponent } from './projectdetails/projectdetails.component';
 import { ThanksComponent } from './thanks/thanks.component';
 import { TestingComponent } from './testing/testing.component';
+import { ContactComponent } from './contact/contact.component';
 const routes: Routes = [
   // { path: 'header', component: HeaderComponent },
   // { path: 'home', component: HomeComponent },
@@ -33,6 +34,7 @@ const routes: Routes = [
   { path: 'projectdetails', component: ProjectdetailsComponent },
   { path: 'thanks', component: ThanksComponent },
   { path: 'test', component: TestingComponent },
+  { path: 'contact', component: ContactComponent },
 ];
 
 @NgModule({
