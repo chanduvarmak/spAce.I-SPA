@@ -13,7 +13,7 @@ export class CommercialComponent {
   constructor(private http: HttpClient, private SpaceiServ: SpaceiService) {}
 
   showData() {
-    this.http.get('http://localhost:3000/signupusers').subscribe((data) => {
+    this.http.get('http://localhost:3000/signup').subscribe((data) => {
       this.jsonData = data;
     });
   }

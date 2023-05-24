@@ -52,7 +52,7 @@ export class SignupComponent {
     this.userData();
   }
   userData() {
-    this.http.get<any>('http://localhost:3000/signupusers').subscribe(
+    this.http.get<any>('http://localhost:3000/signup').subscribe(
       (res) => {
         this.users = res;
         console.log(this.users);
@@ -65,17 +65,35 @@ export class SignupComponent {
 
   //THIS BELOW CODE IS USED TO POST DATA TO OUR JSON SERVER//
   signup() {
-    this.users.forEach((obj: any) => {
-      if (obj.email == this.regForm.value.email) {
-        alert('already exist');
-        return;
+    console.log('hi this appears on form submit');
+    // this.users.forEach((user: any) => {
+    //   if (user.email == this.regForm.value.email) {
+    //     alert('already exist');
+    //     this.route.navigate(['login']);
+
+    //     // return;
+    //   } else {
+    //     this.dataToStore = true;
+    //   }
+    // }
+    // );
+
+    for (let i = 1; i < this.users.length; i++) {
+      if (
+        this.regForm.value.email.toLowerCase() ===
+        this.users[i].email.toLowerCase()
+      ) {
+        alert('user already exists');
+        this.route.navigate(['login']);
+        // break;
       } else {
         this.dataToStore = true;
+        break;
       }
-    });
+    }
     if (this.dataToStore) {
       this.http
-        .post<any>(' http://localhost:3000/signup', this.regForm.value)
+        .post<any>('http://localhost:3000/signup', this.regForm.value)
         .subscribe(
           (res) => {
             alert('signup successfull');

@@ -4,11 +4,210 @@
       "id": 1,
       "title": "json-server",
       "author": "typicode"
+    },
+    {
+      "uname": "chandu",
+      "email": "chandu@gmai.com",
+      "password": "chandu",
+      "cpassword": "chandu",
+      "id": 2
+    },
+    {
+      "uname": "chandu",
+      "email": "chandu@gmai.com",
+      "password": "chandu",
+      "cpassword": "chandu",
+      "id": 3
+    },
+    {
+      "uname": "chandu",
+      "email": "chandu@gmai.com",
+      "password": "chandu",
+      "cpassword": "chandu",
+      "id": 4
+    },
+    {
+      "uname": "chandu",
+      "email": "chandu@gmai.com",
+      "password": "chandu",
+      "cpassword": "chandu",
+      "id": 5
+    },
+    {
+      "uname": "chandu",
+      "email": "chandu@gmai.com",
+      "password": "chandu",
+      "cpassword": "chandu",
+      "id": 6
+    },
+    {
+      "uname": "chandu",
+      "email": "chandu@gmai.com",
+      "password": "chandu",
+      "cpassword": "chandu",
+      "id": 7
+    },
+    {
+      "uname": "chandu",
+      "email": "chandu@gmai.com",
+      "password": "chandu",
+      "cpassword": "chandu",
+      "id": 8
+    },
+    {
+      "uname": "chandu",
+      "email": "chandu@gmai.com",
+      "password": "chandu",
+      "cpassword": "chandu",
+      "id": 9
+    },
+    {
+      "uname": "chandu",
+      "email": "chandu@gmai.com",
+      "password": "chandu",
+      "cpassword": "chandu",
+      "id": 10
+    },
+    {
+      "uname": "chandu",
+      "email": "chandu@gmai.com",
+      "password": "chandu",
+      "cpassword": "chandu",
+      "id": 11
+    },
+    {
+      "uname": "chandu",
+      "email": "chandu@gmai.com",
+      "password": "chandu",
+      "cpassword": "chandu",
+      "id": 12
+    },
+    {
+      "uname": "chandu",
+      "email": "chandu@gmai.com",
+      "password": "chandu",
+      "cpassword": "chandu",
+      "id": 13
+    },
+    {
+      "uname": "varma",
+      "email": "VARMA@GMAIL.COM",
+      "password": "varma",
+      "cpassword": "varma",
+      "id": 14
+    },
+    {
+      "uname": "varma",
+      "email": "VARMA@GMAIL.COM",
+      "password": "varma",
+      "cpassword": "varma",
+      "id": 15
+    },
+    {
+      "uname": "varma",
+      "email": "varma@gmail.com",
+      "password": "varma",
+      "cpassword": "varma",
+      "id": 16
+    },
+    {
+      "uname": "varma",
+      "email": "varma@gmail.com",
+      "password": "varma",
+      "cpassword": "varma",
+      "id": 17
+    },
+    {
+      "uname": "chanduu",
+      "email": "VARMA@GMAIL.COM",
+      "password": "chanduu",
+      "cpassword": "chanduu",
+      "id": 18
+    },
+    {
+      "uname": "suresh",
+      "email": "SURESH@GMAIL.COM",
+      "password": "suresh",
+      "cpassword": "suresh",
+      "id": 19
+    },
+    {
+      "uname": "suresh",
+      "email": "SURESH@GMAIL.COM",
+      "password": "suresh",
+      "cpassword": "suresh",
+      "id": 20
+    },
+    {
+      "uname": "suresh",
+      "email": "suresh@gmail.com",
+      "password": "suresh",
+      "cpassword": "suresh",
+      "id": 21
     }
   ],
-  "contactus": [{
-    
-  }],
+  "contactus": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    },
+    {
+      "id": 2,
+      "name": "k;'",
+      "email": "wgqr@rg",
+      "description": "np'[nj",
+      "frontendTechnologies": [
+        "CSS",
+        "Vue.js"
+      ],
+      "backendTechnologies": [
+        "Node.js"
+      ]
+    },
+    {
+      "name": "k;'",
+      "email": "wgqr@rg",
+      "description": "np'[nj",
+      "frontendTechnologies": [
+        "CSS",
+        "Vue.js"
+      ],
+      "backendTechnologies": [
+        "Node.js"
+      ],
+      "id": 3
+    },
+    {
+      "name": "hakko",
+      "email": "wgqr@rg",
+      "description": "etyhstryh",
+      "frontendTechnologies": [
+        "HTML",
+        "CSS"
+      ],
+      "backendTechnologies": [
+        "Express.js",
+        "Ruby on Rails"
+      ],
+      "id": 4
+    },
+    {
+      "name": "XC hgkfjk",
+      "email": "qfrgeqe@fhrbh",
+      "description": "ghkjhkjfhkj",
+      "frontendTechnologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "backendTechnologies": [
+        "Spring Boot",
+        "Flask"
+      ],
+      "id": 5
+    }
+  ],
   "profile": {
     "name": "typicode"
   }
