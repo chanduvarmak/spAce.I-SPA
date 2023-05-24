@@ -144,6 +144,27 @@
       "password": "suresh",
       "cpassword": "suresh",
       "id": 21
+    },
+    {
+      "uname": "chandu",
+      "email": "chanduvarmak@kmail.com",
+      "password": "chandu",
+      "cpassword": "chandu",
+      "id": 22
+    },
+    {
+      "uname": "chandu",
+      "email": "chanduvarmak@kmail.com",
+      "password": "chandu",
+      "cpassword": "chandu",
+      "id": 23
+    },
+    {
+      "uname": "cwrge",
+      "email": "chandu@gmai.com",
+      "password": "chandu",
+      "cpassword": "chandu",
+      "id": 24
     }
   ],
   "contactus": [
