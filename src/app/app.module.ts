@@ -25,6 +25,7 @@ import { ClipboardModule } from '@angular/cdk/clipboard';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { TestingComponent } from './testing/testing.component';
 import { ContactComponent } from './contact/contact.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { ContactComponent } from './contact/contact.component';
     HttpClientModule,
     ClipboardModule,
     DragDropModule,
+    ToastrModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -5,6 +5,7 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
 
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
@@ -126,39 +127,3 @@ export class SignupComponent {
   }
 }
 
-//new model to try//
-
-//userData() {
-//   this.http.get<any>('http://localhost:3000/signupusers').subscribe(
-//     (res) => {
-//       this.users = res;
-//       console.log(this.users);
-
-//       this.users.forEach((obj: any) => {
-//         if (obj.email == this.regForm.value.email) {
-//           alert('Email already exists');
-//         } else {
-//           this.dataToStore = true;
-//         }
-//       });
-
-//       if (this.dataToStore) {
-//         this.http
-//           .post<any>('http://localhost:3000/signupusers', this.regForm.value)
-//           .subscribe(
-//             (res) => {
-//               alert('Signup successful');
-//               this.regForm.reset();
-//               this.route.navigate(['login']);
-//             },
-//             (err) => {
-//               alert('Something went wrong');
-//             }
-//           );
-//       }
-//     },
-//     (err) => {
-//       alert('Something went wrong');
-//     }
-//   );
-// }
