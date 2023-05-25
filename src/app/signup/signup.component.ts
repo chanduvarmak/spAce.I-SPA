@@ -18,6 +18,7 @@ export class SignupComponent {
 
   regForm: FormGroup;
   users: any = [];
+  emails: any = [];
   dataToStore: boolean = false;
   constructor(private http: HttpClient, private route: Router) {
     this.regForm = new FormGroup(
@@ -63,9 +64,25 @@ export class SignupComponent {
     );
   }
 
+  checkEmail() {
+    console.log('checkEmail called');
+    for (let i = 0; i < this.users.length; i++) {
+      this.emails.push(this.users[i].email);
+    }
+    const email = this.regForm.value.email;
+    let emailExists = this.emails.includes(email);
+    if (emailExists) {
+      alert('email already exists');
+      this.regForm.reset();
+    } else {
+      this.dataToStore = true;
+    }
+  }
+
   //THIS BELOW CODE IS USED TO POST DATA TO OUR JSON SERVER//
   signup() {
     console.log('hi this appears on form submit');
+    this.checkEmail();
     // this.users.forEach((user: any) => {
     //   if (user.email == this.regForm.value.email) {
     //     alert('already exist');
@@ -78,19 +95,19 @@ export class SignupComponent {
     // }
     // );
 
-    for (let i = 1; i < this.users.length; i++) {
-      if (
-        this.regForm.value.email.toLowerCase() ===
-        this.users[i].email.toLowerCase()
-      ) {
-        alert('user already exists');
-        this.route.navigate(['login']);
-        // break;
-      } else {
-        this.dataToStore = true;
-        break;
-      }
-    }
+    // for (let i = 1; i < this.users.length; i++) {
+    //   if (
+    //     this.regForm.value.email.toLowerCase() ===
+    //     this.users[i].email.toLowerCase()
+    //   ) {
+    //     alert('user already exists');
+    //     this.route.navigate(['login']);
+    //     // break;
+    //   } else {
+    //     this.dataToStore = true;
+    //     break;
+    //   }
+    // }
     if (this.dataToStore) {
       this.http
         .post<any>('http://localhost:3000/signup', this.regForm.value)
