@@ -57,7 +57,7 @@ import { ToastrModule } from 'ngx-toastr';
     HttpClientModule,
     ClipboardModule,
     DragDropModule,
-    ToastrModule,
+    ToastrModule.forRoot({ progressBar: true,progressAnimation:"increasing" }),
   ],
   providers: [],
   bootstrap: [AppComponent],

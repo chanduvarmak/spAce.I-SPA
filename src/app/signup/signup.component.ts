@@ -9,6 +9,7 @@ import { ToastrModule } from 'ngx-toastr';
 
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { ToasterService } from '../toaster.service';
 // import { FormBuilder } from '@angular/forms';
 @Component({
   selector: 'app-signup',
@@ -22,7 +23,11 @@ export class SignupComponent {
   users: any = [];
   emails: any = [];
   dataToStore: boolean = false;
-  constructor(private http: HttpClient, private route: Router) {
+  constructor(
+    private http: HttpClient,
+    private route: Router,
+    private toastr: ToasterService
+  ) {
     this.regForm = new FormGroup(
       {
         uname: new FormControl(null, [
@@ -126,4 +131,3 @@ export class SignupComponent {
     }
   }
 }
-
