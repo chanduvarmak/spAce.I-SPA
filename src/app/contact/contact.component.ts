@@ -18,5 +18,7 @@ export class ContactComponent {
 
   cities = ['india', 'singapore', 'pakistan']; // Replace with your city array
 
-  submitForm() {}
+  submitForm() {
+    console.log(this.formData);
+  }
 }
