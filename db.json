@@ -1,46 +1,6 @@
 {
   "signup": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    },
-    {
-      "uname": "chandu",
-      "email": "chandu@gmai.com",
-      "password": "chandu",
-      "cpassword": "chandu",
-      "id": 2
-    },
-    {
-      "uname": "chandu",
-      "email": "chandu@gmai.com",
-      "password": "chandu",
-      "cpassword": "chandu",
-      "id": 3
-    },
-    {
-      "uname": "chandu",
-      "email": "chandu@gmai.com",
-      "password": "chandu",
-      "cpassword": "chandu",
-      "id": 4
-    },
-    {
-      "uname": "chandu",
-      "email": "chandu@gmai.com",
-      "password": "chandu",
-      "cpassword": "chandu",
-      "id": 5
-    },
-    {
-      "uname": "chandu",
-      "email": "chandu@gmai.com",
-      "password": "chandu",
-      "cpassword": "chandu",
-      "id": 6
-    },
-    {
       "uname": "chandu",
       "email": "chandu@gmai.com",
       "password": "chandu",

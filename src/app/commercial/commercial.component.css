@@ -1,4 +1,4 @@
-.container {
+/* .container {
   width: 80%;
   margin: 0 auto;
   padding: 20px;
@@ -32,4 +32,51 @@ th {
 }
 p {
   text-align: center;
+} */
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+button {
+  padding: 8px 16px;
+  margin-top: 8px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.user-details {
+  background-color: #f2f2f2;
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 4px;
+  overflow: hidden;
+  opacity: 0;
+  max-height: 0;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.user-details.show {
+  opacity: 1;
+  max-height: 500px;
 }

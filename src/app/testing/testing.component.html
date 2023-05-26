@@ -1,105 +1,57 @@
-<div class="container">
-  <link rel="stylesheet" href="./testing.component.css" />
-  <form [formGroup]="researchForm" (ngSubmit)="onSubmit()">
-    <label for="researchName">Research Name:</label>
-    <input type="text" id="researchName" formControlName="name" />
-    <div
-      class="error-message"
-      *ngIf="
-        researchForm.get('name')?.invalid && researchForm.get('name')?.touched
-      "
-    >
-      Please enter a valid research name.
-    </div>
+<link rel="stylesheet" href="./testing.component.css" />
+<!-- <h2>User List</h2>
 
-    <label for="researchDescription">Research Description:</label>
-    <textarea id="researchDescription" formControlName="description"></textarea>
-    <div
-      class="error-message"
-      *ngIf="
-        researchForm.get('description')?.invalid &&
-        researchForm.get('description')?.touched
-      "
-    >
-      Please enter a valid research description.
-    </div>
+<table *ngIf="!isCreateMode && !isEditMode">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.id }}</td>
+      <td>{{ user.name }}</td>
+      <td>{{ user.email }}</td>
+      <td>
+        <button (click)="toggleEditMode(user)">Edit</button>
+        <button (click)="deleteUser(user.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-    <label for="frontendTechnologies">Frontend Technologies:</label>
-    <select
-      multiple
-      id="frontendTechnologies"
-      (change)="addFrontendTechnology($event)"
-    >
-      <option
-        *ngFor="let technology of frontendTechnologies"
-        [value]="technology"
-      >
-        {{ technology }}
-      </option>
-    </select>
-    <div
-      class="error-message"
-      *ngIf="
-        researchForm.get('frontendTechnologies')?.invalid &&
-        researchForm.get('frontendTechnologies')?.touched
-      "
-    >
-      Please select at least one frontend technology.
-    </div>
-    <div
-      *ngFor="
-        let technology of frontendTechnologiesFormArray.controls;
-        let i = index
-      "
-    >
-      <span>{{ technology.value }}</span>
-      <button type="button" (click)="removeFrontendTechnology(i)">
-        Remove
-      </button>
-    </div>
+<div *ngIf="isCreateMode || isEditMode">
+  <h2 *ngIf="isCreateMode">Add New User</h2>
+  <h2 *ngIf="isEditMode">Edit User</h2>
 
-    <label for="backendTechnologies">Backend Technologies:</label>
-    <select
-      multiple
-      id="backendTechnologies"
-      (change)="addBackendTechnology($event)"
-    >
-      <option
-        *ngFor="let technology of backendTechnologies"
-        [value]="technology"
-      >
-        {{ technology }}
-      </option>
-    </select>
-    <div
-      class="error-message"
-      *ngIf="
-        researchForm.get('backendTechnologies')?.invalid &&
-        researchForm.get('backendTechnologies')?.touched
-      "
-    >
-      Please select at least one backend technology.
-    </div>
-    <div
-      *ngFor="
-        let technology of backendTechnologiesFormArray.controls;
-        let i = index
-      "
-    >
-      <span>{{ technology.value }}</span>
-      <button type="button" (click)="removeBackendTechnology(i)">Remove</button>
-    </div>
+  <form (submit)="isCreateMode ? createUser() : updateUser()">
+    <label for="name">Name:</label>
+    <input
+      type="text"
+      id="name"
+      [(ngModel)]="isCreateMode ? newUser.name : selectedUser.name"
+      required
+    />
+
     <label for="email">Email:</label>
-    <input type="email" id="email" formControlName="email" />
-    <div
-      class="error-message"
-      *ngIf="
-        researchForm.get('email')?.invalid && researchForm.get('email')?.touched
-      "
+    <input
+      type="email"
+      id="email"
+      [(ngModel)]="isCreateMode ? newUser.email : selectedUser.email"
+      required
+    />
+
+    <button type="submit">
+      {{ isCreateMode ? "Add User" : "Update User" }}
+    </button>
+    <button
+      type="button"
+      (click)="isCreateMode ? toggleCreateMode() : toggleEditMode(null)"
     >
-      Please enter a valid email address.
-    </div>
-    <br />
-    <button type="submit" [disabled]="researchForm.invalid">Submit</button>
+      Cancel
+    </button>
   </form>
-</div>
+</div> -->

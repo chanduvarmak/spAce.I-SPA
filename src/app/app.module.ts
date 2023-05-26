@@ -59,10 +59,7 @@ import { ToastrService } from 'ngx-toastr';
     ClipboardModule,
     DragDropModule,
 
-    ToastrModule.forRoot({
-      progressBar: true,
-      progressAnimation: 'increasing',
-    }),
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],

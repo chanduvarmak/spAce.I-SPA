@@ -4,7 +4,7 @@
   <pre>{{ jsonData | json }}</pre>
 </div> -->
 
-<div class="container">
+<!-- <div class="container">
   <h2>Admin Dashboard</h2>
   <button (click)="showData()">Show Data</button>
   <table *ngIf="jsonData && jsonData.length > 0">
@@ -13,7 +13,7 @@
         <th>Sl.No</th>
         <th>User Name</th>
         <th>Email</th>
-        <!-- <th>Password</th> -->
+        <th>Password</th>
       </tr>
     </thead>
     <tbody>
@@ -25,7 +25,7 @@
           <button (click)="onEdit(item)">Edit</button>
           <button (click)="onDeleteUser(item.id)">Delete</button>
         </td>
-        <!-- <td>{{ item.password }}</td> -->
+        <td>{{ item.password }}</td>
       </tr>
     </tbody>
   </table>
@@ -36,9 +36,62 @@
     Project Details
   </button>
   <div *ngIf="specificData">Specific Value: {{ specificData }}</div>
-  <!-- <div (mouseover)="onMouseOver()" (mouseout)="onMouseOut()" [style.background-color]="backgroundColor">
+  <div (mouseover)="onMouseOver()" (mouseout)="onMouseOut()" [style.background-color]="backgroundColor">
     Hover over me!
-  </div> -->
+  </div>
   <button (click)="onDelete(data.id)">Delete</button>
-  
-</div>
+</div> -->
+
+<link rel="stylesheet" href="./commercial.component.css" />
+<h2>User data</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.id }}</td>
+      <td>{{ user.uname }}</td>
+      <td>{{ user.email }}</td>
+      <td>
+        <!-- <button (click)="editUser(user)">Edit</button> -->
+        <button (click)="deleteUser(user.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- <h2>Add New User</h2>
+
+<form (submit)="createUser()">
+  <label for="name">Name:</label>
+  <input type="text" id="name" [(ngModel)]="newUser.name" required />
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" [(ngModel)]="newUser.email" required />
+
+  <button type="submit">Add User</button>
+</form>
+
+<h2>Edit User</h2>
+
+<form *ngIf="selectedUser" (submit)="updateUser()">
+  <label for="edit-name">Name:</label>
+  <input type="text" id="edit-name" [(ngModel)]="selectedUser.name" required />
+
+  <label for="edit-email">Email:</label>
+  <input
+    type="email"
+    id="edit-email"
+    [(ngModel)]="selectedUser.email"
+    required
+  />
+
+  <button type="submit">Update User</button>
+</form> -->

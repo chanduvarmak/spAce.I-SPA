@@ -1,107 +1,85 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormArray, Validators } from '@angular/forms';
+import { CrudService } from '../crud.service';
 
-interface Research {
-  name: string;
-  email: string;
-  description: string;
-  frontendTechnologies: string[];
-  backendTechnologies: string[];
-}
+
+ 
 
 @Component({
   selector: 'app-testing',
   templateUrl: './testing.component.html',
   styleUrls: ['./testing.component.css'],
 })
-export class TestingComponent implements OnInit {
-  researchForm: FormGroup;
-  frontendTechnologies: string[] = [
-    'HTML',
-    'CSS',
-    'JavaScript',
-    'Angular',
-    'React',
-    'Vue.js',
-    'Bootstrap',
-    'Tailwind CSS',
-    // Add more frontend technologies here
-  ];
+export class TestingComponent {
+//this one is for toggle edit option to create new user and update that user//
+  // users: any[] = [];
+  // newUser: any = {};
+  // selectedUser: any = {};
+  // isEditMode: boolean = false;
+  // isCreateMode: boolean = false;
+  // constructor(private userService: CrudService){}
+  // ngOnInit() {
+  //   this.loadUsers();
+  // }
 
-  backendTechnologies: string[] = [
-    'Node.js',
-    'Express.js',
-    'Django',
-    'Ruby on Rails',
-    'ASP.NET',
-    'Spring Boot',
-    'Laravel',
-    'Flask',
-    // Add more backend technologies here
-  ];
+  // loadUsers() {
+  //   this.userService.getUsers().subscribe(
+  //     (data) => {
+  //       this.users = data;
+  //     },
+  //     (error) => {
+  //       console.error('Error loading users:', error);
+  //     }
+  //   );
+  // }
 
-  constructor(private http: HttpClient) {
-    this.researchForm = new FormGroup({
-      name: new FormControl('', Validators.required),
-      email: new FormControl('', [Validators.required, Validators.email]),
-      description: new FormControl('', Validators.required),
-      frontendTechnologies: new FormArray([], Validators.required),
-      backendTechnologies: new FormArray([], Validators.required),
-    });
-  }
+  // toggleCreateMode() {
+  //   this.isCreateMode = !this.isCreateMode;
+  //   this.newUser = {}; // Reset the form
+  // }
 
-  ngOnInit() {
-    // Add additional form controls or perform other initialization tasks
-  }
+  // createUser() {
+  //   this.userService.createUser(this.newUser).subscribe(
+  //     () => {
+  //       console.log('User created successfully.');
+  //       this.loadUsers();
+  //       this.toggleCreateMode(); // Toggle back to list view
+  //     },
+  //     (error) => {
+  //       console.error('Error creating user:', error);
+  //     }
+  //   );
+  // }
 
-  get frontendTechnologiesFormArray() {
-    return this.researchForm.get('frontendTechnologies') as FormArray;
-  }
+  // toggleEditMode(user: any) {
+  //   this.isEditMode = !this.isEditMode;
+  //   this.selectedUser = this.isEditMode ? { ...user } : {}; // Create a copy of the selected user for editing or reset
+  // }
 
-  get backendTechnologiesFormArray() {
-    return this.researchForm.get('backendTechnologies') as FormArray;
-  }
+  // updateUser() {
+  //   this.userService.updateUser(this.selectedUser).subscribe(
+  //     () => {
+  //       console.log('User updated successfully.');
+  //       this.loadUsers();
+  //       this.toggleEditMode(this.selectedUser); // Toggle back to list view
+  //     },
+  //     (error) => {
+  //       console.error('Error updating user:', error);
+  //     }
+  //   );
+  // }
 
-  addFrontendTechnology(event: any) {
-    const selectedTechnology = event.target.value;
-    this.frontendTechnologiesFormArray.push(
-      new FormControl(selectedTechnology)
-    );
-  }
+  // deleteUser(userId: string) {
+  //   this.userService.deleteUser(userId).subscribe(
+  //     () => {
+  //       console.log('User deleted successfully.');
+  //       this.loadUsers();
+  //     },
+  //     (error) => {
+  //       console.error('Error deleting user:', error);
+  //     }
+  //   );
+  // }
 
-  removeFrontendTechnology(index: number) {
-    this.frontendTechnologiesFormArray.removeAt(index);
-  }
-
-  addBackendTechnology(event: any) {
-    const selectedTechnology = event.target.value;
-    this.backendTechnologiesFormArray.push(new FormControl(selectedTechnology));
-  }
-
-  removeBackendTechnology(index: number) {
-    this.backendTechnologiesFormArray.removeAt(index);
-  }
-
-  onSubmit() {
-    // Access form data here and perform further actions
-    if (this.researchForm.valid) {
-      const researchData: Research = this.researchForm.value;
-
-      this.http.post<Research>('', researchData).subscribe(
-        (response) => {
-          console.log('Data saved successfully!', response);
-          // Perform any other desired actions upon success
-        },
-        (error) => {
-          console.error('Error saving data:', error);
-          // Handle error accordingly
-        }
-      );
-      console.log(this.researchForm.value);
-      this.researchForm.reset();
-      this.researchForm.markAsPristine();
-      this.researchForm.markAsUntouched();
-    }
-  }
 }
