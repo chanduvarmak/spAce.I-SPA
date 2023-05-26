@@ -26,6 +26,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { TestingComponent } from './testing/testing.component';
 import { ContactComponent } from './contact/contact.component';
 import { ToastrModule } from 'ngx-toastr';
+import { ToastrService } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,11 @@ import { ToastrModule } from 'ngx-toastr';
     HttpClientModule,
     ClipboardModule,
     DragDropModule,
-    ToastrModule.forRoot({ progressBar: true,progressAnimation:"increasing" }),
+
+    ToastrModule.forRoot({
+      progressBar: true,
+      progressAnimation: 'increasing',
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],

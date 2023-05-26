@@ -25,4 +25,10 @@ export class SpaceiService {
   getData(): Observable<any> {
     return this.http.get<any>(this.apiUrl);
   }
+  deleteData(id: number): Observable<any> {
+    const url = `http://localhost:3000/signup`; // Replace with your API endpoint
+  
+    return this.http.delete(url);
+  }
+  
 }

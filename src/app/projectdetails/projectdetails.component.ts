@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { SpaceiService } from '../spacei.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-projectdetails',
@@ -22,20 +23,5 @@ export class ProjectdetailsComponent {
       console.log(this.data);
     });
   }
-
-  //   this.projectdetails.getProjectData().subscribe(
-  //     (data) => {
-  //       // Handle the retrieved data here
-  //       console.log(data);
-  //     },
-  //     (error) => {
-  //       // Handle the error accordingly
-  //       console.error(error);
-  //     }
-  //   );
-  // }
+ 
 }
-
-// function handleClick() {
-//   throw new Error('Function not implemented.');
-// }

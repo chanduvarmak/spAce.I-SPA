@@ -21,6 +21,10 @@
         <td>{{ i + 0 }}</td>
         <td>{{ item.uname }}</td>
         <td>{{ item.email }}</td>
+        <td>
+          <button (click)="onEdit(item)">Edit</button>
+          <button (click)="onDeleteUser(item.id)">Delete</button>
+        </td>
         <!-- <td>{{ item.password }}</td> -->
       </tr>
     </tbody>
@@ -35,4 +39,6 @@
   <!-- <div (mouseover)="onMouseOver()" (mouseout)="onMouseOut()" [style.background-color]="backgroundColor">
     Hover over me!
   </div> -->
+  <button (click)="onDelete(data.id)">Delete</button>
+  
 </div>
