@@ -1,57 +1,64 @@
 <link rel="stylesheet" href="./testing.component.css" />
-<!-- <h2>User List</h2>
+<h2>Show Data</h2>
 
-<table *ngIf="!isCreateMode && !isEditMode">
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let user of users">
-      <td>{{ user.id }}</td>
-      <td>{{ user.name }}</td>
-      <td>{{ user.email }}</td>
-      <td>
-        <button (click)="toggleEditMode(user)">Edit</button>
-        <button (click)="deleteUser(user.id)">Delete</button>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<button (click)="toggleTable()">Show Data</button>
 
-<div *ngIf="isCreateMode || isEditMode">
-  <h2 *ngIf="isCreateMode">Add New User</h2>
-  <h2 *ngIf="isEditMode">Edit User</h2>
+<div *ngIf="showDataTable">
+  <h2>User List</h2>
 
-  <form (submit)="isCreateMode ? createUser() : updateUser()">
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.id }}</td>
+        <td>{{ user.uname }}</td>
+        <td>{{ user.email }}</td>
+        <td>
+          <button (click)="createUser()">Edit</button>
+          <button (click)="deleteUser(user.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Add New User</h2>
+
+  <form (submit)="createUser()">
     <label for="name">Name:</label>
-    <input
-      type="text"
-      id="name"
-      [(ngModel)]="isCreateMode ? newUser.name : selectedUser.name"
-      required
-    />
+    <input type="text" id="name" [(ngModel)]="newUser.name" required />
 
     <label for="email">Email:</label>
+    <input type="email" id="email" [(ngModel)]="newUser.email" required />
+
+    <button type="submit">Add User</button>
+  </form>
+
+  <h2>Edit User</h2>
+
+  <form *ngIf="selectedUser" (submit)="updateUser()">
+    <label for="edit-name">Name:</label>
     <input
-      type="email"
-      id="email"
-      [(ngModel)]="isCreateMode ? newUser.email : selectedUser.email"
+      type="text"
+      id="edit-name"
+      [(ngModel)]="selectedUser.name"
       required
     />
 
-    <button type="submit">
-      {{ isCreateMode ? "Add User" : "Update User" }}
-    </button>
-    <button
-      type="button"
-      (click)="isCreateMode ? toggleCreateMode() : toggleEditMode(null)"
-    >
-      Cancel
-    </button>
+    <label for="edit-email">Email:</label>
+    <input
+      type="email"
+      id="edit-email"
+      [(ngModel)]="selectedUser.email"
+      required
+    />
+
+    <button type="submit">Update User</button>
   </form>
-</div> -->
+</div>

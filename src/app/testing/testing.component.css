@@ -1,4 +1,4 @@
-/* table {
+table { 
   width: 100%;
   border-collapse: collapse;
 }
@@ -51,4 +51,4 @@ button:hover {
 .error {
   color: red;
   font-style: italic;
-} */
+} 

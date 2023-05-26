@@ -14,6 +14,7 @@ export class CommercialComponent {
   users: any[] = [];
   newUser: any = {};
   selectedUser: any = {};
+
   constructor(
     private userService: CrudService,
     private toastr: ToastrService
