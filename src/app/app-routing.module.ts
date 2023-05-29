@@ -13,6 +13,7 @@ import { ProjectdetailsComponent } from './projectdetails/projectdetails.compone
 import { ThanksComponent } from './thanks/thanks.component';
 import { TestingComponent } from './testing/testing.component';
 import { ContactComponent } from './contact/contact.component';
+import { CollabcommComponent } from './collabcomm/collabcomm.component';
 const routes: Routes = [
   // { path: 'header', component: HeaderComponent },
   // { path: 'home', component: HomeComponent },
@@ -35,6 +36,7 @@ const routes: Routes = [
   { path: 'thanks', component: ThanksComponent },
   { path: 'test', component: TestingComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'collabcom', component: CollabcommComponent },
 ];
 
 @NgModule({

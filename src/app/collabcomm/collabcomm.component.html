@@ -1,0 +1,108 @@
+<div class="container">
+  <link rel="stylesheet" href="./collabcomm.component.css" />
+  <h1>Collaboration Contact Form</h1>
+  <form [formGroup]="collabForm" (ngSubmit)="onSubmit()">
+    <label for="CollaborationName">Collaboration Name:</label>
+    <input type="text" id="CollaborationName" formControlName="name" />
+    <div
+      class="error-message"
+      *ngIf="
+      collabForm.get('name')?.invalid && collabForm.get('name')?.touched
+      "
+    >
+      Please enter a valid Collaboration name.
+    </div>
+
+    <label for="CollaborationDescription">Collaboration Description:</label>
+    <textarea id="CollaborationDescription" formControlName="description"></textarea>
+    <div
+      class="error-message"
+      *ngIf="
+      collabForm.get('description')?.invalid &&
+      collabForm.get('description')?.touched
+      "
+    >
+      Please enter a valid Collaboration description.
+    </div>
+
+    <label for="frontendTechnologies">Frontend Technologies:</label>
+    <select
+      multiple
+      id="frontendTechnologies"
+      (change)="addFrontendTechnology($event)"
+    >
+      <option
+        *ngFor="let technology of frontendTechnologies"
+        [value]="technology"
+      >
+        {{ technology }}
+      </option>
+    </select>
+    <div
+      class="error-message"
+      *ngIf="
+      collabForm.get('frontendTechnologies')?.invalid &&
+      collabForm.get('frontendTechnologies')?.touched
+      "
+    >
+      Please select at least one frontend technology.
+    </div>
+    <div
+      *ngFor="
+        let technology of frontendTechnologiesFormArray.controls;
+        let i = index
+      "
+    >
+      <span>{{ technology.value }}</span>
+      <button type="button" (click)="removeFrontendTechnology(i)">
+        Remove
+      </button>
+    </div>
+
+    <label for="backendTechnologies">Backend Technologies:</label>
+    <select
+      multiple
+      id="backendTechnologies"
+      (change)="addBackendTechnology($event)"
+    >
+      <option
+        *ngFor="let technology of backendTechnologies"
+        [value]="technology"
+      >
+        {{ technology }}
+      </option>
+    </select>
+    <div
+      class="error-message"
+      *ngIf="
+      collabForm.get('backendTechnologies')?.invalid &&
+      collabForm.get('backendTechnologies')?.touched
+      "
+    >
+      Please select at least one backend technology.
+    </div>
+    <div
+      *ngFor="
+        let technology of backendTechnologiesFormArray.controls;
+        let i = index
+      "
+    >
+      <span>{{ technology.value }}</span>
+      <button type="button" (click)="removeBackendTechnology(i)">Remove</button>
+    </div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" formControlName="email" />
+    <div
+      class="error-message"
+      *ngIf="
+      collabForm.get('email')?.invalid && collabForm.get('email')?.touched
+      "
+    >
+      Please enter a valid email address.
+    </div>
+    <br />
+    <button type="submit" [disabled]="collabForm.invalid">Submit</button>
+  </form>
+</div>
+
+<!-- routerLink="/thanks" -->

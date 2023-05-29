@@ -15,13 +15,24 @@ export class CommercialComponent {
   newUser: any = {};
   selectedUser: any = {};
   showUserTable: boolean = true;
+  jsonData: any[] = [];
+
+  showData: boolean = false;
 
   constructor(
     private userService: CrudService,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private http: HttpClient
   ) {}
   ngOnInit() {
     this.loadUsers();
+    this.http.get<any[]>('http://localhost:3000/contactus').subscribe((data) => {
+      this.jsonData = data;
+      console.log(this.jsonData);
+    });
+  }
+  toggleData() {
+    this.showData = !this.showData;
   }
   toggleUserTable() {
     this.showUserTable = !this.showUserTable;

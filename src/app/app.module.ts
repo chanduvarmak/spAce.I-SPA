@@ -27,6 +27,7 @@ import { TestingComponent } from './testing/testing.component';
 import { ContactComponent } from './contact/contact.component';
 import { ToastrModule } from 'ngx-toastr';
 import { ToastrService } from 'ngx-toastr';
+import { CollabcommComponent } from './collabcomm/collabcomm.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { ToastrService } from 'ngx-toastr';
     ThanksComponent,
     TestingComponent,
     ContactComponent,
+    CollabcommComponent,
   ],
   imports: [
     BrowserModule,

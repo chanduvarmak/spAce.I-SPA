@@ -40,15 +40,21 @@ p {
   height: 200px;
   overflow: auto;
   margin-left: 15px;
-  
+}
+
+.data {
+  margin-left: 30px;
+}
+.project {
+  margin-left: 30px;
 }
 table {
   width: 100%;
   border-collapse: collapse;
 }
-.thead {
+/* .thead {
   position: fixed;
-}
+} */
 h2 {
   text-align: center;
 }
