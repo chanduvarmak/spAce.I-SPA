@@ -33,14 +33,21 @@ th {
 p {
   text-align: center;
 } */
-.container{
-  width: 80%;
+.container {
+  /* width: 80%;
   margin: 0 auto;
-  padding: 20px;
+  padding: 20px; */
+  height: 200px;
+  overflow: auto;
+  margin-left: 15px;
+  
 }
 table {
   width: 100%;
   border-collapse: collapse;
+}
+.thead {
+  position: fixed;
 }
 h2 {
   text-align: center;

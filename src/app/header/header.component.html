@@ -1,88 +1,89 @@
 <div class="menu">
-
   <div class="logo">
     <a href="">spAce.I</a>
   </div>
   <link rel="stylesheet" href="./header.component.css" />
   <div class="sidemenus">
-   <div class="button">
-    <button
-      routerLink="/"
-      routerLinkActive="activebutton"
-      ariaCurrentWhenActive="page"
-    >
-      <mat-icon>home</mat-icon>
-    </button>
-   </div>
-   <div class="research">
-    <button mat-raised-button [mat-menu-trigger-for]="domains">The Work</button>
-    <mat-menu mat-raised-button #domains="matMenu">
-      <button mat-menu-item [mat-menu-trigger-for]="ref">Research</button>
-      <button mat-menu-item [mat-menu-trigger-for]="ref1">commercial</button>
-    </mat-menu>
-    
-    <!-- here,matMenu is used to bind the references -->
-    <mat-menu #ref="matMenu">
-      <button mat-menu-item routerLink="./the-work">Projects</button>
-      <button mat-menu-item routerLink="./the-work">Pluggins</button>
-      <button mat-menu-item routerLink="./the-work">Testing</button>
-    </mat-menu>
-    <mat-menu #ref1="matMenu">
-      <button mat-menu-item routerLink="./thecollab">AI Projects</button>
-      <button mat-menu-item routerLink="./thecollab">E-Commerce</button>
-      <button mat-menu-item routerLink="./thecollab">Banking Sites</button>
-    </mat-menu>
-   </div>
-  
-   <div class="collabration">
-    <button mat-raised-button [mat-menu-trigger-for]="collabrations">
-      The Collaboration
-    </button>
-    <mat-menu mat-raised-button #collabrations="matMenu">
-      <button mat-menu-item [mat-menu-trigger-for]="tc1">Research</button>
-      <button mat-menu-item [mat-menu-trigger-for]="tc2">Commercial</button>
-    </mat-menu>
-    <mat-menu #tc1="matMenu">
-      <button mat-menu-item [mat-menu-trigger-for]="frontend">Frontend</button>
-      <button mat-menu-item [mat-menu-trigger-for]="backend">Backend</button>
-      <button mat-menu-item routerLink="./contactus">contact</button>
-    </mat-menu>
-    <mat-menu #frontend="matMenu">
-      <button mat-menu-item>React</button>
-      <button mat-menu-item>Angular</button>
-      <button mat-menu-item>web responsive</button>
-      <button mat-menu-item>mern</button>
-      <button mat-menu-item>mean</button>
-      <button mat-menu-item>figma</button>
-    </mat-menu>
-    <mat-menu #backend="matMenu">
-      <button mat-menu-item>JAVA</button>
-      <button mat-menu-item>Pyton</button>
-      <button mat-menu-item>My SQL</button>
-      <button mat-menu-item>PHP</button>
-      <button mat-menu-item>.net</button>
-    </mat-menu>
-    <mat-menu #tc2="matMenu">
-      <button mat-menu-item routerLink="./contactus">contact</button>
-      <button mat-menu-item>work</button>
-      <button mat-menu-item>technologies</button>
-    </mat-menu>
-    
-   </div>
-  
-   <div class="button1">
-    <button
-    routerLink="/login"
-    routerLinkActive="activebutton"
-    ariaCurrentWhenActive="page"
-    >
-    Login
-   </button>
+    <div class="button">
+      <button
+        routerLink="/"
+        routerLinkActive="activebutton"
+        ariaCurrentWhenActive="page"
+      >
+        <mat-icon>home</mat-icon>
+      </button>
+    </div>
+    <div class="research">
+      <button mat-raised-button [mat-menu-trigger-for]="domains">
+        The Work
+      </button>
+      <mat-menu mat-raised-button #domains="matMenu">
+        <button mat-menu-item [mat-menu-trigger-for]="ref">Research</button>
+        <button mat-menu-item [mat-menu-trigger-for]="ref1">commercial</button>
+      </mat-menu>
+
+      <!-- here,matMenu is used to bind the references -->
+      <mat-menu #ref="matMenu">
+        <button mat-menu-item routerLink="./the-work">Projects</button>
+        <button mat-menu-item routerLink="./the-work">Pluggins</button>
+        <button mat-menu-item routerLink="./the-work">Testing</button>
+      </mat-menu>
+      <mat-menu #ref1="matMenu">
+        <button mat-menu-item routerLink="./thecollab">AI Projects</button>
+        <button mat-menu-item routerLink="./thecollab">E-Commerce</button>
+        <button mat-menu-item routerLink="./thecollab">Banking Sites</button>
+      </mat-menu>
+    </div>
+
+    <div class="collabration">
+      <button mat-raised-button [mat-menu-trigger-for]="collabrations">
+        The Collaboration
+      </button>
+      <mat-menu mat-raised-button #collabrations="matMenu">
+        <button mat-menu-item [mat-menu-trigger-for]="tc1">Research</button>
+        <button mat-menu-item [mat-menu-trigger-for]="tc2">Commercial</button>
+      </mat-menu>
+      <mat-menu #tc1="matMenu">
+        <!-- <button mat-menu-item [mat-menu-trigger-for]="frontend">
+          Frontend
+        </button> -->
+        <!-- <button mat-menu-item [mat-menu-trigger-for]="backend">Backend</button> -->
+        <button mat-menu-item routerLink="./contactus">contact</button>
+      </mat-menu>
+      <mat-menu #frontend="matMenu">
+        <button mat-menu-item routerLink="/contactus">React</button>
+        <button mat-menu-item routerLink="/contactus">Angular</button>
+        <button mat-menu-item routerLink="/contactus">web responsive</button>
+        <button mat-menu-item routerLink="/contactus">mern</button>
+        <button mat-menu-item routerLink="/contactus">mean</button>
+        <button mat-menu-item routerLink="/contactus">figma</button>
+      </mat-menu>
+      <mat-menu #backend="matMenu">
+        <button mat-menu-item routerLink="/contactus">JAVA</button>
+        <button mat-menu-item routerLink="/contactus">Pyton</button>
+        <button mat-menu-item routerLink="/contactus">My SQL</button>
+        <button mat-menu-item routerLink="/contactus">PHP</button>
+        <button mat-menu-item routerLink="/contactus">.net</button>
+      </mat-menu>
+      <mat-menu #tc2="matMenu">
+        <button mat-menu-item routerLink="./contactus">contact</button>
+        <!-- <button mat-menu-item>work</button>
+        <button mat-menu-item>technologies</button> -->
+      </mat-menu>
+    </div>
+
+    <div class="button1">
+      <button
+        routerLink="/login"
+        routerLinkActive="activebutton"
+        ariaCurrentWhenActive="page"
+      >
+        Login
+      </button>
+    </div>
   </div>
+
+  <!-- here #domains acts as a reference for the work button,we can valid this with using mat-menu-trigger-for selector we bind them together  -->
+  <!-- here,the vale given for routerlink is our component module id,by the help of this we can route them -->
+  <!-- we used angular material selectors for dropdown button,when we use nested selectors inside single tag it will automatically generates arrow dropdown -->
 </div>
-
-
-
-<!-- here #domains acts as a reference for the work button,we can valid this with using mat-menu-trigger-for selector we bind them together  -->
-<!-- here,the vale given for routerlink is our component module id,by the help of this we can route them -->
-<!-- we used angular material selectors for dropdown button,when we use nested selectors inside single tag it will automatically generates arrow dropdown -->

@@ -2,171 +2,17 @@
   "signup": [
     {
       "uname": "chandu",
-      "email": "chandu@gmai.com",
+      "email": "chandu@gmail.com",
       "password": "chandu",
       "cpassword": "chandu",
-      "id": 8
+      "id": 1
     },
     {
       "uname": "chandu",
-      "email": "chandu@gmai.com",
+      "email": "chandu@gmail.com",
       "password": "chandu",
       "cpassword": "chandu",
-      "id": 9
-    },
-    {
-      "uname": "chandu",
-      "email": "chandu@gmai.com",
-      "password": "chandu",
-      "cpassword": "chandu",
-      "id": 10
-    },
-    {
-      "uname": "chandu",
-      "email": "chandu@gmai.com",
-      "password": "chandu",
-      "cpassword": "chandu",
-      "id": 11
-    },
-    {
-      "uname": "chandu",
-      "email": "chandu@gmai.com",
-      "password": "chandu",
-      "cpassword": "chandu",
-      "id": 12
-    },
-    {
-      "uname": "varma",
-      "email": "VARMA@GMAIL.COM",
-      "password": "varma",
-      "cpassword": "varma",
-      "id": 14
-    },
-    {
-      "uname": "varma",
-      "email": "VARMA@GMAIL.COM",
-      "password": "varma",
-      "cpassword": "varma",
-      "id": 15
-    },
-    {
-      "uname": "varma",
-      "email": "varma@gmail.com",
-      "password": "varma",
-      "cpassword": "varma",
-      "id": 16
-    },
-    {
-      "uname": "varma",
-      "email": "varma@gmail.com",
-      "password": "varma",
-      "cpassword": "varma",
-      "id": 17
-    },
-    {
-      "uname": "chanduu",
-      "email": "VARMA@GMAIL.COM",
-      "password": "chanduu",
-      "cpassword": "chanduu",
-      "id": 18
-    },
-    {
-      "uname": "suresh",
-      "email": "SURESH@GMAIL.COM",
-      "password": "suresh",
-      "cpassword": "suresh",
-      "id": 19
-    },
-    {
-      "uname": "suresh",
-      "email": "SURESH@GMAIL.COM",
-      "password": "suresh",
-      "cpassword": "suresh",
-      "id": 20
-    },
-    {
-      "uname": "suresh",
-      "email": "suresh@gmail.com",
-      "password": "suresh",
-      "cpassword": "suresh",
-      "id": 21
-    },
-    {
-      "uname": "chandu",
-      "email": "chanduvarmak@kmail.com",
-      "password": "chandu",
-      "cpassword": "chandu",
-      "id": 22
-    },
-    {
-      "uname": "chandu",
-      "email": "chanduvarmak@kmail.com",
-      "password": "chandu",
-      "cpassword": "chandu",
-      "id": 23
-    },
-    {
-      "uname": "cwrge",
-      "email": "chandu@gmai.com",
-      "password": "chandu",
-      "cpassword": "chandu",
-      "id": 24
-    },
-    {
-      "uname": "wyeu",
-      "email": "chandu@gmai.com",
-      "password": "chanduu",
-      "cpassword": "chanduu",
-      "id": 25
-    },
-    {
-      "uname": "suresh",
-      "email": "suresh@gmail.com",
-      "password": "suresh",
-      "cpassword": "suresh",
-      "id": 26
-    },
-    {
-      "uname": "suresh",
-      "email": "suresh@gmail.com",
-      "password": "suresh",
-      "cpassword": "suresh",
-      "id": 27
-    },
-    {
-      "uname": "chandu",
-      "email": "chandu@gmai.com",
-      "password": "chandu",
-      "cpassword": "chandu",
-      "id": 28
-    },
-    {
-      "uname": "asutosh",
-      "email": "asutosh@gmail.com",
-      "password": "asutosh",
-      "cpassword": "asutosh",
-      "id": 29
-    },
-    {
-      "uname": "asutosh",
-      "email": "asutosh@gmail.com",
-      "password": "asutosh",
-      "cpassword": "asutosh",
-      "id": 30
-    },
-    {
-      "uname": "bandhu",
-      "email": "chanduk@gmail.com",
-      "password": "bandhu",
-      "cpassword": "bandhu",
-      "id": 31
-    },
-    {
-      "uname": "bandhu",
-      "email": "chanduk@gmail.com",
-      "password": "bandhu",
-      "cpassword": "bandhu",
-      "id": 32
+      "id": 2
     }
   ],
   "contactus": [

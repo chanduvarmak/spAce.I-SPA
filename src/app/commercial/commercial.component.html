@@ -49,14 +49,16 @@
 </button>
 <div class="container" *ngIf="showUserTable">
   <table>
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
+    <div class="thead">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+    </div>
     <tbody>
       <tr *ngFor="let user of users">
         <td>{{ user.id }}</td>
