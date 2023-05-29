@@ -34,6 +34,11 @@ export class CommercialComponent {
   toggleData() {
     this.showData = !this.showData;
   }
+   deleteData(index: number) {
+    if (confirm('Are you sure you want to delete this item?')) {
+      this.jsonData.splice(index, 1);
+    }
+  }
   toggleUserTable() {
     this.showUserTable = !this.showUserTable;
     // this.toastr.success('user deleted successfully', 'chandu', {
