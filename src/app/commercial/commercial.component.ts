@@ -14,6 +14,7 @@ export class CommercialComponent {
   users: any[] = [];
   newUser: any = {};
   selectedUser: any = {};
+  showUserTable: boolean = true;
 
   constructor(
     private userService: CrudService,
@@ -21,6 +22,13 @@ export class CommercialComponent {
   ) {}
   ngOnInit() {
     this.loadUsers();
+  }
+  toggleUserTable() {
+    this.showUserTable = !this.showUserTable;
+    // this.toastr.success('user deleted successfully', 'chandu', {
+    //   progressBar: true,
+    //   progressAnimation: 'increasing',
+    // });
   }
   loadUsers() {
     this.userService.getUsers().subscribe(

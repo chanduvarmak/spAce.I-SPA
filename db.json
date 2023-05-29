@@ -5,13 +5,6 @@
       "email": "chandu@gmai.com",
       "password": "chandu",
       "cpassword": "chandu",
-      "id": 7
-    },
-    {
-      "uname": "chandu",
-      "email": "chandu@gmai.com",
-      "password": "chandu",
-      "cpassword": "chandu",
       "id": 8
     },
     {
@@ -174,21 +167,6 @@
       "password": "bandhu",
       "cpassword": "bandhu",
       "id": 32
-    },
-    {
-      "id": 33
-    },
-    {
-      "id": 34
-    },
-    {
-      "id": 35
-    },
-    {
-      "id": 36
-    },
-    {
-      "id": 37
     }
   ],
   "contactus": [
