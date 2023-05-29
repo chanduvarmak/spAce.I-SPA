@@ -20,15 +20,13 @@ export class SpaceiService {
 
   private apiUrl = 'http://localhost:3000/contactus';
 
-  constructor(private http: HttpClient) { }
-
-  getData(): Observable<any> {
-    return this.http.get<any>(this.apiUrl);
+  constructor(private http: HttpClient) {}
+  getData(): Observable<any[]> {
+    return this.http.get<any[]>(this.apiUrl);
   }
   deleteData(id: number): Observable<any> {
     const url = `http://localhost:3000/signup`; // Replace with your API endpoint
-  
+
     return this.http.delete(url);
   }
-  
 }

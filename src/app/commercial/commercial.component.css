@@ -98,3 +98,10 @@ button:hover {
   opacity: 1;
   max-height: 500px;
 }
+
+
+.projectcontainer{
+  height: 200px;
+  overflow: auto;
+  margin-left: 15px;
+}

@@ -16,19 +16,19 @@ export class CommercialComponent {
   selectedUser: any = {};
   showUserTable: boolean = true;
   jsonData: any[] = [];
-
   showData: boolean = false;
 
   constructor(
+    private dataservice: SpaceiService,
     private userService: CrudService,
     private toastr: ToastrService,
     private http: HttpClient
   ) {}
+  
   ngOnInit() {
     this.loadUsers();
-    this.http.get<any[]>('http://localhost:3000/contactus').subscribe((data) => {
+    this.dataservice.getData().subscribe(data => {
       this.jsonData = data;
-      console.log(this.jsonData);
     });
   }
   toggleData() {
