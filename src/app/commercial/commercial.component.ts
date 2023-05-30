@@ -15,7 +15,7 @@ export class CommercialComponent {
   newUser: any = {};
   selectedUser: any = {};
   showUserTable: boolean = true;
-  jsonData: any[] = [];
+  jsonData: any[] = []; 
   showData: boolean = false;
 
   constructor(

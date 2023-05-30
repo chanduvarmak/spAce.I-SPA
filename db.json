@@ -105,6 +105,12 @@
     }
   ],
   "profile": {
-    "name": "typicode"
+    "companyName": "samsung",
+    "companyEmail": "samsung@gmail.com",
+    "city": "india",
+    "interests": {
+      "research": null,
+      "commercial": null
+    }
   }
 }

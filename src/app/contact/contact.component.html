@@ -1,9 +1,96 @@
 <link rel="stylesheet" href="./contact.component.css" />
-<div class="contact-form">
-  <h2>Contact Us</h2>
-  <form (ngSubmit)="submitForm()">
+<div class="form-container">
+  <h2><strong>Contact Form</strong></h2>
+  <form [formGroup]="formData" (ngSubmit)="onSubmit()" class="form-container">
     <div class="form-group">
-      <label for="companyName">Company Name</label>
+      <label for="companyName">Company Name:</label>
+      <input
+        type="text"
+        id="companyName"
+        formControlName="companyName"
+        class="form-control"
+      />
+      <div
+        *ngIf="
+          formData.get('companyName')?.errors &&
+          formData.get('companyName')?.touched
+        "
+        class="error-message"
+      >
+        <div *ngIf="formData.get('companyName')?.hasError('required')">
+          Company Name is required.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="companyEmail">Company Email:</label>
+      <input
+        type="email"
+        id="companyEmail"
+        formControlName="companyEmail"
+        class="form-control"
+      />
+      <div
+        *ngIf="
+          formData.get('companyEmail')?.errors &&
+          formData.get('companyEmail')?.touched
+        "
+        class="error-message"
+      >
+        <div *ngIf="formData.get('companyEmail')?.hasError('required')">
+          Company Email is required.
+        </div>
+        <div *ngIf="formData.get('companyEmail')?.hasError('email')">
+          Please enter a valid email address.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="city">City:</label>
+      <select id="city" formControlName="city" class="form-control">
+        <option value="">Select a city</option>
+        <option *ngFor="let city of cities" [value]="city">{{ city }}</option>
+      </select>
+      <div
+        *ngIf="formData.get('city')?.errors && formData.get('city')?.touched"
+        class="error-message"
+      >
+        <div *ngIf="formData.get('city')?.hasError('required')">
+          City is required.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="research">Research:</label>
+      <input
+        type="checkbox"
+        id="research"
+        formControlName="interests.research"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="commercial">Commercial:</label>
+      <input
+        type="checkbox"
+        id="commercial"
+        formControlName="interests.commercial"
+      />
+    </div>
+
+    <button type="submit" [disabled]="formData.invalid" class="submit-button">
+      Submit
+    </button>
+  </form>
+</div>
+<!-- <div class="contact-form">
+<h2>Contact Us</h2>
+<form (ngSubmit)="submitForm()">
+  <div class="form-group">
+    <label for="companyName">Company Name</label>
       <input
         type="text"
         id="companyName"
@@ -55,4 +142,4 @@
     </div>
     <button type="submit" routerLink="/thanks">Submit</button>
   </form>
-</div>
+</div> -->
