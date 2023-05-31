@@ -18,7 +18,6 @@ import { MatSelectModule } from '@angular/material/select';
 import { HttpClientModule } from '@angular/common/http';
 import { ThecollabComponent } from './thecollab/thecollab.component';
 import { CommercialComponent } from './commercial/commercial.component';
-import { CrudComponent } from './crud/crud.component';
 import { ProjectdetailsComponent } from './projectdetails/projectdetails.component';
 import { ThanksComponent } from './thanks/thanks.component';
 import { ClipboardModule } from '@angular/cdk/clipboard';
@@ -41,7 +40,6 @@ import { CollabcommComponent } from './collabcomm/collabcomm.component';
     TheWorkComponent,
     ThecollabComponent,
     CommercialComponent,
-    CrudComponent,
     ProjectdetailsComponent,
     ThanksComponent,
     TestingComponent,
