@@ -100,7 +100,7 @@ export class CommercialComponent {
       }
     );
   }
-
+}
   // jsonData: any;
   // specificData: any;
   // data: any = {};
@@ -149,4 +149,4 @@ export class CommercialComponent {
   // onDeleteUser(userId: number) {
   //   console.log('Delete user:', userId);
   // }
-}
+

@@ -105,12 +105,12 @@
     }
   ],
   "profile": {
-    "companyName": "samsung",
-    "companyEmail": "samsung@gmail.com",
-    "city": "india",
+    "companyName": "chandu",
+    "companyEmail": "chandfu@gldbkqew",
+    "city": "america",
     "interests": {
-      "research": null,
-      "commercial": null
+      "research": true,
+      "commercial": true
     }
   }
 }

@@ -29,6 +29,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { ToastrService } from 'ngx-toastr';
 import { CollabcommComponent } from './collabcomm/collabcomm.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,6 +47,7 @@ import { CollabcommComponent } from './collabcomm/collabcomm.component';
     TestingComponent,
     ContactComponent,
     CollabcommComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -60,6 +62,7 @@ import { CollabcommComponent } from './collabcomm/collabcomm.component';
     HttpClientModule,
     ClipboardModule,
     DragDropModule,
+    
 
     ToastrModule.forRoot(),
   ],

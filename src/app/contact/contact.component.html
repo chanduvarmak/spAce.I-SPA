@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="./contact.component.css" />
 <div class="form-container">
   <h2><strong>Contact Form</strong></h2>
-  <form [formGroup]="formData" (ngSubmit)="onSubmit()" class="form-container">
+  <form [formGroup]="formData" (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label for="companyName">Company Name:</label>
       <input
@@ -68,7 +68,7 @@
       <input
         type="checkbox"
         id="research"
-        formControlName="interests.research"
+        formControlName="intrests.research"
       />
     </div>
 
@@ -77,7 +77,7 @@
       <input
         type="checkbox"
         id="commercial"
-        formControlName="interests.commercial"
+        formControlName="intrests.commercial"
       />
     </div>
 
