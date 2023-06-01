@@ -16,4 +16,9 @@ export class UserdashboardComponent {
     { name: 'Client 3', country: 'Country 3', lat: 50, lng: 60 }
     // Add more clients with their respective latitudes and longitudes
   ];
+  selectedSection: string = 'Tasks';
+
+  toggleSection(section: string): void {
+    this.selectedSection = section;
+  }
 }

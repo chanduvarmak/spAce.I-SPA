@@ -40,7 +40,7 @@ export class LoginComponent {
           this.regForm.reset();
           this.regForm.markAsPristine();
           this.regForm.markAsUntouched();
-          this.route.navigate(['admindashboard']);
+          this.route.navigate(['userdashboard']);
         } else {
           alert('user not found');
           this.route.navigate(['signup']);

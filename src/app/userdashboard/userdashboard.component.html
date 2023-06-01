@@ -1,6 +1,10 @@
+<link rel="stylesheet" href="./userdashboard.component.css" />
 <div class="container mt-4">
-    <h2>Map</h2>
-    <!-- <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand">User Dashboard</a>
+  </nav>
+  <h2><strong>Project-1</strong></h2>
+  <!-- <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
       <agm-marker *ngFor="let client of clients" [latitude]="client.lat" [longitude]="client.lng">
         <agm-info-window>
           <strong>{{ client.name }}</strong><br>
@@ -8,5 +12,22 @@
         </agm-info-window>
       </agm-marker>
     </agm-map> -->
+  <div class="dashboard">
+    <div class="project-details">
+      <h1>Project Dashboard</h1>
+      <p>Project Name: My Project</p>
+      <p>Start Date: 2023-01-01</p>
+      <p>End Date: 2023-12-31</p>
+    </div>
+
+    <div class="toggle-buttons">
+      <button class="active" (click)="toggleSection('Tasks')">Tasks</button>
+      <button (click)="toggleSection('Issues')">Issues</button>
+      <button (click)="toggleSection('Milestones')">Milestones</button>
+    </div>
+
+    <div class="content">
+      <p>{{ selectedSection }}</p>
+    </div>
   </div>
-  
+</div>

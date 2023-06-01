@@ -12,6 +12,7 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { TheWorkCommComponent } from './the-work-comm/the-work-comm.component';
 import { TheWorkResComponent } from './the-work-res/the-work-res.component';
 import { CollabresComponent } from './collabres/collabres.component';
+import { UserdashboardComponent } from './userdashboard/userdashboard.component';
 const routes: Routes = [
   // { path: 'header', component: HeaderComponent },
   // { path: 'home', component: HomeComponent },
@@ -29,8 +30,9 @@ const routes: Routes = [
   { path: 'thanks', component: ThanksComponent },
   { path: 'test', component: TestingComponent },
   { path: 'contact', component: ContactComponent },
-  {path:'collabres',component:CollabresComponent},
+  { path: 'collabres', component: CollabresComponent },
   { path: 'collabcom', component: CollabcommComponent },
+  { path: 'userdashboard', component: UserdashboardComponent },
   { path: 'admindashboard', component: AdminDashboardComponent },
   { path: 'theworkcomm', component: TheWorkCommComponent },
   { path: 'theworkres', component: TheWorkResComponent },
