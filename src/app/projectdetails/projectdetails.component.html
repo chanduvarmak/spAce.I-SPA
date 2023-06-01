@@ -1,9 +1,0 @@
-<link rel="stylesheet" href="./projectdetails.component.css" />
-<h1>Project Details</h1>
-<button (click)="handleClick()">project details</button>
-<ul *ngIf="data">
-  <li *ngFor="let item of data">
-    description:{{ item.description }} -Research name:{{ item.name }} -Research Email:{{ item.email }}
-    <!-- Replace "property1", "property2", and "property3" with the actual property names in your data object -->
-  </li>
-</ul>

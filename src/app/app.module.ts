@@ -14,7 +14,6 @@ import { SignupComponent } from './signup/signup.component';
 import { HomeComponent } from './home/home.component';
 import { MatSelectModule } from '@angular/material/select';
 import { HttpClientModule } from '@angular/common/http';
-import { ProjectdetailsComponent } from './projectdetails/projectdetails.component';
 import { ThanksComponent } from './thanks/thanks.component';
 import { ClipboardModule } from '@angular/cdk/clipboard';
 import { DragDropModule } from '@angular/cdk/drag-drop';
@@ -37,7 +36,6 @@ import { CollabresComponent } from './collabres/collabres.component';
     HeaderComponent,
     SignupComponent,
     HomeComponent,
-    ProjectdetailsComponent,
     ThanksComponent,
     TestingComponent,
     ContactComponent,

@@ -4,7 +4,6 @@ import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { HomeComponent } from './home/home.component';
-import { ProjectdetailsComponent } from './projectdetails/projectdetails.component';
 import { ThanksComponent } from './thanks/thanks.component';
 import { TestingComponent } from './testing/testing.component';
 import { ContactComponent } from './contact/contact.component';
@@ -27,7 +26,6 @@ const routes: Routes = [
   // { path: 'aboutus', component: AboutusComponent },
   { path: 'home', component: HomeComponent },
   // { path: 'crud', component: CrudComponent },
-  { path: 'projectdetails', component: ProjectdetailsComponent },
   { path: 'thanks', component: ThanksComponent },
   { path: 'test', component: TestingComponent },
   { path: 'contact', component: ContactComponent },
