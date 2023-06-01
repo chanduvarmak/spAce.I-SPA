@@ -27,7 +27,9 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { TheWorkCommComponent } from './the-work-comm/the-work-comm.component';
 import { TheWorkResComponent } from './the-work-res/the-work-res.component';
 import { CollabresComponent } from './collabres/collabres.component';
-// import {AgmCoreModu} from 
+import { TooltipComponent } from './tooltip/tooltip.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
+// import {AgmCoreModu} from
 
 @NgModule({
   declarations: [
@@ -45,7 +47,7 @@ import { CollabresComponent } from './collabres/collabres.component';
     TheWorkCommComponent,
     TheWorkResComponent,
     CollabresComponent,
-    
+    TooltipComponent,
   ],
   imports: [
     BrowserModule,
@@ -60,7 +62,7 @@ import { CollabresComponent } from './collabres/collabres.component';
     HttpClientModule,
     ClipboardModule,
     DragDropModule,
-    
+    MatTooltipModule,
 
     ToastrModule.forRoot(),
   ],

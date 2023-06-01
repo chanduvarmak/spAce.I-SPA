@@ -32,9 +32,11 @@
       <h1>spAce-I</h1>
       <h6>empowerd by AI</h6>
     </div>
-    <button href="#" routerLink="/signup">Signup For Services</button>
+    <button href="#" routerLink="/signup" matTooltip="Sign-up here">
+      Signup For Services
+    </button>
   </section>
-
+  <!-- matTooltip="You can Drag and Play with ME" -->
   <div class="example-box" cdkDrag>Play With Me</div>
 
   <section class="about-us">
@@ -54,7 +56,13 @@
           clean, artful designs that are both intuitive and functional.
         </p>
         <div class="data">
-          <a href="#" class="hire" routerLink="/contact">contact us</a>
+          <a
+            href="#"
+            class="hire"
+            routerLink="/contact"
+            matTooltip="Contact Here For Newsletter"
+            >contact us</a
+          >
         </div>
       </div>
     </div>
