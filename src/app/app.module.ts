@@ -27,7 +27,8 @@ import { ContactComponent } from './contact/contact.component';
 import { ToastrModule } from 'ngx-toastr';
 import { ToastrService } from 'ngx-toastr';
 import { CollabcommComponent } from './collabcomm/collabcomm.component';
-
+import { UserdashboardComponent } from './userdashboard/userdashboard.component';
+// import {AgmCoreModu} from 
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { CollabcommComponent } from './collabcomm/collabcomm.component';
     TestingComponent,
     ContactComponent,
     CollabcommComponent,
+    UserdashboardComponent,
     
   ],
   imports: [

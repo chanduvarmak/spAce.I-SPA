@@ -23,10 +23,10 @@ export class ContactComponent {
       companyName: ['', Validators.required],
       companyEmail: ['', [Validators.required, Validators.email]],
       city: ['', Validators.required],
-      interests: this.formBuilder.group({
-        research: [false],
-        commercial: [false],
-      }),
+      // interests: this.formBuilder.group({
+      //   research: [false],
+      //   commercial: [false],
+      // }),
     });
   }
   onSubmit() {
@@ -37,7 +37,7 @@ export class ContactComponent {
 
     const data = this.formData.value;
 
-    this.http.post('http://localhost:3000/profile', data).subscribe(
+    this.http.post('https://3c8c1f2b-c88c-4924-9ee1-9c1ab2f99b92.mock.pstmn.io/commercial', data).subscribe(
       (response) => {
         console.log('Post request successful', response);
         this.toaster.success('Success message', 'Success');
@@ -45,7 +45,7 @@ export class ContactComponent {
         this.formData.reset();
         this.route.navigate(['thanks']);
       },
-      (error) => {
+      (error) => { 
         console.log('Error occurred while making the post request', error);
       }
     );
