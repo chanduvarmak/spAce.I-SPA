@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
-import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-contact',
@@ -17,7 +16,6 @@ export class ContactComponent {
     private formBuilder: FormBuilder,
     private http: HttpClient,
     private route: Router,
-    private toaster: ToastrService
   ) {
     this.formData = this.formBuilder.group({
       companyName: ['', Validators.required],
@@ -40,7 +38,7 @@ export class ContactComponent {
     this.http.post('https://3c8c1f2b-c88c-4924-9ee1-9c1ab2f99b92.mock.pstmn.io/commercial', data).subscribe(
       (response) => {
         console.log('Post request successful', response);
-        this.toaster.success('Success message', 'Success');
+        // this.toaster.success('Success message', 'Success');
 
         this.formData.reset();
         this.route.navigate(['thanks']);

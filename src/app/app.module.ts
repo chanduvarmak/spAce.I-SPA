@@ -19,8 +19,6 @@ import { ClipboardModule } from '@angular/cdk/clipboard';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { TestingComponent } from './testing/testing.component';
 import { ContactComponent } from './contact/contact.component';
-import { ToastrModule } from 'ngx-toastr';
-import { ToastrService } from 'ngx-toastr';
 import { CollabcommComponent } from './collabcomm/collabcomm.component';
 import { UserdashboardComponent } from './userdashboard/userdashboard.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
@@ -62,7 +60,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     DragDropModule,
     MatTooltipModule,
 
-    ToastrModule.forRoot(),
+    // ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],

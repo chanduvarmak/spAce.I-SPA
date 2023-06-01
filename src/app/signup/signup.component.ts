@@ -5,7 +5,6 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
-import { ToastrModule } from 'ngx-toastr';
 
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';

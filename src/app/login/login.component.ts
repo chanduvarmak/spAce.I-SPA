@@ -43,6 +43,7 @@ export class LoginComponent {
           this.route.navigate(['admindashboard']);
         } else {
           alert('user not found');
+          this.route.navigate(['signup']);
         }
       },
       (err) => {

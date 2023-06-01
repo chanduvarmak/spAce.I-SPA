@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { SpaceiService } from '../spacei.service';
 import { CrudService } from '../crud.service';
 import { HttpClient } from '@angular/common/http';
-import { ToastrService } from 'ngx-toastr';
+// import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-admin-dashboard',
@@ -20,7 +20,7 @@ export class AdminDashboardComponent {
   constructor(
     private dataservice: SpaceiService,
     private userService: CrudService,
-    private toastr: ToastrService,
+    // private toastr: ToastrService,
     private http: HttpClient
   ) {}
   
@@ -87,10 +87,10 @@ export class AdminDashboardComponent {
     this.userService.deleteUser(userId).subscribe(
       () => {
         // console.log('User deleted successfully.');
-        this.toastr.success('user deleted successfully', 'chandu', {
-          progressBar: true,
-          progressAnimation: 'increasing',
-        });
+        // this.toastr.success('user deleted successfully', 'chandu', {
+        //   progressBar: true,
+        //   progressAnimation: 'increasing',
+        // });
 
         this.loadUsers(); // Refresh the user list
       },
