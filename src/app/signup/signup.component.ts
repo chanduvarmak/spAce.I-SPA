@@ -5,10 +5,11 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { ToasterService } from '../toaster.service';
+
 // import { FormBuilder } from '@angular/forms';
 @Component({
   selector: 'app-signup',
@@ -25,7 +26,7 @@ export class SignupComponent {
   constructor(
     private http: HttpClient,
     private route: Router,
-    private toastr: ToasterService
+    private toastr: ToastrService,
   ) {
     this.regForm = new FormGroup(
       {
@@ -119,7 +120,8 @@ export class SignupComponent {
         .post<any>('http://localhost:3000/signup', this.regForm.value)
         .subscribe(
           (res) => {
-            alert('signup successfull');
+            // alert('signup successfull');
+            this.toastr.success('Hello, World!', 'Success');
             this.regForm.reset();
             this.route.navigate(['login']);
           },

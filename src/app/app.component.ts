@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   // // ChannelName = 'chanduvarma';
-  // constructor() { 
+  // constructor() {
   //   this.myMethod();
   // }
   // // title = 'demoproject';

@@ -26,7 +26,7 @@ import { TheWorkCommComponent } from './the-work-comm/the-work-comm.component';
 import { TheWorkResComponent } from './the-work-res/the-work-res.component';
 import { CollabresComponent } from './collabres/collabres.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
-// import {AgmCoreModu} from
+import { ToastrModule } from 'ngx-toastr/public_api';
 
 @NgModule({
   declarations: [
@@ -60,7 +60,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     DragDropModule,
     MatTooltipModule,
 
-    // ToastrModule.forRoot(),
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],
