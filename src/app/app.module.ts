@@ -27,7 +27,6 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { TheWorkCommComponent } from './the-work-comm/the-work-comm.component';
 import { TheWorkResComponent } from './the-work-res/the-work-res.component';
 import { CollabresComponent } from './collabres/collabres.component';
-import { TooltipComponent } from './tooltip/tooltip.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
 // import {AgmCoreModu} from
 
@@ -47,7 +46,6 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     TheWorkCommComponent,
     TheWorkResComponent,
     CollabresComponent,
-    TooltipComponent,
   ],
   imports: [
     BrowserModule,
