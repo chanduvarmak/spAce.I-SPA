@@ -1,0 +1,76 @@
+<link rel="stylesheet" href="./admin-dashboard.component.css">
+<h2><strong>Admin Dashboard</strong></h2>
+<div class="data">
+  <button (click)="toggleUserTable()">
+    {{ showUserTable ? "Hide User Data" : "Show User Data" }}
+  </button>
+  <div class="container" *ngIf="showUserTable">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.id }}</td>
+          <td>{{ user.uname }}</td>
+          <td>{{ user.email }}</td>
+          <td>
+            <!-- <button (click)="editUser(user)">Edit</button> -->
+            <button (click)="deleteUser(user.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div *ngIf="jsonData" class="project">
+  <button (click)="toggleData()">Project Details</button>
+  <div *ngIf="showData" class="projectcontainer">
+    <!-- <pre>{{ jsonData | json }}</pre> -->
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Description</th>
+          <th>Frontend Technologies</th>
+          <th>Backend Technologies</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of jsonData;let i = index">
+          <td>{{ item.id }}</td>
+          <td>{{ item.name }}</td>
+          <td>{{ item.email }}</td>
+          <td>{{ item.description }}</td>
+          <td>
+            <ul>
+              <li *ngFor="let technology of item.frontendTechnologies">
+                {{ technology }}
+              </li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li *ngFor="let technology of item.backendTechnologies">
+                {{ technology }}
+              </li>
+            </ul>
+          </td>
+          <td>
+            <button (click)="deleteData(i)">Delete</button>
+          </td>
+          <!-- <td>{{ item.id }}</td> -->
+        </tr>
+      </tbody>
+    </table>
+  </div>

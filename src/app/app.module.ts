@@ -8,16 +8,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { ContactusComponent } from './contactus/contactus.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { SignupComponent } from './signup/signup.component';
 import { HomeComponent } from './home/home.component';
-import { TheWorkComponent } from './the-work/the-work.component';
 import { MatSelectModule } from '@angular/material/select';
 import { HttpClientModule } from '@angular/common/http';
-import { ThecollabComponent } from './thecollab/thecollab.component';
-import { CommercialComponent } from './commercial/commercial.component';
 import { ProjectdetailsComponent } from './projectdetails/projectdetails.component';
 import { ThanksComponent } from './thanks/thanks.component';
 import { ClipboardModule } from '@angular/cdk/clipboard';
@@ -28,6 +24,10 @@ import { ToastrModule } from 'ngx-toastr';
 import { ToastrService } from 'ngx-toastr';
 import { CollabcommComponent } from './collabcomm/collabcomm.component';
 import { UserdashboardComponent } from './userdashboard/userdashboard.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { TheWorkCommComponent } from './the-work-comm/the-work-comm.component';
+import { TheWorkResComponent } from './the-work-res/the-work-res.component';
+import { CollabresComponent } from './collabres/collabres.component';
 // import {AgmCoreModu} from 
 
 @NgModule({
@@ -35,18 +35,18 @@ import { UserdashboardComponent } from './userdashboard/userdashboard.component'
     AppComponent,
     LoginComponent,
     HeaderComponent,
-    ContactusComponent,
     SignupComponent,
     HomeComponent,
-    TheWorkComponent,
-    ThecollabComponent,
-    CommercialComponent,
     ProjectdetailsComponent,
     ThanksComponent,
     TestingComponent,
     ContactComponent,
     CollabcommComponent,
     UserdashboardComponent,
+    AdminDashboardComponent,
+    TheWorkCommComponent,
+    TheWorkResComponent,
+    CollabresComponent,
     
   ],
   imports: [

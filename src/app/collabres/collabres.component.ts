@@ -1,13 +1,6 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
-import {
-  FormBuilder,
-  FormGroup,
-  Validators,
-  FormControl,
-  FormArray,
-} from '@angular/forms';
-
+import { Component } from '@angular/core';
+import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 interface Research {
   name: string;
   email: string;
@@ -17,11 +10,11 @@ interface Research {
 }
 
 @Component({
-  selector: 'app-contactus',
-  templateUrl: './contactus.component.html',
-  styleUrls: ['./contactus.component.css'],
+  selector: 'app-collabres',
+  templateUrl: './collabres.component.html',
+  styleUrls: ['./collabres.component.css']
 })
-export class ContactusComponent implements OnInit {
+export class CollabresComponent {
   researchForm: FormGroup;
   frontendTechnologies: string[] = [
     'HTML',

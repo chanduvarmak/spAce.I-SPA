@@ -2,17 +2,17 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
-import { ContactusComponent } from './contactus/contactus.component';
 import { SignupComponent } from './signup/signup.component';
 import { HomeComponent } from './home/home.component';
-import { TheWorkComponent } from './the-work/the-work.component';
-import { ThecollabComponent } from './thecollab/thecollab.component';
-import { CommercialComponent } from './commercial/commercial.component';
 import { ProjectdetailsComponent } from './projectdetails/projectdetails.component';
 import { ThanksComponent } from './thanks/thanks.component';
 import { TestingComponent } from './testing/testing.component';
 import { ContactComponent } from './contact/contact.component';
 import { CollabcommComponent } from './collabcomm/collabcomm.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { TheWorkCommComponent } from './the-work-comm/the-work-comm.component';
+import { TheWorkResComponent } from './the-work-res/the-work-res.component';
+import { CollabresComponent } from './collabres/collabres.component';
 const routes: Routes = [
   // { path: 'header', component: HeaderComponent },
   // { path: 'home', component: HomeComponent },
@@ -25,17 +25,17 @@ const routes: Routes = [
   { path: 'signup', component: SignupComponent },
   { path: 'login', component: LoginComponent },
   // { path: 'aboutus', component: AboutusComponent },
-  { path: 'contactus', component: ContactusComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'the-work', component: TheWorkComponent },
-  { path: 'thecollab', component: ThecollabComponent },
-  { path: 'commercial', component: CommercialComponent },
   // { path: 'crud', component: CrudComponent },
   { path: 'projectdetails', component: ProjectdetailsComponent },
   { path: 'thanks', component: ThanksComponent },
   { path: 'test', component: TestingComponent },
   { path: 'contact', component: ContactComponent },
+  {path:'collabres',component:CollabresComponent},
   { path: 'collabcom', component: CollabcommComponent },
+  { path: 'admindashboard', component: AdminDashboardComponent },
+  { path: 'theworkcomm', component: TheWorkCommComponent },
+  { path: 'theworkres', component: TheWorkResComponent },
 ];
 
 @NgModule({
