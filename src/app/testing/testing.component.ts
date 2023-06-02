@@ -89,7 +89,11 @@ export class TestingComponent {
   //     }
   //   );
   // }
+  isAdmin: boolean = false;
 
+  toggleAdmin() {
+    this.isAdmin = !this.isAdmin;
+  }
 
   isLoginMode = true;
   isAdminMode = false;

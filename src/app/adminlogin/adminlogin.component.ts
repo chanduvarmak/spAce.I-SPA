@@ -15,7 +15,7 @@ export class AdminloginComponent {
   ngOnInit() {
     this.myForm = this.formBuilder.group({
       name: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.email]],
     });
   }
 

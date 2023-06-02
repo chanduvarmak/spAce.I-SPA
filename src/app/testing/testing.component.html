@@ -86,7 +86,7 @@
 </div> -->
 
 
-<div class="toggle-button">
+<!-- <div class="toggle-button">
   <button class="active" (click)="toggleMode('login')">Login</button>
   <button (click)="toggleMode('admin')">Admin</button>
 </div>
@@ -103,4 +103,16 @@
     <input type="password" name="password" placeholder="Password" [(ngModel)]="adminData.password" required>
     <button type="submit">Login as Admin</button>
   </form>
+</div> -->
+
+<label class="switch">
+  <input type="checkbox" [(ngModel)]="isAdmin" (change)="toggleAdmin()">
+  <span class="slider round"></span>
+</label>
+
+<div *ngIf="isAdmin">
+  <app-adminlogin></app-adminlogin>
+</div>
+<div *ngIf="!isAdmin">
+  <app-login></app-login>
 </div>
