@@ -5,7 +5,7 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
-import { ToastrService } from 'ngx-toastr';
+// import { ToastrService } from 'ngx-toastr';
 
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
@@ -26,7 +26,7 @@ export class SignupComponent {
   constructor(
     private http: HttpClient,
     private route: Router,
-    private toastr: ToastrService,
+    // private toastr: ToastrService,
   ) {
     this.regForm = new FormGroup(
       {
@@ -120,8 +120,8 @@ export class SignupComponent {
         .post<any>('http://localhost:3000/signup', this.regForm.value)
         .subscribe(
           (res) => {
-            // alert('signup successfull');
-            this.toastr.success('Hello, World!', 'Success');
+            alert('signup successfull');
+            // this.toastr.success('Hello, World!', 'Success');
             this.regForm.reset();
             this.route.navigate(['login']);
           },

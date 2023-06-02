@@ -53,7 +53,7 @@ button:hover {
   font-style: italic;
 }  */
 
-.dashboard {
+/* .dashboard {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -88,4 +88,61 @@ button:hover {
 
 .toggle-buttons button.active {
   background-color: #1e7e34;
+} */
+
+.toggle-button {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.toggle-button button {
+  border: none;
+  background: transparent;
+  padding: 8px 16px;
+  cursor: pointer;
+  outline: none;
+}
+
+.toggle-button button.active {
+  background-color: #ccc;
+  color: #fff;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.form-container.login-mode form,
+.form-container.admin-mode form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.form-container.login-mode form {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.form-container.admin-mode form {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.form-container form input {
+  margin-bottom: 10px;
+  padding: 8px;
+  width: 200px;
+}
+
+.form-container form button {
+  padding: 8px 16px;
 }

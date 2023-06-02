@@ -63,7 +63,7 @@
   </form>
 </div> -->
 
-<div class="dashboard">
+<!-- <div class="dashboard">
   <div class="project-details">
     <h1>Project Dashboard</h1>
     <p>Project Name: My Project</p>
@@ -83,4 +83,24 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">User Dashboard</a>
   </nav>
+</div> -->
+
+
+<div class="toggle-button">
+  <button class="active" (click)="toggleMode('login')">Login</button>
+  <button (click)="toggleMode('admin')">Admin</button>
+</div>
+
+<div class="form-container" [ngClass]="{ 'login-mode': isLoginMode, 'admin-mode': isAdminMode }">
+  <form *ngIf="isLoginMode" (ngSubmit)="login()">
+    <input type="text" name="username" placeholder="Username" [(ngModel)]="loginData.username" required>
+    <input type="password" name="password" placeholder="Password" [(ngModel)]="loginData.password" required>
+    <button type="submit">Login</button>
+  </form>
+  
+  <form *ngIf="isAdminMode" (ngSubmit)="login()">
+    <input type="text" name="username" placeholder="Username" [(ngModel)]="adminData.username" required>
+    <input type="password" name="password" placeholder="Password" [(ngModel)]="adminData.password" required>
+    <button type="submit">Login as Admin</button>
+  </form>
 </div>

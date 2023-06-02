@@ -10,11 +10,11 @@ import { CrudService } from '../crud.service';
 })
 export class TestingComponent {
 
-  selectedSection: string = 'Tasks';
+  // selectedSection: string = 'Tasks';
 
-  toggleSection(section: string): void {
-    this.selectedSection = section;
-  }
+  // toggleSection(section: string): void {
+  //   this.selectedSection = section;
+  // }
   
   // this one is for toggle edit option to create new user and update that user//
   // users: any[] = [];
@@ -91,5 +91,29 @@ export class TestingComponent {
   // }
 
 
+  isLoginMode = true;
+  isAdminMode = false;
+  loginData = { username: '', password: '' };
+  adminData = { username: '', password: '' };
+
+  toggleMode(mode: string) {
+    if (mode === 'login') {
+      this.isLoginMode = true;
+      this.isAdminMode = false;
+    } else if (mode === 'admin') {
+      this.isLoginMode = false;
+      this.isAdminMode = true;
+    }
+  }
+
+  login() {
+    if (this.isLoginMode) {
+      // Perform login logic for regular users
+      console.log('Login:', this.loginData);
+    } else if (this.isAdminMode) {
+      // Perform login logic for admin users
+      console.log('Login as Admin:', this.adminData);
+    }
+  }
 }
 
