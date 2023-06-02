@@ -41,6 +41,7 @@ export class AdminloginComponent {
         );
     }
   }
+  //TO GET DATA
   // getData() {
   //   this.http.get('https://example.com/data').subscribe(
   //     (response) => {
