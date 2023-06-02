@@ -112,5 +112,37 @@
       "research": true,
       "commercial": true
     }
-  }
+  },
+  "Admin": [
+    {
+      "title": "New Post",
+      "content": "This is a new post.",
+      "id": 1
+    },
+    {
+      "username": "chandu",
+      "password": "varma",
+      "id": 2
+    },
+    {
+      "username": "chandu",
+      "password": "varma",
+      "id": 3
+    },
+    {
+      "username": "chandu",
+      "password": "varma",
+      "id": 4
+    },
+    {
+      "username": "chandu",
+      "password": "babu",
+      "id": 5
+    },
+    {
+      "username": "chandu",
+      "password": "varma",
+      "id": 6
+    }
+  ]
 }

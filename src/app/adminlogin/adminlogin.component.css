@@ -1,102 +1,52 @@
-.container {
-    width: 300px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    animation: slideIn 0.5s ease;
-  }
-  
-  @keyframes slideIn {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  h2 {
-    text-align: center;
-    animation: fadeIn 0.5s ease;
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-    opacity: 0;
-    animation: fadeIn 0.5s ease forwards;
-    animation-delay: 0.2s;
-  }
-  
-  label {
-    display: block;
-    font-weight: bold;
-    opacity: 0;
-    animation: fadeIn 0.5s ease forwards;
-    animation-delay: 0.4s;
-  }
-  
-  input[type="text"],
-  input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    opacity: 0;
-    animation: slideIn 0.5s ease forwards;
-    animation-delay: 0.4s;
-  }
-  
-  .error {
-    color: red;
-    font-size: 14px;
-    margin-top: 5px;
-    opacity: 0;
-    animation: fadeIn 0.5s ease forwards;
-    animation-delay: 0.6s;
-  }
-  
-  button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    opacity: 0;
-    animation: slideIn 0.5s ease forwards;
-    animation-delay: 0.6s;
-  }
-  
-  button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-  }
-  
-  @media (prefers-reduced-motion: reduce) {
-    .container,
-    h2,
-    .form-group,
-    label,
-    input[type="text"],
-    input[type="password"],
-    .error,
-    button {
-      animation: none !important;
-      opacity: 1 !important;
-    }
-  }
-  
+.login-container {
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: #45a049;
+}

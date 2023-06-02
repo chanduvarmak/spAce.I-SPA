@@ -80,16 +80,21 @@
         <button mat-menu-item>technologies</button> -->
       </mat-menu>
     </div>
-
+    <!-- routerLink="/login" -->
     <div class="button1">
       <button
-        routerLink="/login"
         routerLinkActive="activebutton"
+        mat-raised-button
+        [mat-menu-trigger-for]="access"
         ariaCurrentWhenActive="page"
-        matTooltip="User Login"
+        matTooltip="User/Admin"
       >
-        User
+        Access
       </button>
+      <mat-menu #access="matMenu">
+        <button mat-menu-item routerLink="./login">User</button>
+        <button mat-menu-item routerLink="./adminlogin">Admin</button>
+      </mat-menu>
     </div>
   </div>
 
