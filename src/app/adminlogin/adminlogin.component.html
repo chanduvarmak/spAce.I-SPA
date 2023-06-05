@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="./adminlogin.component.css" />
 <div class="login-container">
   <h2>Admin Login</h2>
-  <form [formGroup]="loginForm" (ngSubmit)="login()">
+  <form [formGroup]="loginForm" (ngSubmit)=" getData()">
     <div class="form-group">
       <label for="username">Username</label>
       <input type="text" formControlName="username" placeholder="Enter your username">

@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 })
 export class AdminloginComponent {
   loginForm!: FormGroup;
+  users: any = [];
 
   constructor(
     private formBuilder: FormBuilder,
@@ -24,32 +25,82 @@ export class AdminloginComponent {
     });
   }
 
-  login() {
-    if (this.loginForm.valid) {
-      console.log(this.loginForm.value);
-      this.http
-        .post('http://localhost:3000/Admin', this.loginForm.value)
-        .subscribe(
-          (response) => {
-            console.log('Login success:', response);
-            this.loginForm.reset();
-            this.route.navigate(['admindashboard']);
-          },
-          (error) => {
-            console.error('Login error:', error);
-          }
-        );
+  getData() {
+    this.http.get('http://localhost:3000/Admin').subscribe(
+      (response) => {
+        this.users = response;
+        console.log(this.loginForm.value);
+        this.logindata();
+      },
+      (error) => {
+        console.error('Error:', error);
+      }
+    );
+  }
+
+  logindata() {
+    const loginEmail = this.loginForm.value.email;
+    const loginPassword = this.loginForm.value.password;
+
+    const userExists = this.users.some(
+      (user: { email: any; password: any }) => {
+        return user.email === loginEmail && user.password === loginPassword;
+      }
+    );
+
+    if (userExists) {
+      
+      this.route.navigate(['/admindashboard']);
+    } else {
+      this.route.navigate(['/login']);
     }
   }
-  //TO GET DATA
+
+  // login() {
+  //   if (this.loginForm.valid) {
+  //     console.log(this.loginForm.value);
+  //     this.http
+  //       .post('http://localhost:3000/Admin', this.loginForm.value)
+  //       .subscribe(
+  //         (response) => {
+  //           console.log('Login success:', response);
+  //           this.loginForm.reset();
+  //           this.route.navigate(['admindashboard']);
+  //         },
+  //         (error) => {
+  //           console.error('Login error:', error);
+  //         }
+  //       );
+  //   }
+  // }
+
   // getData() {
-  //   this.http.get('https://example.com/data').subscribe(
+  //   this.http.get('http://localhost:3000/Admin').subscribe(
   //     (response) => {
-  //       console.log('Data:', response);
+  //       this.users = response;
+  //       // console.log(this.loginForm.value);
+  //       alert('chandu');
+  //       this.logindata();
   //     },
   //     (error) => {
   //       console.error('Error:', error);
   //     }
   //   );
+  // }
+  // logindata() {
+  //   const loginEmail = this.loginForm.value.username;
+  //   const loginPassword = this.loginForm.value.password;
+
+  //   const userExists = this.users.some(
+  //     (user: { email: any; password: any }) => {
+  //       return user.email === loginEmail && user.password === loginPassword;
+  //     }
+  //   );
+
+  //   if (userExists) {
+  //     alert('User already exists. Please login.');
+  //   } else {
+  //     // Perform login process
+  //   }
   // }
 }
