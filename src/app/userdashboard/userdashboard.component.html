@@ -1,33 +1,94 @@
 <link rel="stylesheet" href="./userdashboard.component.css" />
-<div class="container mt-4">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand">User Dashboard</a>
-  </nav>
-  <h2><strong>Project-1</strong></h2>
-  <div class="dashboard">
-    <header>
-      <h1>User Dashboard</h1>
-      <button (click)="logout()">Logout</button>
-    </header>
-    <main>
-      <nav>
-        <ul>
-          <li routerLink="/dashboard" routerLinkActive="active">Dashboard</li>
-          <li routerLink="/profile" routerLinkActive="active">Profile</li>
-          <li routerLink="/settings" routerLinkActive="active">Settings</li>
-        </ul>
-      </nav>
-    </main>
+<div class="container">
+  <div class="header">
+    <h1>User Dashboard</h1>
+    <button class="logout-button" (click)="logout()">Logout</button>
   </div>
-  <!-- <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
-      <agm-marker *ngFor="let client of clients" [latitude]="client.lat" [longitude]="client.lng">
-        <agm-info-window>
-          <strong>{{ client.name }}</strong><br>
-          {{ client.country }}
-        </agm-info-window>
-      </agm-marker>
-    </agm-map> -->
-  <div class="dashboard">
+  <!-- <div class="sidebar">
+    <button class="toggle-button" (click)="toggleProjects()">Projects</button>
+    <button class="toggle-button" (click)="toggleStatus()">Status</button>
+  </div> -->
+  <!-- <div class="main-content">
+    <div *ngIf="showProjects" class="project-details">
+      <h2>Project Details</h2>
+      Add your project details here
+    </div>
+    <div *ngIf="showStatus" class="project-status">
+      <h2>Project Status</h2>
+      Add your project status here
+    </div>
+  </div> -->
+<button (click)="toggleTable()">collaboration details</button>
+
+<table [hidden]="!tableVisible">
+  <caption>
+    CollabComm Contacts
+  </caption>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Description</th>
+      <th>Frontend Technologies</th>
+      <th>Backend Technologies</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let contact of collabcommContacts">
+      <td>{{ contact.name }}</td>
+      <td>{{ contact.email }}</td>
+      <td>{{ contact.description }}</td>
+      <td>{{ contact.frontendTechnologies }}</td>
+      <td>{{ contact.backendTechnologies }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<button (click)="toggleTable()">Research Details</button>
+<table [hidden]="!tableVisible">
+  <!-- Table content -->
+  <caption>
+    Contact Us Contacts
+  </caption>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Description</th>
+      <th>Frontend Technologies</th>
+      <th>Backend Technologies</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let contact of contactusContacts">
+      <td>{{ contact.name }}</td>
+      <td>{{ contact.email }}</td>
+      <td>{{ contact.description }}</td>
+      <td>{{ contact.frontendTechnologies }}</td>
+      <td>{{ contact.backendTechnologies }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- <div>
+  <h3>Research Contacts</h3>
+  <ul>
+    <li *ngFor="let contact of collabcommContacts">
+      {{ contact.name }} - {{ contact.email }}
+    </li>
+  </ul>
+</div>
+
+<div>
+  <h3>Commercial Contacts</h3>
+  <ul>
+    <li *ngFor="let contact of contactusContacts">
+      {{ contact.name }} - {{ contact.email }}
+    </li>
+  </ul>
+</div> -->
+
+<!-- <div class="dashboard">
     <div class="project-details">
       <h1>Project Dashboard</h1>
       <p>Project Name: My Project</p>
@@ -44,5 +105,4 @@
     <div class="content">
       <p>{{ selectedSection }}</p>
     </div>
-  </div>
-</div>
+  </div> -->

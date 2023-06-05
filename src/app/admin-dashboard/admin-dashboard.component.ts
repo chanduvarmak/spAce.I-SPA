@@ -2,38 +2,40 @@ import { Component } from '@angular/core';
 import { SpaceiService } from '../spacei.service';
 import { CrudService } from '../crud.service';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 // import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-admin-dashboard',
   templateUrl: './admin-dashboard.component.html',
-  styleUrls: ['./admin-dashboard.component.css']
+  styleUrls: ['./admin-dashboard.component.css'],
 })
 export class AdminDashboardComponent {
   users: any[] = [];
   newUser: any = {};
   selectedUser: any = {};
   showUserTable: boolean = true;
-  jsonData: any[] = []; 
+  jsonData: any[] = [];
   showData: boolean = false;
 
   constructor(
     private dataservice: SpaceiService,
     private userService: CrudService,
     // private toastr: ToastrService,
-    private http: HttpClient
+    private http: HttpClient,
+    private route: Router
   ) {}
-  
+
   ngOnInit() {
     this.loadUsers();
-    this.dataservice.getData().subscribe(data => {
+    this.dataservice.getData().subscribe((data) => {
       this.jsonData = data;
     });
   }
   toggleData() {
     this.showData = !this.showData;
   }
-   deleteData(index: number) {
+  deleteData(index: number) {
     if (confirm('Are you sure you want to delete this item?')) {
       this.jsonData.splice(index, 1);
     }
@@ -98,5 +100,13 @@ export class AdminDashboardComponent {
         console.error('Error deleting user:', error);
       }
     );
+  }
+  logout() {
+    const confirmed = window.confirm('Are you sure you want to logout?');
+    if (confirmed) {
+      // this.authService.logout();
+
+      this.route.navigate(['/login']);
+    }
   }
 }

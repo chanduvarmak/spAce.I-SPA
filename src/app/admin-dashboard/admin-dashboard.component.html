@@ -1,5 +1,9 @@
-<link rel="stylesheet" href="./admin-dashboard.component.css">
+<link rel="stylesheet" href="./admin-dashboard.component.css" />
+
 <h2><strong>Admin Dashboard</strong></h2>
+<div class="logout">
+  <button class="logout-button" (click)="logout()">Logout</button>
+</div>
 <div class="data">
   <button (click)="toggleUserTable()">
     {{ showUserTable ? "Hide User Data" : "Show User Data" }}
@@ -47,7 +51,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let item of jsonData;let i = index">
+        <tr *ngFor="let item of jsonData; let i = index">
           <td>{{ item.id }}</td>
           <td>{{ item.name }}</td>
           <td>{{ item.email }}</td>
@@ -74,3 +78,5 @@
       </tbody>
     </table>
   </div>
+  <!-- <button class="logout-button" (click)="logout()">Logout</button> -->
+</div>
