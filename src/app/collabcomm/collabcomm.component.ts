@@ -1,6 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { FormGroup, FormBuilder, Validators, FormControl, FormArray } from '@angular/forms';
+import {
+  FormGroup,
+  FormBuilder,
+  Validators,
+  FormControl,
+  FormArray,
+} from '@angular/forms';
 interface Research {
   name: string;
   email: string;
@@ -14,7 +20,7 @@ interface Research {
   styleUrls: ['./collabcomm.component.css'],
 })
 export class CollabcommComponent {
- collabForm: FormGroup;
+  collabForm: FormGroup;
   frontendTechnologies: string[] = [
     'HTML',
     'CSS',
@@ -87,7 +93,7 @@ export class CollabcommComponent {
       const researchData: Research = this.collabForm.value;
 
       this.http
-        .post<Research>(' http://localhost:3000/contactus', researchData)
+        .post<Research>(' http://localhost:3000/collabcomm ', researchData)
         .subscribe(
           (response) => {
             console.log('Data saved successfully!', response);

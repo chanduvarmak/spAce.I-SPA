@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit ,Input} from '@angular/core';
 import { FormControl, FormGroup, FormArray, Validators } from '@angular/forms';
 import { CrudService } from '../crud.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-testing',
@@ -89,35 +90,14 @@ export class TestingComponent {
   //     }
   //   );
   // }
-  isAdmin: boolean = false;
+  constructor(private router: Router) {}
 
-  toggleAdmin() {
-    this.isAdmin = !this.isAdmin;
-  }
+  logout(): void {
+    // Call your authentication service's logout method
+    // this.authService.logout();
 
-  isLoginMode = true;
-  isAdminMode = false;
-  loginData = { username: '', password: '' };
-  adminData = { username: '', password: '' };
-
-  toggleMode(mode: string) {
-    if (mode === 'login') {
-      this.isLoginMode = true;
-      this.isAdminMode = false;
-    } else if (mode === 'admin') {
-      this.isLoginMode = false;
-      this.isAdminMode = true;
-    }
-  }
-
-  login() {
-    if (this.isLoginMode) {
-      // Perform login logic for regular users
-      console.log('Login:', this.loginData);
-    } else if (this.isAdminMode) {
-      // Perform login logic for admin users
-      console.log('Login as Admin:', this.adminData);
-    }
+    // Redirect the user to the login page or any other desired page
+    this.router.navigate(['/login']);
   }
 }
 

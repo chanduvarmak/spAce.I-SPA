@@ -105,14 +105,20 @@
   </form>
 </div> -->
 
-<label class="switch">
-  <input type="checkbox" [(ngModel)]="isAdmin" (change)="toggleAdmin()">
-  <span class="slider round"></span>
-</label>
+<!-- app.component.html -->
+<div class="dashboard">
+  <header>
+    <h1>User Dashboard</h1>
+    <button (click)="logout()">Logout</button>
+  </header>
+  <main>
+    <nav>
+      <ul>
+        <li routerLink="/dashboard" routerLinkActive="active">Dashboard</li>
+        <li routerLink="/profile" routerLinkActive="active">Profile</li>
+        <li routerLink="/settings" routerLinkActive="active">Settings</li>
+      </ul>
+    </nav>
+  </main>
+</div>
 
-<div *ngIf="isAdmin">
-  <app-adminlogin></app-adminlogin>
-</div>
-<div *ngIf="!isAdmin">
-  <app-login></app-login>
-</div>

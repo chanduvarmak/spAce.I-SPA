@@ -40,51 +40,70 @@
       "name": "k;'",
       "email": "wgqr@rg",
       "description": "np'[nj",
-      "frontendTechnologies": ["CSS", "Vue.js"],
-      "backendTechnologies": ["Node.js"]
+      "frontendTechnologies": [
+        "CSS",
+        "Vue.js"
+      ],
+      "backendTechnologies": [
+        "Node.js"
+      ]
     },
     {
       "name": "k;'",
       "email": "wgqr@rg",
       "description": "np'[nj",
-      "frontendTechnologies": ["CSS", "Vue.js"],
-      "backendTechnologies": ["Node.js"],
+      "frontendTechnologies": [
+        "CSS",
+        "Vue.js"
+      ],
+      "backendTechnologies": [
+        "Node.js"
+      ],
       "id": 3
     },
     {
       "name": "hakko",
       "email": "wgqr@rg",
       "description": "etyhstryh",
-      "frontendTechnologies": ["HTML", "CSS"],
-      "backendTechnologies": ["Express.js", "Ruby on Rails"],
+      "frontendTechnologies": [
+        "HTML",
+        "CSS"
+      ],
+      "backendTechnologies": [
+        "Express.js",
+        "Ruby on Rails"
+      ],
       "id": 4
     },
     {
       "name": "XC hgkfjk",
       "email": "qfrgeqe@fhrbh",
       "description": "ghkjhkjfhkj",
-      "frontendTechnologies": ["HTML", "CSS", "JavaScript"],
-      "backendTechnologies": ["Spring Boot", "Flask"],
+      "frontendTechnologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "backendTechnologies": [
+        "Spring Boot",
+        "Flask"
+      ],
       "id": 5
     },
     {
       "name": "samsung buds versions",
       "email": "varma@gmail.com",
       "description": "we are going to create new embedded series of buds pro series and volatile small size of Samsung buds.",
-      "frontendTechnologies": ["Angular"],
-      "backendTechnologies": ["ASP.NET", "Flask"],
+      "frontendTechnologies": [
+        "Angular"
+      ],
+      "backendTechnologies": [
+        "ASP.NET",
+        "Flask"
+      ],
       "id": 6
     }
   ],
-  "profile": {
-    "companyName": "chandu",
-    "companyEmail": "chandfu@gldbkqew",
-    "city": "america",
-    "interests": {
-      "research": true,
-      "commercial": true
-    }
-  },
   "Admin": [
     {
       "title": "New Post",
@@ -115,6 +134,27 @@
       "username": "nstar",
       "password": "nstarx",
       "id": 6
+    }
+  ],
+  "collabcomm": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    },
+    {
+      "name": "refyhdtsr",
+      "email": "chandu@gmail.com",
+      "description": "efrhstryj",
+      "frontendTechnologies": [
+        "React",
+        "Bootstrap"
+      ],
+      "backendTechnologies": [
+        "Node.js",
+        "Spring Boot"
+      ],
+      "id": 2
     }
   ]
 }

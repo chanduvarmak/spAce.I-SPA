@@ -4,6 +4,21 @@
     <a class="navbar-brand">User Dashboard</a>
   </nav>
   <h2><strong>Project-1</strong></h2>
+  <div class="dashboard">
+    <header>
+      <h1>User Dashboard</h1>
+      <button (click)="logout()">Logout</button>
+    </header>
+    <main>
+      <nav>
+        <ul>
+          <li routerLink="/dashboard" routerLinkActive="active">Dashboard</li>
+          <li routerLink="/profile" routerLinkActive="active">Profile</li>
+          <li routerLink="/settings" routerLinkActive="active">Settings</li>
+        </ul>
+      </nav>
+    </main>
+  </div>
   <!-- <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
       <agm-marker *ngFor="let client of clients" [latitude]="client.lat" [longitude]="client.lng">
         <agm-info-window>
