@@ -29,7 +29,7 @@ export class AdminloginComponent {
     this.http.get('http://localhost:3000/Admin').subscribe(
       (response) => {
         this.users = response;
-        console.log(this.loginForm.value);
+        // console.log(this.loginForm.value);
         this.logindata();
       },
       (error) => {
@@ -49,10 +49,11 @@ export class AdminloginComponent {
     );
 
     if (userExists) {
-      
       this.route.navigate(['/admindashboard']);
     } else {
-      this.route.navigate(['/login']);
+      alert('you have no access for admin dashboard');
+      this.loginForm.reset();
+      // this.route.navigate(['/login']);
     }
   }
 

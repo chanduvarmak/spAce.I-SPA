@@ -11,21 +11,21 @@ export class UserdashboardComponent implements OnInit {
   tableVisible: boolean = false;
   collabcommContacts: any[] = [];
   contactusContacts: any[] = [];
-  showProjects: boolean = true;
-  showStatus: boolean = false;
+  // showProjects: boolean = true;
+  // showStatus: boolean = false;
 
   toggleTable() {
     this.tableVisible = !this.tableVisible;
   }
-  toggleProjects() {
-    this.showProjects = true;
-    this.showStatus = false;
-  }
+  // toggleProjects() {
+  //   this.showProjects = true;
+  //   this.showStatus = false;
+  // }
 
-  toggleStatus() {
-    this.showProjects = false;
-    this.showStatus = true;
-  }
+  // toggleStatus() {
+  //   this.showProjects = false;
+  //   this.showStatus = true;
+  // }
   constructor(
     private route: Router,
     private contactservice: CollaborationserviceService
@@ -59,19 +59,19 @@ export class UserdashboardComponent implements OnInit {
     }
   }
 
-  lat = 0;
-  lng = 0;
-  zoom = 2;
+  // lat = 0;
+  // lng = 0;
+  // zoom = 2;
 
-  clients = [
-    { name: 'Client 1', country: 'Country 1', lat: 10, lng: 20 },
-    { name: 'Client 2', country: 'Country 2', lat: 30, lng: 40 },
-    { name: 'Client 3', country: 'Country 3', lat: 50, lng: 60 },
-    // Add more clients with their respective latitudes and longitudes
-  ];
-  selectedSection: string = 'Tasks';
+  // clients = [
+  //   { name: 'Client 1', country: 'Country 1', lat: 10, lng: 20 },
+  //   { name: 'Client 2', country: 'Country 2', lat: 30, lng: 40 },
+  //   { name: 'Client 3', country: 'Country 3', lat: 50, lng: 60 },
+  //   // Add more clients with their respective latitudes and longitudes
+  // ];
+  // selectedSection: string = 'Tasks';
 
-  toggleSection(section: string): void {
-    this.selectedSection = section;
-  }
+  // toggleSection(section: string): void {
+  //   this.selectedSection = section;
+  // }
 }

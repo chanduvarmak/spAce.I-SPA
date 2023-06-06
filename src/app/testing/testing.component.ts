@@ -1,8 +1,9 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit ,Input} from '@angular/core';
+import { Component, OnInit ,Input, Output, EventEmitter} from '@angular/core';
 import { FormControl, FormGroup, FormArray, Validators } from '@angular/forms';
 import { CrudService } from '../crud.service';
 import { Router } from '@angular/router';
+import { CollaborationserviceService } from '../collaborationservice.service';
 
 @Component({
   selector: 'app-testing',
@@ -10,7 +11,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./testing.component.css'],
 })
 export class TestingComponent {
-
+  collabcommContacts: any[] = [];
+  contactusContacts: any[] = [];
   // selectedSection: string = 'Tasks';
 
   // toggleSection(section: string): void {
@@ -90,13 +92,23 @@ export class TestingComponent {
   //     }
   //   );
   // }
-  constructor(private router: Router) {}
-
+  constructor(private router: Router,private contactservice: CollaborationserviceService) {}
+  loadCollabCommContacts() {
+    this.contactservice.getCollabCommContacts()
+      .subscribe(contacts => {
+        this.collabcommContacts = contacts;
+        console.log(this.collabcommContacts); // Logging the fetched collabcomm contacts
+      });
+  }
+  loadContactUsContacts() {
+    this.contactservice.getContactUsContacts()
+      .subscribe(contacts => {
+        this.contactusContacts = contacts;
+        console.log(this.contactusContacts); // Logging the fetched contactus contacts
+      });
+  }
   logout(): void {
-    // Call your authentication service's logout method
-    // this.authService.logout();
-
-    // Redirect the user to the login page or any other desired page
+  
     this.router.navigate(['/login']);
   }
 }

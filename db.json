@@ -8,25 +8,18 @@
       "id": 1
     },
     {
-      "uname": "chandu",
-      "email": "chandu@gmail.com",
-      "password": "chandu",
-      "cpassword": "chandu",
-      "id": 2
-    },
-    {
-      "uname": "varma",
-      "email": "varma@gmail.com",
-      "password": "varma",
-      "cpassword": "varma",
-      "id": 3
-    },
-    {
       "uname": "varma",
       "email": "varma@gmail.com",
       "password": "varma",
       "cpassword": "varma",
       "id": 4
+    },
+    {
+      "uname": "varma",
+      "email": "example@example.com",
+      "password": "varma",
+      "cpassword": "varma",
+      "id": 5
     }
   ],
   "contactus": [
@@ -34,8 +27,13 @@
       "name": "samsung buds versions",
       "email": "varma@gmail.com",
       "description": "we are going to create new embedded series of buds pro series and volatile small size of Samsung buds.",
-      "frontendTechnologies": ["Angular"],
-      "backendTechnologies": ["ASP.NET", "Flask"],
+      "frontendTechnologies": [
+        "Angular"
+      ],
+      "backendTechnologies": [
+        "ASP.NET",
+        "Flask"
+      ],
       "id": 6
     }
   ],
@@ -76,6 +74,20 @@
       "id": 1,
       "body": "some comment",
       "postId": 1
+    },
+    {
+      "name": "huwai",
+      "email": "chanduvarma@gmail.com",
+      "description": "we are desired to develop many collaborated pages for our website.",
+      "frontendTechnologies": [
+        "CSS",
+        "Angular"
+      ],
+      "backendTechnologies": [
+        "Django",
+        "Laravel"
+      ],
+      "id": 2
     }
   ]
 }

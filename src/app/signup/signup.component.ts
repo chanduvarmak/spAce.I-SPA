@@ -20,14 +20,15 @@ export class SignupComponent {
   //THIS PIECE OF CODE IS USED FOR VALIDATIONS AND CONFIRM PASSWORD MATCH//
 
   regForm: FormGroup;
+  isUserSignedUp: boolean = false;
   users: any = [];
   emails: any = [];
   dataToStore: boolean = false;
   constructor(
     private http: HttpClient,
-    private route: Router,
-    // private toastr: ToastrService,
-  ) {
+    private route: Router
+  ) // private toastr: ToastrService,
+  {
     this.regForm = new FormGroup(
       {
         uname: new FormControl(null, [
@@ -58,6 +59,24 @@ export class SignupComponent {
 
   ngOnInit() {
     this.userData();
+    this.http.get<any[]>('http://localhost:3000/signup').subscribe(
+      (users: any[]) => {
+        console.log(users);
+        // Check if the user's data exists in the response
+        const userData = users.find(
+          (user) => user.id === this.regForm.value.id
+        );
+
+        if (userData) {
+          this.isUserSignedUp = true;
+        } else {
+          this.isUserSignedUp = false;
+        }
+      },
+      (error) => {
+        console.error('Error fetching user data:', error);
+      }
+    );
   }
   userData() {
     this.http.get<any>('http://localhost:3000/signup').subscribe(
@@ -81,6 +100,7 @@ export class SignupComponent {
     if (emailExists) {
       alert('email already exists');
       this.regForm.reset();
+      this.route.navigate(['login']);
     } else {
       this.dataToStore = true;
     }

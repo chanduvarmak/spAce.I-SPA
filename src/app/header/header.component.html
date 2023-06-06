@@ -45,6 +45,7 @@
         mat-raised-button
         [mat-menu-trigger-for]="collabrations"
         matTooltip="Collabrate Contact Forms"
+        [disabled]="!isUserSignedUp"
       >
         The Collaboration
       </button>

@@ -1,23 +1,10 @@
 <link rel="stylesheet" href="./userdashboard.component.css" />
-<div class="container">
+<!-- <div class="container">
   <div class="header">
     <h1>User Dashboard</h1>
     <button class="logout-button" (click)="logout()">Logout</button>
   </div>
-  <!-- <div class="sidebar">
-    <button class="toggle-button" (click)="toggleProjects()">Projects</button>
-    <button class="toggle-button" (click)="toggleStatus()">Status</button>
-  </div> -->
-  <!-- <div class="main-content">
-    <div *ngIf="showProjects" class="project-details">
-      <h2>Project Details</h2>
-      Add your project details here
-    </div>
-    <div *ngIf="showStatus" class="project-status">
-      <h2>Project Status</h2>
-      Add your project status here
-    </div>
-  </div> -->
+
 <button (click)="toggleTable()">collaboration details</button>
 
 <table [hidden]="!tableVisible">
@@ -46,7 +33,7 @@
 
 <button (click)="toggleTable()">Research Details</button>
 <table [hidden]="!tableVisible">
-  <!-- Table content -->
+  
   <caption>
     Contact Us Contacts
   </caption>
@@ -68,7 +55,7 @@
       <td>{{ contact.backendTechnologies }}</td>
     </tr>
   </tbody>
-</table>
+</table> -->
 
 <!-- <div>
   <h3>Research Contacts</h3>
@@ -106,3 +93,77 @@
       <p>{{ selectedSection }}</p>
     </div>
   </div> -->
+
+
+
+  <div class="container">
+    <div class="header">
+      <h1>User Dashboard</h1>
+      <button class="logout-button" (click)="logout()">Logout</button>
+    </div>
+    
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Collaboration Details
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <table>
+          <caption>
+            CollabComm Contacts
+          </caption>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Description</th>
+              <th>Frontend Technologies</th>
+              <th>Backend Technologies</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let contact of collabcommContacts">
+              <td>{{ contact.name }}</td>
+              <td>{{ contact.email }}</td>
+              <td>{{ contact.description }}</td>
+              <td>{{ contact.frontendTechnologies }}</td>
+              <td>{{ contact.backendTechnologies }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </mat-expansion-panel>
+    
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Research Details
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <table>
+          <caption>
+            Contact Us Contacts
+          </caption>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Description</th>
+              <th>Frontend Technologies</th>
+              <th>Backend Technologies</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let contact of contactusContacts">
+              <td>{{ contact.name }}</td>
+              <td>{{ contact.email }}</td>
+              <td>{{ contact.description }}</td>
+              <td>{{ contact.frontendTechnologies }}</td>
+              <td>{{ contact.backendTechnologies }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+  

@@ -27,6 +27,7 @@ import { TheWorkResComponent } from './the-work-res/the-work-res.component';
 import { CollabresComponent } from './collabres/collabres.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
+import { MatExpansionModule } from '@angular/material/expansion';
 // import { ToastrModule } from 'ngx-toastr/public_api';
 
 @NgModule({
@@ -61,7 +62,7 @@ import { AdminloginComponent } from './adminlogin/adminlogin.component';
     ClipboardModule,
     DragDropModule,
     MatTooltipModule,
-
+    MatExpansionModule,
     // ToastrModule.forRoot(),
   ],
   providers: [],

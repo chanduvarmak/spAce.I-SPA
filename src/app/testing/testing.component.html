@@ -106,7 +106,7 @@
 </div> -->
 
 <!-- app.component.html -->
-<div class="dashboard">
+<!-- <div class="dashboard">
   <header>
     <h1>User Dashboard</h1>
     <button (click)="logout()">Logout</button>
@@ -120,5 +120,80 @@
       </ul>
     </nav>
   </main>
-</div>
+  <label class="toggle-switch">
+    <input type="checkbox" [(ngModel)]="toggleValue" (ngModelChange)="onToggleChange($event)">
+    <span class="slider round"></span>
+  </label>
+  
+</div> -->
 
+<div class="container">
+  <div class="header">
+    <h1>User Dashboard</h1>
+    <button class="logout-button" (click)="logout()">Logout</button>
+  </div>
+  
+  <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Collaboration Details
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <table>
+        <caption>
+          CollabComm Contacts
+        </caption>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Description</th>
+            <th>Frontend Technologies</th>
+            <th>Backend Technologies</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let contact of collabcommContacts">
+            <td>{{ contact.name }}</td>
+            <td>{{ contact.email }}</td>
+            <td>{{ contact.description }}</td>
+            <td>{{ contact.frontendTechnologies }}</td>
+            <td>{{ contact.backendTechnologies }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </mat-expansion-panel>
+  
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Research Details
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <table>
+        <caption>
+          Contact Us Contacts
+        </caption>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Description</th>
+            <th>Frontend Technologies</th>
+            <th>Backend Technologies</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let contact of contactusContacts">
+            <td>{{ contact.name }}</td>
+            <td>{{ contact.email }}</td>
+            <td>{{ contact.description }}</td>
+            <td>{{ contact.frontendTechnologies }}</td>
+            <td>{{ contact.backendTechnologies }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>

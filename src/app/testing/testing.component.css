@@ -148,3 +148,32 @@ router-outlet {
   flex-grow: 1;
   padding: 1rem;
 }
+
+
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.logout-button {
+  margin-left: auto;
+}
+
+table {
+  width: 100%;
+  margin-top: 10px;
+}
+
+mat-expansion-panel {
+  margin-bottom: 10px;
+}
+
+mat-panel-title {
+  font-weight: bold;
+}

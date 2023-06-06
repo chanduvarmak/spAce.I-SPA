@@ -106,7 +106,7 @@ export class AdminDashboardComponent {
     if (confirmed) {
       // this.authService.logout();
 
-      this.route.navigate(['/login']);
+      this.route.navigate(['/adminlogin']);
     }
   }
 }
