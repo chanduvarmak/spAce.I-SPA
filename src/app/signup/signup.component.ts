@@ -9,6 +9,7 @@ import {
 
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { AuthserviceService } from '../authservice.service';
 
 // import { FormBuilder } from '@angular/forms';
 @Component({
@@ -26,7 +27,8 @@ export class SignupComponent {
   dataToStore: boolean = false;
   constructor(
     private http: HttpClient,
-    private route: Router
+    private route: Router,
+    private service: AuthserviceService 
   ) // private toastr: ToastrService,
   {
     this.regForm = new FormGroup(
@@ -64,7 +66,7 @@ export class SignupComponent {
         console.log(users);
         // Check if the user's data exists in the response
         const userData = users.find(
-          (user) => user.id === this.regForm.value.id
+          (user) => user.email === this.regForm.value.email
         );
 
         if (userData) {
@@ -144,6 +146,7 @@ export class SignupComponent {
             // this.toastr.success('Hello, World!', 'Success');
             this.regForm.reset();
             this.route.navigate(['login']);
+            this.service.signin = true;
           },
           (err) => {
             alert('something went wrong');

@@ -111,5 +111,8 @@ export class TestingComponent {
   
     this.router.navigate(['/login']);
   }
+  deleteData(){
+
+  }
 }
 

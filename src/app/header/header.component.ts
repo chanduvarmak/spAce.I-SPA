@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { AuthserviceService } from '../authservice.service';
 
 @Component({
   selector: 'app-header',
@@ -9,9 +10,10 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 })
 export class HeaderComponent {
   isUserSignedUp: boolean = false;
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private service: AuthserviceService) {}
 
   ngOnInit() {
+    this.isUserSignedUp = this.service.signin;
     this.http.get<any[]>('http://localhost:3000/signup').subscribe(
       (users: any[]) => {
         console.log(users);

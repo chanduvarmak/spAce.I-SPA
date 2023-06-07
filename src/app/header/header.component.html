@@ -41,11 +41,11 @@
     </div>
 
     <div class="collabration">
-      <button
+      <button *ngIf="isUserSignedUp"
         mat-raised-button
         [mat-menu-trigger-for]="collabrations"
         matTooltip="Collabrate Contact Forms"
-        [disabled]="!isUserSignedUp"
+        
       >
         The Collaboration
       </button>
@@ -103,3 +103,6 @@
   <!-- here,the vale given for routerlink is our component module id,by the help of this we can route them -->
   <!-- we used angular material selectors for dropdown button,when we use nested selectors inside single tag it will automatically generates arrow dropdown -->
 </div>
+
+
+<!-- [disabled]="!isUserSignedUp" -->

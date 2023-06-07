@@ -90,90 +90,35 @@ button:hover {
   background-color: #1e7e34;
 } */
 
-/* styles.css */
-.dashboard {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
+
+.nav-item::after{
+  content:'';
+  display:block;
+  width:0px;
+  height:4px;
+  background:#ff0000;
+  transition: 0.2s;
+  margin-top:-10px;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  background-color: #f1f1f1;
+.nav-item:hover::after{width:100%;}
+
+
+.nav-link{padding:15px 5px;transition:0.2s;}
+
+.navbar-nav .nav-link {
+  
+  color:#000;
+  font-weight:bold;
+  font-size:18px;
 }
 
-h1 {
-  font-size: 1.5rem;
-  margin: 0;
-}
+.navbar-nav .active > .nav-link{
 
-button {
-  background-color: #2196f3;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-main {
-  flex-grow: 1;
-  display: flex;
-}
-
-nav {
-  background-color: #f1f1f1;
-  padding: 1rem;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-li {
-  margin-bottom: 0.5rem;
-  cursor: pointer;
-}
-
-li.active {
-  font-weight: bold;
-}
-
-router-outlet {
-  flex-grow: 1;
-  padding: 1rem;
-}
-
-
-
-.container {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.header {
-  display: flex;
-  align-items: center;
-}
-
-.logout-button {
-  margin-left: auto;
-}
-
-table {
-  width: 100%;
-  margin-top: 10px;
-}
-
-mat-expansion-panel {
-  margin-bottom: 10px;
-}
-
-mat-panel-title {
-  font-weight: bold;
+  width:100%;
+  height:51px;
+  
+border-bottom: .25rem solid transparent;
+border-bottom-color: #ed4137;
+ 
 }
