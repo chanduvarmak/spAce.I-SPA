@@ -5,7 +5,8 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class AuthserviceService {
+  showCollaborationForm:boolean=false;
   
-  signin:boolean = false;
+ 
  
 }

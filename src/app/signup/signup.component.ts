@@ -25,12 +25,12 @@ export class SignupComponent {
   users: any = [];
   emails: any = [];
   dataToStore: boolean = false;
+  showCollaborationForm = false;
   constructor(
     private http: HttpClient,
     private route: Router,
-    private service: AuthserviceService 
-  ) // private toastr: ToastrService,
-  {
+    private service: AuthserviceService // private toastr: ToastrService,
+  ) {
     this.regForm = new FormGroup(
       {
         uname: new FormControl(null, [
@@ -61,24 +61,6 @@ export class SignupComponent {
 
   ngOnInit() {
     this.userData();
-    this.http.get<any[]>('http://localhost:3000/signup').subscribe(
-      (users: any[]) => {
-        console.log(users);
-        // Check if the user's data exists in the response
-        const userData = users.find(
-          (user) => user.email === this.regForm.value.email
-        );
-
-        if (userData) {
-          this.isUserSignedUp = true;
-        } else {
-          this.isUserSignedUp = false;
-        }
-      },
-      (error) => {
-        console.error('Error fetching user data:', error);
-      }
-    );
   }
   userData() {
     this.http.get<any>('http://localhost:3000/signup').subscribe(
@@ -112,41 +94,18 @@ export class SignupComponent {
   signup() {
     console.log('hi this appears on form submit');
     this.checkEmail();
-    // this.users.forEach((user: any) => {
-    //   if (user.email == this.regForm.value.email) {
-    //     alert('already exist');
-    //     this.route.navigate(['login']);
-
-    //     // return;
-    //   } else {
-    //     this.dataToStore = true;
-    //   }
-    // }
-    // );
-
-    // for (let i = 1; i < this.users.length; i++) {
-    //   if (
-    //     this.regForm.value.email.toLowerCase() ===
-    //     this.users[i].email.toLowerCase()
-    //   ) {
-    //     alert('user already exists');
-    //     this.route.navigate(['login']);
-    //     // break;
-    //   } else {
-    //     this.dataToStore = true;
-    //     break;
-    //   }
-    // }
+    // debugger;
     if (this.dataToStore) {
       this.http
         .post<any>('http://localhost:3000/signup', this.regForm.value)
         .subscribe(
           (res) => {
             alert('signup successfull');
+            
             // this.toastr.success('Hello, World!', 'Success');
             this.regForm.reset();
             this.route.navigate(['login']);
-            this.service.signin = true;
+            this.showCollaborationForm = true;
           },
           (err) => {
             alert('something went wrong');
@@ -154,4 +113,5 @@ export class SignupComponent {
         );
     }
   }
+  
 }

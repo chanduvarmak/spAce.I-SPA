@@ -9,11 +9,12 @@ import { AuthserviceService } from '../authservice.service';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
+  isUserSignup: boolean = false;
   isUserSignedUp: boolean = false;
   constructor(private http: HttpClient, private service: AuthserviceService) {}
 
   ngOnInit() {
-    this.isUserSignedUp = this.service.signin;
+    this.isUserSignedUp = this.service.showCollaborationForm;
     this.http.get<any[]>('http://localhost:3000/signup').subscribe(
       (users: any[]) => {
         console.log(users);

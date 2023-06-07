@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CollaborationserviceService } from '../collaborationservice.service';
+import * as $ from 'jquery';
+
+
 
 @Component({
   selector: 'app-userdashboard',
@@ -11,6 +14,7 @@ export class UserdashboardComponent implements OnInit {
   tableVisible: boolean = false;
   collabcommContacts: any[] = [];
   contactusContacts: any[] = [];
+  menuItems: any[] = [];
   // showProjects: boolean = true;
   // showStatus: boolean = false;
 
@@ -33,8 +37,19 @@ export class UserdashboardComponent implements OnInit {
   ngOnInit() {
     this.loadCollabCommContacts();
     this.loadContactUsContacts();
+    // this.menuItems = Router.filter((menuItem: any) => menuItem);
+    this.menuItems = this.menuItems.filter((menuItem: any) => menuItem);
+
   }
- 
+  isMobileMenu() {
+    // if (typeof window !== 'undefined' && typeof $(window) !== 'undefined') {
+    //   if ($(window).width() > 991) {
+    //     return false;
+    //   }
+    // }
+    // return true;
+  }
+  
   loadCollabCommContacts() {
     this.contactservice.getCollabCommContacts()
       .subscribe(contacts => {
