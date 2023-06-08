@@ -2,10 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CollaborationserviceService } from '../collaborationservice.service';
 import * as $ from 'jquery';
-// import { NgChartsModule } from 'ng2-charts';
+import { NgChartsModule } from 'ng2-charts';
 import { ChartDataset, ChartOptions, ChartType, TooltipItem } from 'chart.js';
-// import { Label, Colors } from 'ng2-charts';
-
 
 interface Task {
   name: string;
@@ -17,9 +15,9 @@ interface Task {
   styleUrls: ['./userdashboard.component.css'],
 })
 export class UserdashboardComponent implements OnInit {
-  showCollabDetails: boolean = true;
+  showCollabDetails: boolean = false;
   showResearchDetails: boolean = false;
-  showProgress: boolean = false;
+  showProgress: boolean = true;
   tableVisible: boolean = false;
   collabcommContacts: any[] = [];
   contactusContacts: any[] = [];
@@ -27,7 +25,7 @@ export class UserdashboardComponent implements OnInit {
   tasks: Task[] = [
     { name: 'Task 1', completed: false },
     { name: 'Task 2', completed: true },
-    { name: 'Task 3', completed: false }
+    { name: 'Task 3', completed: false },
   ];
   // public pieChartLabels: Label[] = ['Open', 'In Progress', 'Completed'];
   public pieChartData: number[] = [300, 500, 200]; // Example data, replace with your actual data
@@ -40,11 +38,11 @@ export class UserdashboardComponent implements OnInit {
 
   // User Behavior Graph data
   public lineChartData: ChartDataset[] = [
-    { data: [65, 59, 80, 81, 56, 55, 40], label: 'Behavior' }
+    { data: [65, 59, 80, 81, 56, 55, 40], label: 'Behavior' },
   ];
   // public lineChartLabels: Label[] = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
   public lineChartOptions: ChartOptions = {
-    responsive: true
+    responsive: true,
   };
   // public lineChartColors: Colors[] = [
   //   {
@@ -66,8 +64,8 @@ export class UserdashboardComponent implements OnInit {
   toggleTable() {
     this.tableVisible = !this.tableVisible;
   }
-  toggleProgress(){
-    this.showProgress=!this.showProgress;
+  toggleProgress() {
+    this.showProgress = !this.showProgress;
   }
   constructor(
     private route: Router,
@@ -78,7 +76,6 @@ export class UserdashboardComponent implements OnInit {
     this.loadContactUsContacts();
     // this.menuItems = Router.filter((menuItem: any) => menuItem);
     this.menuItems = this.menuItems.filter((menuItem: any) => menuItem);
-
   }
   isMobileMenu() {
     // if (typeof window !== 'undefined' && typeof $(window) !== 'undefined') {
@@ -88,22 +85,20 @@ export class UserdashboardComponent implements OnInit {
     // }
     // return true;
   }
-  
+
   loadCollabCommContacts() {
-    this.contactservice.getCollabCommContacts()
-      .subscribe(contacts => {
-        this.collabcommContacts = contacts;
-        console.log(this.collabcommContacts); // Logging the fetched collabcomm contacts
-      });
+    this.contactservice.getCollabCommContacts().subscribe((contacts) => {
+      this.collabcommContacts = contacts;
+      console.log(this.collabcommContacts); // Logging the fetched collabcomm contacts
+    });
   }
   loadContactUsContacts() {
-    this.contactservice.getContactUsContacts()
-      .subscribe(contacts => {
-        this.contactusContacts = contacts;
-        console.log(this.contactusContacts); // Logging the fetched contactus contacts
-      });
+    this.contactservice.getContactUsContacts().subscribe((contacts) => {
+      this.contactusContacts = contacts;
+      console.log(this.contactusContacts); // Logging the fetched contactus contacts
+    });
   }
-  
+
   logout() {
     const confirmed = window.confirm('Are you sure you want to logout?');
     if (confirmed) {

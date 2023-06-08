@@ -30,6 +30,7 @@ import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { AuthserviceService } from './authservice.service';
 // import { ToastrModule } from 'ngx-toastr/public_api';
+import { NgChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -65,6 +66,7 @@ import { AuthserviceService } from './authservice.service';
     MatTooltipModule,
     MatExpansionModule,
     // ToastrModule.forRoot(),
+    NgChartsModule,
   ],
   providers: [AuthserviceService],
   bootstrap: [AppComponent],

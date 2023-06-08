@@ -27,6 +27,7 @@
     "globby": "^13.1.4",
     "json": "^11.0.0",
     "json-server": "^0.17.3",
+    "ng2-charts": "^4.1.1",
     "ngx-toastr": "^14.3.0",
     "npm-git-install": "^0.3.0",
     "package.json": "^2.0.1",
