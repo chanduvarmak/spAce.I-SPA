@@ -10,6 +10,7 @@ import {
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { AuthserviceService } from '../authservice.service';
+import { HeaderComponent } from '../header/header.component';
 
 // import { FormBuilder } from '@angular/forms';
 @Component({
@@ -61,6 +62,7 @@ export class SignupComponent {
 
   ngOnInit() {
     this.userData();
+    
   }
   userData() {
     this.http.get<any>('http://localhost:3000/signup').subscribe(
@@ -94,18 +96,21 @@ export class SignupComponent {
   signup() {
     console.log('hi this appears on form submit');
     this.checkEmail();
-    // debugger;
+    debugger;
     if (this.dataToStore) {
       this.http
         .post<any>('http://localhost:3000/signup', this.regForm.value)
         .subscribe(
           (res) => {
             alert('signup successfull');
+            this.service.flag = true;
 
             // this.toastr.success('Hello, World!', 'Success');
             this.regForm.reset();
             this.route.navigate(['login']);
-            this.service.setCollaborationFormVisibility(true);
+            debugger;
+
+            // this.service.setCollaborationFormVisibility.next(true);
           },
           (err) => {
             alert('something went wrong');

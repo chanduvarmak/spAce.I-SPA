@@ -14,9 +14,14 @@ export class HeaderComponent {
   constructor(private http: HttpClient, private service: AuthserviceService) {}
 
   ngOnInit() {
-    this.service.showForm$.subscribe(showForm => {
-      this.showCollaborationForm = showForm;
-    });
+    // this.service.showForm$.subscribe(showForm => {
+    //   this.showCollaborationForm = showForm;
+    // });
+    this.getBooleanValue();
   }
-   
+
+  getBooleanValue() {
+    this.isUserSignedUp = this.service.flag;
+    console.log(this.isUserSignedUp); // Use the boolean value as required
+  }
 }

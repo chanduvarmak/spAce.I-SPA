@@ -5,10 +5,12 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class AuthserviceService {
-  private showFormSubject = new BehaviorSubject<boolean>(false);
-  showForm$ = this.showFormSubject.asObservable();
+  // myBooleanValue: boolean;
+ flag:boolean = false;
+  // private showFormSubject = new BehaviorSubject<boolean>(false);
+  // showForm$ = this.showFormSubject.asObservable();
 
-  setCollaborationFormVisibility(showForm: boolean) {
-    this.showFormSubject.next(showForm);
-  }
+  // setCollaborationFormVisibility(showForm: boolean) {
+  //   this.showFormSubject.next(showForm);
+  // }
 }

@@ -14,7 +14,7 @@ export class AdminDashboardComponent {
   users: any[] = [];
   newUser: any = {};
   selectedUser: any = {};
-  showUserTable: boolean = true;
+  showUserTable: boolean = false;
   jsonData: any[] = [];
   showData: boolean = false;
 
