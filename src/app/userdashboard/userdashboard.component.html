@@ -39,7 +39,7 @@
 
 
 
-  <div class="container">
+  <!-- <div class="container">
     <div class="header">
       <h1>User Dashboard</h1>
       <button class="logout-button" (click)="logout()">Logout</button>
@@ -102,7 +102,7 @@
         </table>
       </mat-expansion-panel>
     </mat-accordion>
-  </div>
+  </div> -->
   
 
 
@@ -184,3 +184,93 @@
       </li>
   </ul>
 </div> -->
+
+<div class="dashboard-container">
+  <div class="sidebar">
+    <ul>
+      <li (click)="toggleCollabDetails()">Collaboration Details</li>
+      <li (click)="toggleResearchDetails()">Research Details</li>
+      <li (click)="toggleProgress()">Progress</li>
+    </ul>
+  </div>
+  <div class="content">
+    <div class="header">
+      <h1>User Dashboard</h1>
+      <button class="logout-button" (click)="logout()">Logout</button>
+    </div>
+    <section *ngIf="showCollabDetails" id="collab">
+      <h2>Collaboration Details</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Description</th>
+            <th>Frontend Technologies</th>
+            <th>Backend Technologies</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let contact of collabcommContacts">
+            <td>{{ contact.name }}</td>
+            <td>{{ contact.email }}</td>
+            <td>{{ contact.description }}</td>
+            <td>{{ contact.frontendTechnologies }}</td>
+            <td>{{ contact.backendTechnologies }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section *ngIf="showResearchDetails" id="research">
+      <h2>Research Details</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Description</th>
+            <th>Frontend Technologies</th>
+            <th>Backend Technologies</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let contact of contactusContacts">
+            <td>{{ contact.name }}</td>
+            <td>{{ contact.email }}</td>
+            <td>{{ contact.description }}</td>
+            <td>{{ contact.frontendTechnologies }}</td>
+            <td>{{ contact.backendTechnologies }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section *ngIf="showProgress" id="progress">
+      <h2>Progress</h2>
+      <div class="progress-content">
+        <div class="box">
+          <h3>Email Statistics</h3>
+          <!-- Email Statistics content (e.g., pie chart) -->
+          <!-- <div style="height: 300px">
+            <canvas baseChart [data]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType" [colors]="pieChartColors"></canvas>
+          </div> -->
+        </div>
+        <div class="box">
+          <h3>User Behavioral Graph</h3>
+          <!-- User Behavioral Graph content -->
+        </div>
+        <div class="box">
+          <h3>Tasks</h3>
+          <ul>
+            <li *ngFor="let task of tasks">
+              <input type="checkbox" [checked]="task.completed" /> {{ task.name }}
+            </li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3>GitHub Repository</h3>
+          <a href="https://github.com/chandukeertipati/spAce.I-SPA" target="_blank">View Repository</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

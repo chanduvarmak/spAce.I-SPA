@@ -2,34 +2,73 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CollaborationserviceService } from '../collaborationservice.service';
 import * as $ from 'jquery';
+// import { NgChartsModule } from 'ng2-charts';
+import { ChartDataset, ChartOptions, ChartType, TooltipItem } from 'chart.js';
+// import { Label, Colors } from 'ng2-charts';
 
 
-
+interface Task {
+  name: string;
+  completed: boolean;
+}
 @Component({
   selector: 'app-userdashboard',
   templateUrl: './userdashboard.component.html',
   styleUrls: ['./userdashboard.component.css'],
 })
 export class UserdashboardComponent implements OnInit {
+  showCollabDetails: boolean = true;
+  showResearchDetails: boolean = false;
+  showProgress: boolean = false;
   tableVisible: boolean = false;
   collabcommContacts: any[] = [];
   contactusContacts: any[] = [];
   menuItems: any[] = [];
-  // showProjects: boolean = true;
-  // showStatus: boolean = false;
+  tasks: Task[] = [
+    { name: 'Task 1', completed: false },
+    { name: 'Task 2', completed: true },
+    { name: 'Task 3', completed: false }
+  ];
+  // public pieChartLabels: Label[] = ['Open', 'In Progress', 'Completed'];
+  public pieChartData: number[] = [300, 500, 200]; // Example data, replace with your actual data
+  public pieChartType: ChartType = 'pie';
+  // public pieChartColors: Colors[] = [
+  //   {
+  //     backgroundColor: ['#ff6f69', '#ffcc5c', '#88d8b0']
+  //   }
+  // ];
+
+  // User Behavior Graph data
+  public lineChartData: ChartDataset[] = [
+    { data: [65, 59, 80, 81, 56, 55, 40], label: 'Behavior' }
+  ];
+  // public lineChartLabels: Label[] = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+  public lineChartOptions: ChartOptions = {
+    responsive: true
+  };
+  // public lineChartColors: Colors[] = [
+  //   {
+  //     borderColor: 'rgba(105, 0, 132, .8)',
+  //     backgroundColor: 'rgba(105, 0, 132, .2)',
+  //   }
+  // ];
+  public lineChartLegend = true;
+  public lineChartType: ChartType = 'line';
+  public lineChartPlugins = [];
+  toggleCollabDetails() {
+    this.showCollabDetails = !this.showCollabDetails;
+  }
+
+  toggleResearchDetails() {
+    this.showResearchDetails = !this.showResearchDetails;
+  }
 
   toggleTable() {
     this.tableVisible = !this.tableVisible;
   }
-  // toggleProjects() {
-  //   this.showProjects = true;
-  //   this.showStatus = false;
-  // }
-
-  // toggleStatus() {
-  //   this.showProjects = false;
-  //   this.showStatus = true;
-  // }
+  toggleProgress(){
+    this.showProgress=!this.showProgress;
+  }
   constructor(
     private route: Router,
     private contactservice: CollaborationserviceService
