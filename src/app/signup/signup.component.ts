@@ -29,7 +29,7 @@ export class SignupComponent {
   constructor(
     private http: HttpClient,
     private route: Router,
-    private service: AuthserviceService // private toastr: ToastrService,
+    private service: AuthserviceService
   ) {
     this.regForm = new FormGroup(
       {
@@ -101,11 +101,11 @@ export class SignupComponent {
         .subscribe(
           (res) => {
             alert('signup successfull');
-            
+
             // this.toastr.success('Hello, World!', 'Success');
             this.regForm.reset();
             this.route.navigate(['login']);
-            this.showCollaborationForm = true;
+            this.service.setCollaborationFormVisibility(true);
           },
           (err) => {
             alert('something went wrong');
@@ -113,5 +113,4 @@ export class SignupComponent {
         );
     }
   }
-  
 }

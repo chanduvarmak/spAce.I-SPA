@@ -28,6 +28,7 @@ import { CollabresComponent } from './collabres/collabres.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { AuthserviceService } from './authservice.service';
 // import { ToastrModule } from 'ngx-toastr/public_api';
 
 @NgModule({
@@ -65,7 +66,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MatExpansionModule,
     // ToastrModule.forRoot(),
   ],
-  providers: [],
+  providers: [AuthserviceService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
