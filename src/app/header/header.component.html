@@ -39,10 +39,10 @@
         <button mat-menu-item routerLink="./theworkcomm">Banking Sites</button>
       </mat-menu>
     </div>
-
+    
+    <!-- *ngIf="isUserSignedUp" -->
     <div class="collabration">
       <button
-        *ngIf="isUserSignedUp"
         mat-raised-button
         [mat-menu-trigger-for]="collabrations"
         matTooltip="Collabrate Contact Forms"
@@ -92,7 +92,7 @@
       >
         Access
       </button>
-      <button (click)="getBooleanValue()">check</button>
+      <!-- <button (click)="getBooleanValue()">check</button> -->
       <mat-menu #access="matMenu">
         <button mat-menu-item routerLink="./login">User</button>
         <button mat-menu-item routerLink="./adminlogin">Admin</button>

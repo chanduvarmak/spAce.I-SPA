@@ -92,27 +92,137 @@ export class TestingComponent {
   //     }
   //   );
   // }
-  constructor(private router: Router,private contactservice: CollaborationserviceService) {}
-  loadCollabCommContacts() {
-    this.contactservice.getCollabCommContacts()
-      .subscribe(contacts => {
-        this.collabcommContacts = contacts;
-        console.log(this.collabcommContacts); // Logging the fetched collabcomm contacts
-      });
-  }
-  loadContactUsContacts() {
-    this.contactservice.getContactUsContacts()
-      .subscribe(contacts => {
-        this.contactusContacts = contacts;
-        console.log(this.contactusContacts); // Logging the fetched contactus contacts
-      });
-  }
-  logout(): void {
-  
-    this.router.navigate(['/login']);
-  }
-  deleteData(){
 
+
+  // constructor(private router: Router,private contactservice: CollaborationserviceService) {}
+  // loadCollabCommContacts() {
+  //   this.contactservice.getCollabCommContacts()
+  //     .subscribe(contacts => {
+  //       this.collabcommContacts = contacts;
+  //       console.log(this.collabcommContacts); 
+  //     });
+  // }
+  // loadContactUsContacts() {
+  //   this.contactservice.getContactUsContacts()
+  //     .subscribe(contacts => {
+  //       this.contactusContacts = contacts;
+  //       console.log(this.contactusContacts);
+  //     });
+  // }
+  // logout(): void {
+  
+  //   this.router.navigate(['/login']);
+  // }
+  // deleteData(){
+
+  // }
+
+  // Existing code
+  users: any[] = [];
+  newUser: any = {};
+  selectedUser: any = {};
+  showUserTable: boolean = false;
+  jsonData: any[] = [];
+  showData: boolean = false;
+  subscriptions: any[] = [];
+  showSubscriptions: boolean = false;
+  activeMenu: string = '';
+
+  constructor(
+    private http: HttpClient,
+    private route: Router
+  ) {}
+
+  ngOnInit() {
+    this.loadUsers();
+    this.loadData();
+    this.loadSubscriptions();
+  }
+
+  toggleMenu(menu: string) {
+    if (this.activeMenu === menu) {
+      this.activeMenu = '';
+    } else {
+      this.activeMenu = menu;
+    }
+  }
+
+  toggleUserTable() {
+    this.showUserTable = !this.showUserTable;
+  }
+
+  toggleData() {
+    this.showData = !this.showData;
+  }
+
+  toggleSubscriptions() {
+    this.showSubscriptions = !this.showSubscriptions;
+  }
+
+  loadUsers() {
+    this.http.get<any[]>('http://localhost:3000/signup')
+      .subscribe(
+        (data) => {
+          this.users = data;
+        },
+        (error) => {
+          console.error('Error loading users:', error);
+        }
+      );
+  }
+
+  loadData() {
+    this.http.get<any[]>('http://localhost:3000/contactus')
+      .subscribe(
+        (data) => {
+          this.jsonData = data;
+        },
+        (error) => {
+          console.error('Error loading project data:', error);
+        }
+      );
+  }
+
+  loadSubscriptions() {
+    this.http.get<any[]>('http://localhost:3000/homecontact')
+      .subscribe(
+        (data) => {
+          this.subscriptions = data;
+        },
+        (error) => {
+          console.error('Error loading subscriptions:', error);
+        }
+      );
+  }
+
+  deleteUser(userId: string) {
+    if (confirm('Are you sure you want to delete this user?')) {
+      this.http.delete(`http://localhost:3000/users/${userId}`)
+        .subscribe(
+          () => {
+            this.loadUsers();
+          },
+          (error) => {
+            console.error('Error deleting user:', error);
+          }
+        );
+    }
+  }
+
+  deleteData(index: number) {
+    if (confirm('Are you sure you want to delete this item?')) {
+      this.jsonData.splice(index, 1);
+    }
+  }
+
+  logout() {
+    const confirmed = window.confirm('Are you sure you want to logout?');
+    if (confirmed) {
+      this.route.navigate(['/adminlogin']);
+    }
   }
 }
+
+
+
 

@@ -163,7 +163,7 @@
     </div>
   </mat-expansion-panel>
 </mat-accordion> -->
-
+ 
 <div class="dashboard-container">
   <div class="sidebar">
     <h2>Admin Dashboard</h2>
@@ -253,7 +253,7 @@
       </tbody>
     </table>
   </div>
-  
+
   <div class="content" *ngIf="showSubscriptions">
     <div
       class="subscriptions-container"
@@ -286,9 +286,20 @@
   </div>
   <div class="portfolios-container" *ngIf="showPortfolios">
     <h3>Portfolios</h3>
-    Add your portfolios content here
+    <div class="portfolio-items">
+      <div class="portfolio-item">
+        <img src="" alt="Portfolio Image 1" />
+        <h4>Project 1</h4>
+        <p>Description of Project 1</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="" alt="Portfolio Image 2" />
+        <h4>Project 2</h4>
+        <p>Description of Project 2</p>
+      </div>
+      <!-- Add more portfolio items here -->
+    </div>
   </div>
 </div>
-
 
 <!-- <button (click)="editUser(user)">Edit</button> -->

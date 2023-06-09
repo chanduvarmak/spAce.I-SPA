@@ -55,7 +55,12 @@ button {
 }
 
 .sidebar h2 {
-  margin-bottom: 20px;
+  padding: 10px;
+  margin-bottom: 25px;
+  border-bottom: black solid;
+  border-bottom-style: double;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 .sidebar-menu {
@@ -71,8 +76,11 @@ button {
   cursor: pointer;
 }
 
-.menu-item i {
+.menu-item li {
   margin-right: 10px;
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
 }
 
 .content {
@@ -86,6 +94,7 @@ button {
   display: inline-block;
   bottom: 0;
   left: 15px;
+  margin-left: 30px;
 }
 
 .logout-button {
@@ -137,4 +146,15 @@ button:hover {
 .subscriptions-container table td {
   padding: 8px;
   border-bottom: 1px solid #ddd;
+}
+li {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding-inline: 40px;
+}
+li:hover {
+  background-color: rgb(61, 61, 61);
 }

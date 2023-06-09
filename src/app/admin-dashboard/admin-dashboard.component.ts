@@ -44,6 +44,7 @@ export class AdminDashboardComponent {
       this.jsonData = data;
     });
   }
+
   toggleData() {
     this.showData = !this.showData;
   }
@@ -55,7 +56,7 @@ export class AdminDashboardComponent {
   toggleSubscriptions() {
     this.showSubscriptions = !this.showSubscriptions;
   }
-
+  
   togglePortfolios() {
     this.showPortfolios = !this.showPortfolios;
   }

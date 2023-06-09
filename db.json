@@ -63,6 +63,22 @@
         "Flask"
       ],
       "id": 6
+    },
+    {
+      "name": "nstarx",
+      "email": "nstarx@gmail.com",
+      "description": "hii we are doing AI services soon.",
+      "frontendTechnologies": [
+        "Angular",
+        "Tailwind CSS"
+      ],
+      "backendTechnologies": [
+        "Flask",
+        "Ruby on Rails",
+        "Django",
+        "Spring Boot"
+      ],
+      "id": 7
     }
   ],
   "Admin": [
