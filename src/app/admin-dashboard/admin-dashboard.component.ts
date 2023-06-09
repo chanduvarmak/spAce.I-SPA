@@ -17,6 +17,11 @@ export class AdminDashboardComponent {
   showUserTable: boolean = false;
   jsonData: any[] = [];
   showData: boolean = false;
+  showSubscriptions: boolean = false;
+  showPortfolios: boolean = false;
+  subscriptions: any[] = [];
+  activeMenu: string = '';
+
 
   constructor(
     private dataservice: SpaceiService,
@@ -25,9 +30,16 @@ export class AdminDashboardComponent {
     private http: HttpClient,
     private route: Router
   ) {}
-
+  toggleMenu(menu: string) {
+    if (this.activeMenu === menu) {
+      this.activeMenu = '';
+    } else {
+      this.activeMenu = menu;
+    }
+  }
   ngOnInit() {
     this.loadUsers();
+    this.loadSubscriptions();
     this.dataservice.getData().subscribe((data) => {
       this.jsonData = data;
     });
@@ -40,12 +52,29 @@ export class AdminDashboardComponent {
       this.jsonData.splice(index, 1);
     }
   }
+  toggleSubscriptions() {
+    this.showSubscriptions = !this.showSubscriptions;
+  }
+
+  togglePortfolios() {
+    this.showPortfolios = !this.showPortfolios;
+  }
   toggleUserTable() {
     this.showUserTable = !this.showUserTable;
     // this.toastr.success('user deleted successfully', 'chandu', {
     //   progressBar: true,
     //   progressAnimation: 'increasing',
     // });
+  }
+  loadSubscriptions() {
+    this.http.get<any[]>('http://localhost:3000/homecontact').subscribe(
+      (data) => {
+        this.subscriptions = data;
+      },
+      (error) => {
+        console.error('Error loading subscriptions:', error);
+      }
+    );
   }
   loadUsers() {
     this.userService.getUsers().subscribe(

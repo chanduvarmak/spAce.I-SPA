@@ -26,4 +26,8 @@ export class CrudService {
     const url = `${this.apiUrl}/${userId}`;
     return this.http.delete<any>(url);
   }
+
+  getSubscriptions(): Observable<any[]> {
+    return this.http.get<any[]>('http://localhost:3000/homecontact');
+  }
 }

@@ -67,12 +67,12 @@
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   animation: slideIn 0.5s ease-in-out;
+  margin-top: 75px;
 }
-
 
 .form-group {
   margin-bottom: 20px;
-} 
+}
 
 .form-control {
   width: 100%;
@@ -124,6 +124,12 @@
 }
 
 @keyframes form-animation {
-  0% { opacity: 0; transform: translateY(-10px); }
-  100% { opacity: 1; transform: translateY(0); }
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
