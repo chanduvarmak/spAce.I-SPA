@@ -21,7 +21,10 @@ export class AdminDashboardComponent {
   showPortfolios: boolean = false;
   subscriptions: any[] = [];
   activeMenu: string = '';
-
+  contactDetails: any[] = [];
+  collaborationDetails: any[] = [];
+  showCollaborationDetails: boolean = false;
+  showContactDetails:boolean=false;
 
   constructor(
     private dataservice: SpaceiService,
@@ -138,5 +141,25 @@ export class AdminDashboardComponent {
 
       this.route.navigate(['/adminlogin']);
     }
+  }
+  loadContactDetails() {
+    this.http.get<any[]>('http://localhost:3000/contactus').subscribe(
+      (data) => {
+        this.contactDetails = data;
+      },
+      (error) => {
+        console.error('Error loading contact details:', error);
+      }
+    );
+  }
+  loadCollaborationDetails() {
+    this.http.get<any[]>('http://localhost:3000/collabcomm').subscribe(
+      (data) => {
+        this.collaborationDetails = data;
+      },
+      (error) => {
+        console.error('Error loading collaboration details:', error);
+      }
+    );
   }
 }

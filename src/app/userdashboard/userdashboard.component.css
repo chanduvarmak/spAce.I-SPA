@@ -101,7 +101,7 @@ body {
 
 .sidebar {
   width: 250px;
-  background-color: gray;
+  background: linear-gradient(#344548, #617073);
 }
 
 .sidebar ul {
@@ -120,7 +120,7 @@ body {
   border-bottom: 1px solid #ddd;
 }
 .sidebar li:hover {
-  background-color: rgb(77, 77, 77);
+  background-color: #4d5e62;
 }
 .content {
   flex: 1;
@@ -194,7 +194,8 @@ tr:nth-child(even) {
 
 .box a {
   display: inline-block;
-  background-color: gray;
+  background:linear-gradient(#222e30,#3a4d51
+  );
   color: #fff;
   padding: 8px 16px;
   text-decoration: none;

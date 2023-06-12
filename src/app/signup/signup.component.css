@@ -7,7 +7,7 @@ body {
 .cont {
   width: 400px;
   margin: 100px auto;
-  background: linear-gradient(#d1d7e0, #243b55);
+  background: linear-gradient(#758285, #9ca6a8);
   border-radius: 10px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
   /* padding: 40px; */
@@ -25,9 +25,9 @@ h2 {
   font-family: Arial, sans-serif;
   color: #333;
   margin-bottom: 30px;
-  background-color: gray;
+  background-color: #3a4d51;
   border-radius: 50px;
-  color: black;
+  color: white;
   text-align: center;
   padding: 8px;
 }
@@ -38,7 +38,7 @@ input[type="password"] {
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
-  border-radius: 5px;
+  border-radius: 50px;
   border: none;
   background-color: #f2f2f2;
   color: #333;

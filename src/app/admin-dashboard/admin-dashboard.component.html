@@ -163,7 +163,7 @@
     </div>
   </mat-expansion-panel>
 </mat-accordion> -->
- 
+
 <div class="dashboard-container">
   <div class="sidebar">
     <h2>Admin Dashboard</h2>
@@ -173,7 +173,14 @@
         <span>{{ showUserTable ? "Hide User Data" : "Show User Data" }}</span>
       </li>
       <li class="menu-item" (click)="toggleData()">
-        <!-- <i class="fas fa-project-diagram"></i> -->
+        <div class="toggle-buttons">
+          <button class="toggle-button" (click)="showContactDetails = !showContactDetails">
+            Show Contact Details
+          </button>
+          <button class="toggle-button" (click)="showCollaborationDetails = !showCollaborationDetails">
+            Show Collaboration Details
+          </button>
+        </div>
         <span>Project Details</span>
       </li>
       <li class="menu-item" (click)="toggleSubscriptions()">
@@ -212,8 +219,6 @@
   </div>
 
   <div class="project-details" *ngIf="showData">
-    <!-- Project Details -->
-    <!-- <pre>{{ jsonData | json }}</pre> -->
     <table>
       <thead>
         <tr>

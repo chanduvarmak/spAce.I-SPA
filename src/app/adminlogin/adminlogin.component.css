@@ -5,6 +5,7 @@
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  background: linear-gradient(#222e30, #889496);
 }
 
 .form-group {
@@ -15,6 +16,7 @@ label {
   display: block;
   font-weight: bold;
   margin-bottom: 5px;
+  color: white;
 }
 
 input[type="text"],
@@ -44,10 +46,13 @@ input[type="password"] {
 }
 
 .submit-button:disabled {
-  background-color: #ccc;
+  background-color: #1d2628;
   cursor: not-allowed;
 }
 
 .submit-button:hover:not(:disabled) {
   background-color: black;
+}
+h2 {
+  color: white;
 }
