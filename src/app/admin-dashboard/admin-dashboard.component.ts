@@ -24,7 +24,7 @@ export class AdminDashboardComponent {
   contactDetails: any[] = [];
   collaborationDetails: any[] = [];
   showCollaborationDetails: boolean = false;
-  showContactDetails:boolean=false;
+  showContactDetails: boolean = false;
 
   constructor(
     private dataservice: SpaceiService,
@@ -43,6 +43,7 @@ export class AdminDashboardComponent {
   ngOnInit() {
     this.loadUsers();
     this.loadSubscriptions();
+    this.loadCollaborationDetails();
     this.dataservice.getData().subscribe((data) => {
       this.jsonData = data;
     });
@@ -59,7 +60,9 @@ export class AdminDashboardComponent {
   toggleSubscriptions() {
     this.showSubscriptions = !this.showSubscriptions;
   }
-  
+  toggleCollabdetails() {
+    this.showCollaborationDetails = !this.showCollaborationDetails;
+  }
   togglePortfolios() {
     this.showPortfolios = !this.showPortfolios;
   }
@@ -142,16 +145,7 @@ export class AdminDashboardComponent {
       this.route.navigate(['/adminlogin']);
     }
   }
-  loadContactDetails() {
-    this.http.get<any[]>('http://localhost:3000/contactus').subscribe(
-      (data) => {
-        this.contactDetails = data;
-      },
-      (error) => {
-        console.error('Error loading contact details:', error);
-      }
-    );
-  }
+
   loadCollaborationDetails() {
     this.http.get<any[]>('http://localhost:3000/collabcomm').subscribe(
       (data) => {
