@@ -1,27 +1,41 @@
 .logo a {
   display: flex;
-  color: unset;
+  color: white;
   text-decoration-color: whitesmoke;
   font-size: xx-large;
   text-decoration-style: wavy;
 }
-.sidemenus{
+.sidemenus {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 80px;
-  background-color: gray;
+  background-color: rgb(62, 144, 165);
   border-bottom: 1px solid whitesmoke;
   padding: 0 20px;
+  /* background: rgb(2, 0, 36); */
+  background: linear-gradient(
+    90deg,
+    #222e30 0%,
+    #3a4d51 35%,
+    #5a777e 100%
+  );
 }
 .menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 80px;
-  background-color: gray;
+  background-color:#222e30;
   border-bottom: 1px solid whitesmoke;
   padding: 0 20px;
+  /* background: rgb(2, 0, 36); */
+  background: linear-gradient(
+    90deg,
+    #222e30 0%,
+    #3a4d51 35%,
+    #5a777e 100%
+  );
 }
 
 .button {
@@ -29,7 +43,6 @@
   color: aquamarine;
   font-size: 18px;
   transition: transform 0.3s ease-in-out;
-  
 }
 
 .button1 {
@@ -52,4 +65,3 @@
   font-size: 18px;
   transition: transform 0.3s ease-in-out;
 }
-

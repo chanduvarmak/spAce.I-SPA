@@ -89,7 +89,7 @@ export class SignupComponent {
       this.route.navigate(['login']);
     } else {
       this.dataToStore = true;
-    }
+    } 
   }
 
   //THIS BELOW CODE IS USED TO POST DATA TO OUR JSON SERVER//

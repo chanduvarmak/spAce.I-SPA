@@ -1,13 +1,20 @@
 .welcome {
   width: 400px;
   margin: 100px auto;
-  background-color: #fff;
   border-radius: 10px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
   padding: 40px;
   text-align: center;
   animation: shadow 2s ease-in-out infinite;
   font-size: 45px;
+  /* background: rgb(9, 9, 121); */
+  background: linear-gradient(
+    90deg,
+    #222e30 0%,
+    #3a4d51 35%,
+    #5a777e 100%
+  );
+  color: white;
 }
 h1 {
   font-size: 42px;
@@ -16,47 +23,75 @@ h1 {
   font-family: unset;
   letter-spacing: normal;
   margin: 0 0 16px;
-  cursor: pointer;
+  color: white;
 }
 h6 {
   font: 400 calc(14px * 0.67) / 20px Roboto, sans-serif;
   margin: 0 0 12px;
   font-size: small;
   font-family: initial;
-  color: gray;
-  cursor: pointer;
+  color: white;
 }
 
 button {
   width: 310px;
   margin: 100px auto;
-  background-color: #fff;
+  /* background: rgb(9, 9, 121); */
+  background: linear-gradient(
+    90deg,
+    #222e30 0%,
+    #3a4d51 35%,
+    #5a777e 100%
+  );
   border-radius: 50px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
   padding: 5px;
   text-align: center;
   animation: shadow 2s ease-in-out infinite;
   font-size: 20px;
+  color: white;
+}
+button:hover {
+  /* background: rgb(9, 9, 121); */
+  background: linear-gradient(
+    90deg,
+    #222e30 0%,
+    #3a4d51 35%,
+    #5a777e 100%
+  );
 }
 .front {
   width: 500px;
   margin: 100px auto;
-  background-color: rgba(0, 0, 0, 0.38);
   border-radius: 10px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
   padding: 40px;
   text-align: center;
   animation: shadow 2s ease-in-out infinite;
+  /* background: rgb(9, 9, 121); */
+  background: linear-gradient(
+    90deg,
+    #222e30 0%,
+    #3a4d51 35%,
+    #5a777e 100%
+  );
 }
 .container {
   display: block;
   margin-left: auto;
   margin-right: auto;
   float: none;
-  background: darkgray;
+  /* background: darkgray; */
   border-radius: 15px;
   animation: shadow 2s ease-in-out infinite;
-  cursor: pointer;
+  color: white;
+  /* background: rgb(9, 9, 121); */
+  background: linear-gradient(
+    90deg,
+    #222e30 0%,
+    #3a4d51 35%,
+    #5a777e 100%
+  );
 }
 .row {
   /* font-size: 2.5rem; */
@@ -93,7 +128,13 @@ button {
   height: 100vh;
   width: 100%;
   padding: 90px 0;
-  background: #dddddde7;
+ 
+  background: linear-gradient(
+    90deg,
+    #222e30 0%,
+    #3a4d51 35%,
+    #5a777e 100%
+  );
 }
 .pic {
   height: auto;
@@ -122,7 +163,7 @@ button {
   margin-bottom: 20px;
 }
 span {
-  color: gray;
+  color: white;
 }
 .text p {
   font-size: 18px;
@@ -165,7 +206,13 @@ span {
   text-align: center;
   font-size: large;
   font-style: italic;
-  background: gray;
+  /* background: rgb(8, 34, 138); */
+  background: linear-gradient(
+    90deg,
+    #222e30 0%,
+    #3a4d51 35%,
+    #5a777e 100%
+  );
   border-radius: 50%;
   position: relative;
   z-index: 1;
@@ -178,5 +225,3 @@ span {
   box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
     0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
 }
-
-
