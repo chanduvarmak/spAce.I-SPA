@@ -14,6 +14,7 @@ import { TheWorkResComponent } from './the-work-res/the-work-res.component';
 import { CollabresComponent } from './collabres/collabres.component';
 import { UserdashboardComponent } from './userdashboard/userdashboard.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
+import { PracticeComponent } from './practice/practice.component';
 const routes: Routes = [
   // { path: 'header', component: HeaderComponent },
   // { path: 'home', component: HomeComponent },
@@ -38,6 +39,7 @@ const routes: Routes = [
   { path: 'theworkcomm', component: TheWorkCommComponent },
   { path: 'theworkres', component: TheWorkResComponent },
   { path: 'adminlogin', component: AdminloginComponent },
+  { path: 'practice', component: PracticeComponent },
 ];
 
 @NgModule({

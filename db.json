@@ -152,5 +152,11 @@
       "city": "russia",
       "id": 3
     }
+  ],
+  "practice":[
+    {
+      "id":0,
+      "name":"some comment"
+    }
   ]
 }

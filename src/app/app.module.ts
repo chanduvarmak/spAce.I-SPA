@@ -31,6 +31,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { AuthserviceService } from './authservice.service';
 // import { ToastrModule } from 'ngx-toastr/public_api';
 import { NgChartsModule } from 'ng2-charts';
+import { PracticeComponent } from './practice/practice.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { NgChartsModule } from 'ng2-charts';
     TheWorkResComponent,
     CollabresComponent,
     AdminloginComponent,
+    PracticeComponent,
   ],
   imports: [
     BrowserModule,
