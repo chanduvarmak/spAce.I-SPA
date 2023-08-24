@@ -32,6 +32,7 @@ import { AuthserviceService } from './authservice.service';
 // import { ToastrModule } from 'ngx-toastr/public_api';
 import { NgChartsModule } from 'ng2-charts';
 import { PracticeComponent } from './practice/practice.component';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -69,6 +70,8 @@ import { PracticeComponent } from './practice/practice.component';
     MatExpansionModule,
     // ToastrModule.forRoot(),
     NgChartsModule,
+    MatCardModule ,
+    MatButtonModule 
   ],
   providers: [AuthserviceService],
   bootstrap: [AppComponent],

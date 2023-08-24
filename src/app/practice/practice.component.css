@@ -1,0 +1,65 @@
+/* .h1{
+    text-align: center;
+} */
+.uploader-card {
+    width: 400px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+    background: linear-gradient(
+        90deg,
+        #222e30 0%,
+        #3a4d51 35%,
+        #5a777e 100%); /* Gradient color */
+    color: white;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 75px;
+  }
+  
+  .uploader-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .file-input {
+    margin-bottom: 10px;
+  }
+  
+  .submitted-message em {
+    font-style: italic;
+  }
+  
+  .csv-details {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #f5f5f5;
+  }
+  @keyframes glowing {
+    0% {
+      box-shadow: 
+        90deg,
+        #222e30 0%,
+        #3a4d51 35%,
+        #5a777e 100%;
+    }
+    50% {
+      box-shadow:90deg,
+      #222e30 0%,
+      #3a4d51 35%,
+      #5a777e 100%;;
+    }
+    100% {
+      box-shadow: 90deg,
+      #222e30 0%,
+      #3a4d51 35%,
+      #5a777e 100%;;
+    }
+  }
+  
+  .submitted-message em {
+    font-style: italic;
+    animation: glowing 2s infinite; /* Apply the animation */
+  }
+    

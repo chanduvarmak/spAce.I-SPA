@@ -1,22 +1,41 @@
-<h1>User List</h1>
+<!-- <mat-card class="uploader-card">
+  <mat-card-header>
+    <mat-card-title>CSV Uploader</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div>
+      <input type="file" (input)="handleFileInput($event)" accept=".csv" class="file-input">
+      <button mat-raised-button color="primary" (click)="submitFile()" [disabled]="!csvContent">Submit</button>
+    </div>
+    <div *ngIf="submitted" class="submitted-message">
+      <p>File submitted successfully!</p>
+    </div>
+  </mat-card-content>
+</mat-card>
 
-<form (submit)="createUser()">
-  <input type="text" [(ngModel)]="newUser.name" placeholder="Name" required>
-  <button type="submit">Create</button>
-</form>
-
-<ul>
-  <li *ngFor="let user of users">
-    <ng-container *ngIf="editingUserId !== user.id; else editMode">
-      {{ user.name }}
-      <button (click)="editUser(user.id)">Edit</button>
-      <button (click)="deleteUser(user.id)">Delete</button>
-    </ng-container>
-    <ng-template #editMode>
-      <input type="text" [(ngModel)]="user.name" required>
-      <button (click)="updateUser(user)">Save</button>
-      <button (click)="cancelEdit()">Cancel</button>
-    </ng-template>
-  </li>
-</ul>
-
+<div class="csv-details" *ngIf="submitted">
+  <h3>Submitted CSV Details</h3>
+  <p><strong>File Name:</strong> {{ fileName }}</p>
+  <p><strong>File Size:</strong> {{ fileSize }} bytes</p>
+  <p><strong>CSV Content:</strong></p>
+  <pre>{{ csvContent }}</pre>
+</div> -->
+<mat-card class="uploader-card">
+  <mat-card-header>
+    <mat-card-title>CSV Uploader</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div>
+      <input type="file" (input)="handleFileInput($event)" accept=".csv" class="file-input">
+      <button mat-raised-button color="primary" (click)="submitFile()" [disabled]="!csvContent">Submit</button>
+    </div>
+    <div *ngIf="submitted" class="submitted-message">
+      <p>File submitted successfully!</p>
+      <em>CSV details submitted:</em>
+      <p><strong>File Name:</strong> {{ fileName }}</p>
+      <p><strong>File Size:</strong> {{ fileSize }} bytes</p>
+      <p><strong>CSV Content:</strong></p>
+      <pre>{{ csvContent }}</pre>
+    </div>
+  </mat-card-content>
+</mat-card>

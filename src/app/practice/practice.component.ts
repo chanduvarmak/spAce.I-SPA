@@ -6,66 +6,62 @@ import { PracticeService } from '../practice.service';
   templateUrl: './practice.component.html',
   styleUrls: ['./practice.component.css'],
 })
-export class PracticeComponent implements OnInit {
-  users!: any[];
+export class PracticeComponent  {
 
-  newUser: any = {}; // Object to store new user data
 
-  editingUserId: number = 0;
-  constructor(private serverService: PracticeService) {}
-  ngOnInit(): void {}
+  // csvContent: string = '';
+  // fileName: string = '';
+  // fileSize: number = 0;
+  // submitted: boolean = false;
 
-  getUsers() {
-    this.serverService.getUsers().subscribe(
-      (response) => {
-        this.users = response;
-      },
-      (error) => {
-        console.error(error);
+  // handleFileInput(event: Event): void {
+  //   const inputElement = event.target as HTMLInputElement;
+  //   const files = inputElement.files;
+
+  //   if (files && files.length > 0) {
+  //     const file = files.item(0);
+  //     if (file) {
+  //       this.fileName = file.name;
+  //       this.fileSize = file.size;
+  //       const reader = new FileReader();
+  //       reader.onload = (e) => {
+  //         this.csvContent = reader.result as string;
+  //       };
+  //       reader.readAsText(file);
+  //     }
+  //   }
+  // }
+
+  // submitFile(): void {
+  //   // Add your submit logic here
+
+  //   // For this example, just showing a success message
+  //   this.submitted = true;
+  // }
+  csvContent: string = '';
+  fileName: string = '';
+  fileSize: number = 0;
+  submitted: boolean = false;
+
+  handleFileInput(event: Event): void {
+    const inputElement = event.target as HTMLInputElement;
+    const files = inputElement.files;
+
+    if (files && files.length > 0) {
+      const file = files.item(0);
+      if (file) {
+        this.fileName = file.name;
+        this.fileSize = file.size;
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          this.csvContent = reader.result as string;
+        };
+        reader.readAsText(file);
       }
-    );
+    }
   }
 
-  createUser() {
-    this.serverService.createUser(this.newUser).subscribe(
-      (response) => {
-        this.getUsers(); // Refresh the user list after creating a new user
-        this.newUser = {}; // Reset the new user object
-        console.log(this.newUser);
-      },
-      (error) => {
-        console.error(error);
-      }
-    );
-  }
-
-  editUser(userId: number) {
-    this.editingUserId = userId;
-  }
-
-  cancelEdit() {
-    this.editingUserId = 0;
-  }
-
-  updateUser(user: any) {
-    this.serverService.updateUser(user.id, user).subscribe(
-      (response) => {
-        this.editingUserId = 0; // Exit edit mode
-      },
-      (error) => {
-        console.error(error);
-      }
-    );
-  }
-
-  deleteUser(userId: number) {
-    this.serverService.deleteUser(userId).subscribe(
-      (response) => {
-        this.getUsers(); // Refresh the user list after deleting a user
-      },
-      (error) => {
-        console.error(error);
-      }
-    );
+  submitFile(): void {
+    this.submitted = true;
   }
 }
