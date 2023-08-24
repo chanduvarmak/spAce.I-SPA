@@ -63,83 +63,10 @@
       </div>
     </div>
 
-    <!-- <div class="form-group">
-      <label for="research">Research:</label>
-      <input
-        type="checkbox"
-        id="research"
-        formControlName="intrests.research"
-      />
-    </div>
-
-    <div class="form-group">
-      <label for="commercial">Commercial:</label>
-      <input
-        type="checkbox"
-        id="commercial"
-        formControlName="intrests.commercial"
-      />
-    </div> -->
+  
 
     <button type="submit" [disabled]="formData.invalid" class="submit-button">
       subscribe
     </button>
   </form>
 </div>
-<!-- <div class="contact-form">
-<h2>Contact Us</h2>
-<form (ngSubmit)="submitForm()">
-  <div class="form-group">
-    <label for="companyName">Company Name</label>
-      <input
-        type="text"
-        id="companyName"
-        name="companyName"
-        [(ngModel)]="formData.companyName"
-        required
-      />
-    </div>
-    <div class="form-group">
-      <label for="companyEmail">Company Email</label>
-      <input
-        type="email"
-        id="companyEmail"
-        name="companyEmail"
-        [(ngModel)]="formData.companyEmail"
-        required
-      />
-    </div>
-    <div class="form-group">
-      <label for="city">Select City</label>
-      <select id="city" name="city" [(ngModel)]="formData.city" required>
-        <option *ngFor="let city of cities" [value]="city">{{ city }}</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label>Purpose</label>
-      <div>
-        <label for="research">
-          <input
-            type="checkbox"
-            id="research"
-            name="interests"
-            [(ngModel)]="formData.interests.research"
-          />
-          Research
-        </label>
-      </div>
-      <div>
-        <label for="commercial">
-          <input
-            type="checkbox"
-            id="commercial"
-            name="interests"
-            [(ngModel)]="formData.interests.commercial"
-          />
-          Commercial
-        </label>
-      </div>
-    </div>
-    <button type="submit" routerLink="/thanks">Submit</button>
-  </form>
-</div> -->

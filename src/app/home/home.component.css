@@ -104,18 +104,7 @@ button:hover {
   font-size: 34px;
   font-family: sans-serif;
 }
-/* .thework {
-  box-sizing: border-box;
-  display: block;
-  color: black;
-  margin: 0;
-  padding: 35px;
-  background: darkgray;
-  border-radius: 50px;
-  font-family: sans-serif;
-  font-style: oblique;
-  font-size: larger;
-} */
+
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap");
 * {

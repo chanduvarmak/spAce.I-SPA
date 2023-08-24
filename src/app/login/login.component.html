@@ -9,25 +9,7 @@
       <a routerLink="/home" style="color: cornflowerblue">spAce.I</a>
       <h2>User Log-in</h2>
       <form [formGroup]="regForm" (ngSubmit)="login()">
-        <!-- <input
-          type="text"
-          placeholder="Username*"
-          formControlName="uname"
-          [(ngModel)]="loginObj.userName"
-          required
-        />
-        <div
-          *ngIf="regForm
-          .controls['uname'].touched &&regForm.controls['uname']?.['errors']"
-          class="invalid"
-        >
-          <div *ngIf="regForm.controls['uname']?.['errors']?.['required']">
-            username is required
-          </div>
-          <div *ngIf="regForm.controls['uname']?.['errors']?.['minlength']">
-            minimum length should be 4
-          </div>
-        </div> -->
+    
         <input
           type="email"
           placeholder="Email*"
