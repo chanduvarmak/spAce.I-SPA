@@ -39,3 +39,32 @@
     </div>
   </mat-card-content>
 </mat-card>
+
+
+<form id="form" [formGroup]="resumeForm" (ngSubmit)="submitForm()">
+  <h2 class="heading">Resume</h2>
+  <div id="about">
+  This is a simple website that helps you pick out the best resume for any specifed role with the help of Aritificial Intellegence.
+  </div>
+  <br>
+  <div class="inputField">
+  <input type="text" name="inputPath" id="iP" formControlName="inputPath" placeholder="Input Path">
+  <div *ngIf="resumeForm.get('inputPath')?.hasError('required') && resumeForm.get('inputPath')?.touched" class="validation">
+    Input Path is required.
+  </div>
+  </div>
+  <br>
+  <div class="inputField">
+  <input type="text" name="outputPath" formControlName="outputPath" id="oP" placeholder="Output Path" >
+  <div *ngIf="resumeForm.get('outputPath')?.hasError('required') && resumeForm.get('outputPath')?.touched" class="validation">
+    Output Path is required.
+  </div>
+  </div>
+  <br>
+  <div class="inputField">
+  <input type="text" name="prompt" id="promt" formControlName="prompt" placeholder="Prompt">
+  <div *ngIf="resumeForm.get('prompt')?.hasError('required') && resumeForm.get('prompt')?.touched" class="validation">
+    Prompt is required.
+  </div>
+  </div>
+  <button type="submit">Submit</button>

@@ -153,10 +153,36 @@
       "id": 3
     }
   ],
-  "practice":[
+  "practice": [
     {
-      "id":0,
-      "name":"some comment"
+      "id": 0,
+      "name": "some comment"
+    }
+  ],
+  "python": [
+    {
+      "inputPath": "C:\\Users\\ChanduKeertipati\\Desktop\\demotask",
+      "outputPath": "C:\\Users\\ChanduKeertipati\\Desktop\\demotask",
+      "prompt": "text prompt 1",
+      "id": 1
+    },
+    {
+      "inputPath": "C:\\Users\\ChanduKeertipati\\Desktop\\demotask",
+      "outputPath": "C:\\Users\\ChanduKeertipati\\Desktop\\demotask",
+      "prompt": "text prompt 2",
+      "id": 2
+    },
+    {
+      "inputPath": "C:\\Users\\ChanduKeertipati\\Desktop\\demotask",
+      "outputPath": "C:\\Users\\ChanduKeertipati\\Desktop\\demotask",
+      "prompt": "text prompt 2",
+      "id": 3
+    },
+    {
+      "inputPath": "C:\\Users\\ChanduKeertipati\\Desktop\\demotask",
+      "outputPath": "C:\\Users\\ChanduKeertipati\\Desktop\\demotask",
+      "prompt": "text prompt 3",
+      "id": 4
     }
   ]
 }
