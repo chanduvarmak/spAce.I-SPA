@@ -205,3 +205,15 @@
     form {
       margin-top: 20px;
     }
+    button{
+      background-color: black;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    button:hover{
+      background-color: rgba(98, 117, 126, 0.753);
+    }
