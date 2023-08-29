@@ -1,0 +1,40 @@
+<div class="weather-container">
+    <h2>Weather Forecast</h2>
+    <button (click)="fetchData()">Load Data</button>
+    <div *ngIf="isDataLoaded">
+      <ul class="weather-list">
+        <li *ngFor="let item of weatherData" class="weather-item">
+          {{ item.date | date }}: {{ item.temperatureC }}°C
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <div>
+    <h2>Add Student</h2>
+    <form #studentForm="ngForm" (ngSubmit)="onSubmit(studentForm)">
+      <div>
+        <label for="studentName">Student Name:</label>
+        <input type="text" id="studentName" name="studentName" ngModel required>
+      </div>
+      <div>
+        <label for="emailId">Email:</label>
+        <input type="email" id="emailId" name="emailId" ngModel required>
+      </div>
+      <div>
+        <button type="submit" [disabled]="!studentForm.valid">Submit</button>
+      </div>
+    </form>
+  </div>
+  <h2>Student List</h2>
+<ul>
+  <li *ngFor="let student of students">
+    {{ student.studentName }} ({{ student.emailId }})
+    <button (click)="getStudent(student.studentId)">Get</button>
+    <button (click)="deleteStudent(student.studentId)">Delete</button>
+  </li>
+</ul>
+
+  
+   
+  

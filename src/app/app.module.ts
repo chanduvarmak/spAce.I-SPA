@@ -33,6 +33,7 @@ import { AuthserviceService } from './authservice.service';
 import { NgChartsModule } from 'ng2-charts';
 import { PracticeComponent } from './practice/practice.component';
 import { MatCardModule } from '@angular/material/card';
+import { WeatherComponent } from './weather/weather.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,8 @@ import { MatCardModule } from '@angular/material/card';
     CollabresComponent,
     AdminloginComponent,
     PracticeComponent,
+    WeatherComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -70,10 +73,10 @@ import { MatCardModule } from '@angular/material/card';
     MatExpansionModule,
     // ToastrModule.forRoot(),
     NgChartsModule,
-    MatCardModule ,
-    MatButtonModule 
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [AuthserviceService],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

@@ -8,16 +8,17 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './practice.component.html',
   styleUrls: ['./practice.component.css'],
 })
-export class PracticeComponent {
+export class PracticeComponent implements OnInit{
   resumeForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private http: HttpClient) {
+  constructor(private fb: FormBuilder, private http: HttpClient, private apiService: PracticeService) {
     this.resumeForm = this.fb.group({
       inputPath: ['', Validators.required],
       outputPath: ['', Validators.required],
       prompt: ['', Validators.required]
     });
   }
+  ngOnInit(): void {}
   // csvContent: string = '';
   // fileName: string = '';
   // fileSize: number = 0;
@@ -76,13 +77,29 @@ export class PracticeComponent {
 
 
   // for python
+  // submitForm() {
+  //   if (this.resumeForm.valid) {
+  //     const formData = this.resumeForm.value;
+  //     this.http.post('http://localhost:3000/python', formData).subscribe(
+  //       response => {
+  //         this.resumeForm.reset();
+  //         console.log('Data posted successfully', response);
+  //       },
+  //       error => {
+  //         console.error('Error posting data', error);
+  //       }
+  //     );
+  //   }
+  // }
+
   submitForm() {
     if (this.resumeForm.valid) {
       const formData = this.resumeForm.value;
-      this.http.post('http://localhost:3000/python', formData).subscribe(
+
+      this.apiService.postFormData(formData).subscribe(
         response => {
-          this.resumeForm.reset();
           console.log('Data posted successfully', response);
+          this.resumeForm.reset();
         },
         error => {
           console.error('Error posting data', error);
@@ -91,5 +108,4 @@ export class PracticeComponent {
     }
   }
 }
-
 

@@ -7,27 +7,12 @@ import { Observable } from 'rxjs';
 })
 export class PracticeService {
 
-  private apiUrl = 'http://localhost:3000/practice';
+  private baseUrl1 = 'http://localhost:3000'; // Adjust the base URL
 
   constructor(private http: HttpClient) { }
 
-  getUsers(): Observable<any> {
-    return this.http.get(`${this.apiUrl}/users`);
-  }
-
-  getUserById(userId: number): Observable<any> {
-    return this.http.get(`${this.apiUrl}/users/${userId}`);
-  }
-
-  createUser(user: any): Observable<any> {
-    return this.http.post(`${this.apiUrl}/users`, user);
-  }
-
-  updateUser(userId: number, user: any): Observable<any> {
-    return this.http.put(`${this.apiUrl}/users/${userId}`, user);
-  }
-
-  deleteUser(userId: number): Observable<any> {
-    return this.http.delete(`${this.apiUrl}/users/${userId}`);
+  postFormData(data: any): Observable<any> {
+    const url = `${this.baseUrl1}/python`; // Replace 'endpoint' with the actual endpoint
+    return this.http.post(url, data);
   }
 }

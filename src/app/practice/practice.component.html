@@ -1,25 +1,3 @@
-<!-- <mat-card class="uploader-card">
-  <mat-card-header>
-    <mat-card-title>CSV Uploader</mat-card-title>
-  </mat-card-header>
-  <mat-card-content>
-    <div>
-      <input type="file" (input)="handleFileInput($event)" accept=".csv" class="file-input">
-      <button mat-raised-button color="primary" (click)="submitFile()" [disabled]="!csvContent">Submit</button>
-    </div>
-    <div *ngIf="submitted" class="submitted-message">
-      <p>File submitted successfully!</p>
-    </div>
-  </mat-card-content>
-</mat-card>
-
-<div class="csv-details" *ngIf="submitted">
-  <h3>Submitted CSV Details</h3>
-  <p><strong>File Name:</strong> {{ fileName }}</p>
-  <p><strong>File Size:</strong> {{ fileSize }} bytes</p>
-  <p><strong>CSV Content:</strong></p>
-  <pre>{{ csvContent }}</pre>
-</div> -->
 <mat-card class="uploader-card">
   <mat-card-header>
     <mat-card-title>CSV Uploader</mat-card-title>
@@ -68,3 +46,5 @@
   </div>
   </div>
   <button type="submit">Submit</button>
+
+  <button routerLink="/weather">DotNet Used Here</button>
