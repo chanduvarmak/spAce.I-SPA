@@ -112,4 +112,16 @@ button:hover {
   padding: 8px;
   border-bottom: 1px solid #ddd;
 }
+.dotnet{
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+}
+dotnet:hover{
+  background-color: rgba(98, 117, 126, 0.753);
+}
 
